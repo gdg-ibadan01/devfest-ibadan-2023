@@ -1,22 +1,17 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
 import TextCarousel from "./component/Carousel/TextCarousel";
 import LogosCarousel from "./component/Carousel/LogosCarousel";
 import DevfestHero from "./component/DevfestHero";
-import "./page.css";
-import { useToggle } from "./hooks/useToggle";
+import About from "./component/About";
 
 const Home = () => {
-  const router = useRouter();
-  const handleClick = () => router.push("/about");
-  const [isVisible, setIsVisible] = useToggle(false);
   return (
     <div className="container">
-      <TextCarousel/>
+      <TextCarousel />
       <DevfestHero />
-      <LogosCarousel/>
+      <LogosCarousel />
+      <About />
     </div>
   );
 };

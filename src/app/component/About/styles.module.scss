@@ -1,0 +1,100 @@
+.container {
+  background-color: var(--dark);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    flex-basis: 50%;
+    padding: 20px 50px;
+
+    h1,
+    p {
+      color: var(--white);
+    }
+    h1 {
+      font-size: 72px;
+    }
+    p {
+      text-align: justify;
+      line-height: 1.5;
+      font-family: var(--font-cabinet-grotesk);
+      color: var(--light-gray);
+      font-weight: 100;
+    }
+  }
+
+  &__pills {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    flex-basis: 50%;
+    position: relative;
+
+    &--el {
+      position: absolute;
+      transform-origin: center top;
+      //   left: 20px;
+      left: 0;
+
+      &:nth-child(1) {
+        top: 5rem;
+        // right: 0;
+      }
+      &:nth-child(2) {
+        top: 13rem;
+        transform: rotate(-10deg);
+      }
+      &:nth-child(3) {
+        top: 7rem;
+        left: 22rem;
+        transform: rotate(17deg);
+      }
+      &:nth-child(4) {
+        top: 11rem;
+        left: 16rem;
+        transform: rotate(-20deg);
+      }
+      &:nth-child(5) {
+        top: 16rem;
+        left: 28rem;
+        transform: rotate(-29deg);
+      }
+      &:nth-child(6) {
+        top: 16rem;
+        left: 16rem;
+        transform: rotate(-29deg);
+      }
+      &:nth-child(7) {
+        top: 22rem;
+        left: 4rem;
+        transform: rotate(6deg);
+      }
+      &:nth-child(8) {
+        top: 27rem;
+        left: 19rem;
+        transform: rotate(-88deg);
+      }
+      &:nth-child(9) {
+        top: 27rem;
+        left: 32rem;
+        transform: rotate(-20deg);
+      }
+      &:nth-child(10) {
+        top: 32rem;
+        left: 10rem;
+        transform: rotate(36deg);
+      }
+      &:nth-child(11) {
+        top: 39rem;
+        left: 10rem;
+        transform: rotate(20deg);
+      }
+    }
+  }
+}
