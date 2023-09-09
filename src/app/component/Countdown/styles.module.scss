@@ -1,0 +1,15 @@
+.container {
+  width: 100vw;
+  overflow: auto;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__countdown {
+    width: 100%;
+    border: 1px solid var(--light-gray);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
