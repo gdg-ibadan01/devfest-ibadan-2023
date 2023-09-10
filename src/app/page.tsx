@@ -2,13 +2,14 @@
 
 import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+
 import { motion } from "framer-motion";
 import useMouse from "@react-hook/mouse-position";
 import TextCarousel from "./component/Carousel/TextCarousel";
 import LogosCarousel from "./component/Carousel/LogosCarousel";
 import DevfestHero from "./component/DevfestHero";
-
-import "./page.css";
+import About from "./component/About";
+import Countdown from "./component/Countdown";
 
 const Home = () => {
   const [cursorText, setCursorText] = useState("");
@@ -30,7 +31,7 @@ const Home = () => {
     devfestHeroLeave: (e: object) => any;
   }
 
-  let mousePositions:MousePositions = {
+  let mousePositions: MousePositions = {
     mouseXPosition: 0,
     mouseYPosition: 0
   }
@@ -51,8 +52,8 @@ const Home = () => {
       fontSize: "20px",
       backgroundColor: "transparent",
       x: mousePositions.mouseXPosition,
-      y: mousePositions. mouseYPosition,
-      
+      y: mousePositions.mouseYPosition,
+
       transition: {
         type: "spring",
         mass: 0.6
@@ -102,18 +103,20 @@ const Home = () => {
   const router = useRouter();
 
   return (
-    <div ref={ref}>
+    <div className="container" ref={ref}>
       <motion.div
-          variants={variants}
-          className="circle"
-          animate={cursorVariant}
-          transition={spring}
-        >
-          <span className="cursorText">{cursorText}</span>
-        </motion.div>
-      <TextCarousel/>
-      <DevfestHero devfestHeroEnter={devfestHeroEnter} devfestHeroLeave={devfestHeroLeave}/>
-      <LogosCarousel/>
+        variants={variants}
+        className="circle"
+        animate={cursorVariant}
+        transition={spring}
+      >
+        <span className="cursorText">{cursorText}</span>
+      </motion.div>
+      <TextCarousel />
+      <DevfestHero devfestHeroEnter={devfestHeroEnter} devfestHeroLeave={devfestHeroLeave} />
+      <LogosCarousel />
+      <About />
+      <Countdown />
     </div>
   );
 };
