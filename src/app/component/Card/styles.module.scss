@@ -1,0 +1,79 @@
+.speaker--card {
+    position: relative;
+    overflow-y: hidden;
+
+    &.big {
+        // width: 360px;
+        height: 588px;
+
+        .speaker--card-image {
+            margin-top: 70px;
+            // margin-top: 150px;
+            width: 100%;
+        }
+
+        .speaker--card-profile {
+            position: absolute;
+            color: var(--white);
+            bottom: 38px;
+            padding-left: 33px;
+            z-index: 2;
+            
+            h3 {
+                font-size: 2.4em;
+                max-width: 200px;
+                font-weight: 400;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+
+    &.medium {
+        height: 416px;
+
+        .organizer--card-image {
+            margin-top: 79px;
+            // margin-top: 150px;
+            width: 100%;
+        }
+
+        .organizer--card-profile {
+            position: absolute;
+            color: var(--white);
+            bottom: 26px;
+            padding-left: 23px;
+            z-index: 2;
+            
+            h3 {
+                font-size: 1.4em;
+                max-width: 185px;
+                font-weight: 400;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: .65em;
+            }
+        }
+    }
+
+    &.bas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+    }   
+}

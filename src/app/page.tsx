@@ -7,6 +7,7 @@ import LogosCarousel from "./component/Carousel/LogosCarousel";
 import DevfestHero from "./component/DevfestHero";
 import About from "./component/About";
 import Countdown from "./component/Countdown";
+import Speakers from "./component/Speakers";
 import Footer from "./component/Footer";
 import useCustomCursor from "./hooks/useCustomCusor";
 import Preloader from "./component/Preloader";
@@ -54,6 +55,7 @@ const Home = () => {
       <LogosCarousel />
       <About />
       <Countdown />
+      <Speakers />
       <Footer />
     </div>
   );
