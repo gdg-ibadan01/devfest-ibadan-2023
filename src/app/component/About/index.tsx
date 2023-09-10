@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Pills from "../Pills";
 import Styles from "./styles.module.scss";
+import Button from "../Button";
 
 const colorVariables = ["--primary", "--warning", "--success", "--danger"];
 
@@ -9,10 +10,10 @@ const skills = [
   "BUSINESS ANALYST",
   "DATA SCIENTIST",
   "SOFTWARE DEVELOPER",
-  "NFT ARTIST",
+  "CLOUD ARCHITECT",
   "PRODUCTS MANAGERS",
   "TECHNICAL WRITER",
-  "GRAPHICS DESIGNER",
+  "PRODUCT DESIGNER",
   "CYBER SECURITY",
   "AUDITORS",
   "UX RESEARCHERS",
@@ -48,6 +49,7 @@ const About = () => {
           and economic impact, DevFest offers an amazing platform for developers
           to connect locally, learn, and build on Google's tools.
         </p>
+        <Button>Become a Sponsor</Button>
       </section>
       <section className={Styles["container__pills"]}>
         {skills.map((data, idx) => (
