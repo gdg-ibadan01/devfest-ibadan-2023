@@ -6,7 +6,7 @@ import Styles from "./styles.module.scss";
 const colorVariables = ["--primary", "--warning", "--success", "--danger"];
 
 const skills = [
-  "BUSINESS ANALYSIS",
+  "BUSINESS ANALYST",
   "DATA SCIENTIST",
   "SOFTWARE DEVELOPER",
   "NFT ARTIST",

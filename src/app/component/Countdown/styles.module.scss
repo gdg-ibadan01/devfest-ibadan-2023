@@ -1,15 +1,63 @@
 .container {
   width: 100vw;
   overflow: auto;
+  padding: 2rem 20px;
+  background: url("../../../assets/imgs/cbg.png") center center;
 
   &__title {
     text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: var(--dark);
+
+    @media screen and (max-width: 640px) {
+      font-size: 1.4rem;
+    }
   }
 
   &__countdown {
     width: 100%;
-    border: 1px solid var(--light-gray);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    font-weight: 100;
+    margin-bottom: 20px;
+
+    &--wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--gray);
+
+      h1 {
+        font-size: 180px;
+
+        @media screen and (max-width: 820px) {
+          font-size: 4rem;
+        }
+
+        @media screen and (max-width: 640px) {
+          font-size: 2rem;
+        }
+      }
+      p {
+        font-size: 39px;
+        @media screen and (max-width: 820px) {
+          font-size: 1.4rem;
+        }
+        @media screen and (max-width: 640px) {
+          font-size: 1rem;
+        }
+      }
+
+      &:nth-child(2) {
+        border-right: 0;
+        border-left: 0;
+      }
+      &:nth-child(4) {
+        border-right: 0;
+        border-left: 0;
+      }
+    }
   }
 }

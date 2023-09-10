@@ -1,6 +1,32 @@
 .container {
-  width: 150%;
+  width: auto;
   height: auto;
-  height: 200px;
-  background-color: var(--primary);
+  overflow: auto;
+  //   background-color: var(--primary);
+}
+
+.wrapper {
+  width: 130%;
+
+  p {
+    font-family: var(--font-radio-grotesk);
+    color: var(--dark);
+    font-size: 100px;
+    font-weight: 100;
+    white-space: nowrap;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 150%;
+    p {
+      font-size: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    p {
+      font-size: 2rem;
+    }
+  }
 }
