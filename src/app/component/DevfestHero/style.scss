@@ -3,6 +3,7 @@
     width: 100vw;
     height: 90vh;
     position: relative;
+    cursor: none;
 
      @media only screen and (min-width: 0px) and (max-width: 768px) {
         height: 100vh;
@@ -228,6 +229,7 @@
 }
 
 .devfest-ctas__wrapper {
+    cursor: none;
     .devfest-ctas {
         width: 100vw;
         height: 109px;
