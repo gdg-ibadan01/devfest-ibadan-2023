@@ -28,6 +28,15 @@
       justify-content: center;
       align-items: center;
       border: 1px solid var(--gray);
+      padding: 10px 0 35px 0;
+
+      @media screen and (max-width: 820px) {
+        padding: 10px 0 20px 0;
+      }
+
+      @media screen and (max-width: 640px) {
+        padding: 10px 0 10px 0;
+      }
 
       h1 {
         font-size: 180px;
