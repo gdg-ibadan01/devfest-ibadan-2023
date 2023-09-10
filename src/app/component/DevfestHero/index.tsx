@@ -7,10 +7,11 @@ import bottomRightPicture from '../../../assets/imgs/bottom-right.png';
 import topRightPicture from '../../../assets/imgs/top-right.png';
 import gdgIbadanLogo from '../../../assets/svgs/gdg-ibadan-logo.svg';
 
-const DevfestHero = () => {
+const DevfestHero = ({devfestHeroEnter, devfestHeroLeave}: {devfestHeroEnter: any, devfestHeroLeave: any}) => {
+    
     return (
         <>
-            <div className="devfesthero__wrapper">
+            <div className="devfesthero__wrapper" onMouseEnter={devfestHeroEnter} onMouseLeave={devfestHeroLeave}>
                 <div className="nigeria-map"></div>
                 <div className="bubble-picture-frame bottom-left">
                     <Image src={bottomLeftPicture} alt="devfest Ibadan past event" />
