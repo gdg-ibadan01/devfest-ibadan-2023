@@ -1,26 +1,48 @@
 import "./styles/global.scss";
 import type { Metadata } from "next";
-import localFont from 'next/font/local';
+import localFont from "next/font/local";
 
 const grotesk = localFont({
   src: [
     {
-      path: './../assets/fonts/cabinet/cabinet-grotesk-regular.otf',
-      weight: '500',
-      style: 'normal'
+      path: "./../assets/fonts/cabinet/CabinetGrotesk-Black.otf",
+      weight: "900",
+      style: "normal",
     },
     {
-      path: './../assets/fonts/radio/radio-grotesk-regular.otf',
-      weight: 'normal',
-      style: 'normal'
+      path: "./../assets/fonts/cabinet/CabinetGrotesk-Medium.otf",
+      style: "normal",
     },
     {
-      path: './../assets/fonts/cabinet/cabinet-grotesk-bold.otf',
-      weight: 'bold',
-      style: 'normal'
+      path: "./../assets/fonts/cabinet/cabinet-grotesk-regular.otf",
+      weight: "500",
+      style: "normal",
     },
-  ]
-})
+    {
+      path: "./../assets/fonts/cabinet/CabinetGrotesk-Light.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "./../assets/fonts/radio/radio-grotesk-regular.otf",
+      weight: "normal",
+      style: "normal",
+    },
+    {
+      path: "./../assets/fonts/cabinet/cabinet-grotesk-bold.otf",
+      weight: "bold",
+      style: "normal",
+    },
+    {
+      path: "./../assets/fonts/radio/PPRadioGrotesk-Ultralight.ttf",
+      style: "normal",
+    },
+    {
+      path: "./../assets/fonts/radio/PPRadioGrotesk-Regular.ttf",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "DevFest Ibadan 2023",
