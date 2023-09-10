@@ -5,6 +5,7 @@ import LogosCarousel from "./component/Carousel/LogosCarousel";
 import DevfestHero from "./component/DevfestHero";
 import About from "./component/About";
 import Countdown from "./component/Countdown";
+import Footer from "./component/Footer";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <LogosCarousel />
       <About />
       <Countdown />
+      <Footer />
     </div>
   );
 };
