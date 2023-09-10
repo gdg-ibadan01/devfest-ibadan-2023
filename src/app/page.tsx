@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import TextCarousel from "./component/Carousel/TextCarousel";
 import LogosCarousel from "./component/Carousel/LogosCarousel";
 import DevfestHero from "./component/DevfestHero";
@@ -8,6 +9,7 @@ import About from "./component/About";
 import Countdown from "./component/Countdown";
 import Footer from "./component/Footer";
 import useCustomCursor from "./hooks/useCustomCusor";
+import Preloader from "./component/Preloader";
 
 const Home = () => {
   const {
@@ -19,9 +21,23 @@ const Home = () => {
     variants,
     spring,
   } = useCustomCursor();
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    (async () => {
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
 
   return (
-    <div className="container" ref={ref}>
+    <div ref={ref}>
+      <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
       <motion.div
         variants={variants}
         className="circle"
