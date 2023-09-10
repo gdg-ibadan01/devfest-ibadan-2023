@@ -20,7 +20,7 @@ const skills = [
   "CYBER SECURITY",
 ];
 
-const About = () => {
+const About = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, devfestLeave: any}) => {
   const [randomColors, setRandomColors] = useState<string[]>([]);
 
   useEffect(() => {
@@ -35,8 +35,8 @@ const About = () => {
   return (
     <div className={Styles["container"]}>
       <section className={Styles["container__text"]}>
-        <h1>What is devfest?</h1>
-        <p>
+        <h1 onMouseEnter={devfestHeroEnter} onMouseLeave={devfestLeave}>What is devfest?</h1>
+        <p onMouseEnter={devfestHeroEnter} onMouseLeave={devfestLeave}>
           DevFest is an annual decentralized tech conference hosted by the
           Google Developer Groups (GDG) community. GDGs host these events around
           the globe. DevFest 2023 marked the 12th year of DevFest and represents

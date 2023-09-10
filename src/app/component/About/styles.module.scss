@@ -5,6 +5,7 @@
   display: flex;
   position: relative;
   overflow: hidden;
+  cursor: none;
 
   @media screen and (max-width: 820px) {
     flex-wrap: wrap;

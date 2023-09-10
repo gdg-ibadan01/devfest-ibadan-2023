@@ -40,7 +40,8 @@ const useCustomCursor = () => {
       height: 30,
       width: 30,
       fontSize: "20px",
-      backgroundColor: "transparent",
+      backgroundColor: "#fff",
+      mixBlendMode: "difference",
       x: mousePositions.mouseXPosition,
       y: mousePositions.mouseYPosition,
 
@@ -52,25 +53,21 @@ const useCustomCursor = () => {
     devfestHero: {
       opacity: 1,
       backgroundColor: "#fff",
-      color: "#fbbc04",
+      mixBlendMode: "difference",
+      color: "#0e1921",
       height: 80,
       width: 80,
-      fontSize: "16px",
-      border: "5px solid #4285f4",
-      padding: "10px",
       x: mousePositions.mouseXPosition ?? 0 - 32,
       y: mousePositions.mouseYPosition ?? 0 - 32,
     },
-    bubbleFrame: {
-      opacity: 0.8,
-      backgroundColor: "#fff",
-      color: "#0E1921",
-      height: 40,
-      width: 40,
-      fontSize: "16px",
-      padding: "10px",
-      x: mousePositions.mouseXPosition ?? 0 - 32,
-      y: mousePositions.mouseYPosition ?? 0 - 32,
+    volunteer: {
+      opacity: 1,
+      backgroundColor: "transparent",
+      height: 20,
+      width: 20,
+      fontSize: "32px",
+      x: mousePositions.mouseXPosition ?? 0 - 50,
+      y: mousePositions.mouseYPosition ?? 0 - 50,
     },
   };
 
@@ -81,18 +78,33 @@ const useCustomCursor = () => {
   };
 
   function devfestHeroEnter(e: object) {
-    setCursorText("DevFest");
+    setCursorText("");
     setCursorVariant("devfestHero");
   }
+  function volunteer(e: object) {
+    setCursorText("🦸‍♂️🦸‍♀️");
+    setCursorVariant("volunteer");
+  }
+  function ticket(e: object) {
+    setCursorText("🎟️");
+    setCursorVariant("volunteer");
+  }
+  function speaker(e: object) {
+    setCursorText("🗣️");
+    setCursorVariant("volunteer");
+  }
 
-  function devfestHeroLeave(e: object) {
-    setCursorText("😊");
+  function devfestLeave(e: object) {
+    setCursorText("");
     setCursorVariant("default");
   }
 
   return {
     devfestHeroEnter,
-    devfestHeroLeave,
+    volunteer,
+    ticket,
+    speaker,
+    devfestLeave,
     cursorText,
     cursorVariant,
     ref,

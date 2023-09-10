@@ -1,13 +1,13 @@
 import Styles from "./styles.module.scss";
 import EventDate from "../EventDate";
 
-const Countdown = () => {
+const Countdown = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, devfestLeave: any}) => {
   return (
     <div className={Styles.container}>
-      <h1 className={Styles["container__title"]}>
+      <h1 className={Styles["container__title"]} onMouseEnter={devfestHeroEnter} onMouseLeave={devfestLeave}>
         Tick-Tock: The wait is almost over
       </h1>
-      <div className={Styles["container__countdown"]}>
+      <div className={Styles["container__countdown"]} onMouseEnter={devfestHeroEnter} onMouseLeave={devfestLeave}>
         <span className={Styles["container__countdown--wrapper"]}>
           <h1>04</h1>
           <p>Months</p>
@@ -29,7 +29,7 @@ const Countdown = () => {
           <p>Seconds</p>
         </span>
       </div>
-      <EventDate />
+      <EventDate devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave}/>
     </div>
   );
 };
