@@ -7,6 +7,7 @@ html {
   --danger: #ea4335;
   --light-gray: #e9eced;
   --gray: #213c4e;
+  --gray-light: #336383;
   --white: #fff;
   --dark: #0e1921;
   --font-radio-grotesk: "Radio Grotesk";
@@ -27,6 +28,7 @@ body {
   font-family: var(--font-cabinet-grotesk), "sans-serif";
   font-weight: 500;
   overflow-x: hidden;
+  cursor: wait;
 }
 
 img {
