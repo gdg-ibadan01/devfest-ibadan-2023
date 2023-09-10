@@ -1,4 +1,4 @@
-import './style.scss';
+import Styles from './styles.module.scss';
 
 import Image from 'next/image';
 import bottomLeftPicture from '../../../assets/imgs/bottom-left.png';
@@ -11,56 +11,56 @@ const DevfestHero = ({devfestHeroEnter, devfestHeroLeave}: {devfestHeroEnter: an
     
     return (
         <>
-            <div className="devfesthero__wrapper" onMouseEnter={devfestHeroEnter} onMouseLeave={devfestHeroLeave}>
-                <div className="nigeria-map"></div>
-                <div className="bubble-picture-frame bottom-left">
+            <div className={Styles["devfesthero__wrapper"]} onMouseEnter={devfestHeroEnter} onMouseLeave={devfestHeroLeave}>
+                <div className={Styles["nigeria__map"]}></div>
+                <div className={`${Styles.bubble__picture__frame} ${Styles.bottom__left}`}>
                     <Image src={bottomLeftPicture} alt="devfest Ibadan past event" />
                 </div>
-                <div className="bubble-picture-frame top-center">
+                <div className={`${Styles.bubble__picture__frame} ${Styles.top__center}`}>
                     <Image src={topCenterPicture} alt="devfest Ibadan past event" />
                 </div>
-                <div className="bubble-picture-frame bottom-right">
+                <div className={`${Styles.bubble__picture__frame} ${Styles.bottom__right}`}>
                     <Image src={bottomRightPicture} alt="devfest Ibadan past event" />
                 </div>
-                <div className="bubble-picture-frame top-right">
+                <div className={`${Styles.bubble__picture__frame} ${Styles.top__right}`}>
                     <Image src={topRightPicture} alt="devfest Ibadan past event" />
                 </div>
-                <div className="devfesthero__container">
-                    <div className="devfesthero">
-                        <div className="logo-container">
+                <div className={Styles["devfesthero__container"]}>
+                    <div className={Styles["devfesthero"]}>
+                        <div className={Styles["logo__container"]}>
                             <Image src={gdgIbadanLogo} alt="GDG Ibadan Logo" />
                         </div>
-                        <div className="content">
-                            <h1 className='heading'>The BiggestTech</h1>
-                            <h1 className='heading'>Event is here again</h1>
-                            <div className="colored-texts-container">
-                                <h1 className='colored'>
-                                    <span className='primary'>D</span>
-                                    <span className="danger">E</span>
-                                    <span className="warning">V</span>
-                                    <span className="success">F</span>
-                                    <span className="primary">E</span>
-                                    <span className="warning">S</span>
-                                    <span className="success">T</span>
-                                    <span className='primary'>2</span>
-                                    <span className='danger'>0</span>
-                                    <span className='warning'>2</span>
-                                    <span className='success'>3</span>
+                        <div className={Styles["content"]}>
+                            <h1 className={Styles["heading"]}>The BiggestTech</h1>
+                            <h1 className={Styles["heading"]}>Event is here again</h1>
+                            <div className={Styles["colored-texts-container"]}>
+                                <h1 className={Styles['colored']}>
+                                    <span className={Styles["primary"]}>D</span>
+                                    <span className={Styles["danger"]}>E</span>
+                                    <span className={Styles["warning"]}>V</span>
+                                    <span className={Styles["success"]}>F</span>
+                                    <span className={Styles["primary"]}>E</span>
+                                    <span className={Styles["warning"]}>S</span>
+                                    <span className={Styles["success"]}>T</span>
+                                    <span className={Styles["primary"]}>2</span>
+                                    <span className={Styles["danger"]}>0</span>
+                                    <span className={Styles["warning"]}>2</span>
+                                    <span className={Styles["success"]}>3</span>
                                 </h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="devfest-ctas__wrapper">
-                <div className="devfest-ctas">
-                    <a className="devfest-cta bas-warning">
+            <div className={Styles["devfest__ctas__wrapper"]}>
+                <div className={Styles["devfest__ctas"]}>
+                    <a className={`${Styles.devfest__cta} ${Styles.bas__warning}`}>
                         <h3>become a speaker</h3>
                     </a>
-                    <a className="devfest-cta gt-primary">
+                    <a className={`${Styles.devfest__cta} ${Styles.gt__primary}`}>
                         <h3>get ticket</h3>
                     </a>
-                    <a className="devfest-cta bav-success">
+                    <a className={`${Styles.devfest__cta} ${Styles.bav__success}`}>
                         <h3>become a volunteer</h3>
                     </a>
                 </div>

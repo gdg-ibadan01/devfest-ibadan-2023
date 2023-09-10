@@ -35,7 +35,7 @@ img {
   object-fit: contain;
 }
 
-.-icon {
+.__icon {
   width: 20px;
   height: 20px;
   display: block;
@@ -49,6 +49,10 @@ img {
     background-size: contain;
     height: 100%;
     display: block;
+
+    &.diagonal__arrow {
+      background-image: url("../../assets/svgs/diagonal-arrow.svg");
+    }
   }
 }
 

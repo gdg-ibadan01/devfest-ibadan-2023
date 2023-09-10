@@ -26,10 +26,10 @@ const Home = () => {
     mouseYPosition?: number
   }
 
-  interface mouseFunctions {
-    devfestHeroEnter: (e: object) => any;
-    devfestHeroLeave: (e: object) => any;
-  }
+  // interface mouseFunctions {
+  //   devfestHeroEnter: (e: object) => any;
+  //   devfestHeroLeave: (e: object) => any;
+  // }
 
   let mousePositions: MousePositions = {
     mouseXPosition: 0,

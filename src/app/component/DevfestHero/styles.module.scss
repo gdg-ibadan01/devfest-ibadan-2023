@@ -13,15 +13,12 @@
         height: 100vh;
      }
 
-     
-
-    .nigeria-map {
+    .nigeria__map {
         width: 750px;
         height: 610px;
         position: absolute;
         top: 50%;
         left: 50%;
-        /* bring your own prefixes */
         transform: translate(-50%, -50%);
 
         background-image: url("../../../assets/imgs/nigeria-map.png");
@@ -36,14 +33,12 @@
          }
     }
 
-
-
-    .bubble-picture-frame {
+    .bubble__picture__frame {
         position: absolute;
         border: 1.9px solid var(--white);
         border-radius: 50%;
 
-        &.bottom-left {
+        &.bottom__left {
             width: 368px;
             height: 368px;
             left: 15px;
@@ -61,12 +56,10 @@
                 height: 191px;
                 bottom: 45px;
                 padding: 11px;
-             }
-
-            
+             }   
         }
 
-        &.top-center {
+        &.top__center {
             width: 162px;
             height: 162px;
             top: 62px;
@@ -85,8 +78,8 @@
              }    
         }
 
-        &.bottom-right,
-        &.top-right {
+        &.bottom__right,
+        &.top__right {
             width: 210px;
             height: 210px;
             padding: 11px;
@@ -96,7 +89,7 @@
              }
         }
 
-        &.bottom-right {
+        &.bottom__right {
             right: 166px;
             bottom: 25px;
 
@@ -107,7 +100,7 @@
                 bottom: 185px;
              }
         }
-        &.top-right {
+        &.top__right {
             right: 181px;
             top: 109px;
 
@@ -118,8 +111,6 @@
                 right: 16px;
              }
         }
-
-
     }
 
     .devfesthero__container {
@@ -134,7 +125,7 @@
 
         .devfesthero {
             
-            .logo-container {
+            .logo__container {
                 width: 250px;
                 height: 38px;
                 margin-bottom: 28px;
@@ -228,9 +219,9 @@
     }
 }
 
-.devfest-ctas__wrapper {
+.devfest__ctas__wrapper {
     cursor: none;
-    .devfest-ctas {
+    .devfest__ctas {
         width: 100vw;
         height: 109px;
         display: grid;
@@ -240,9 +231,10 @@
 
        @media only screen and (min-width: 250px) and (max-width: 480px) { 
             grid-template-columns: repeat(1, 1fr);
+            height: auto;
          }
 
-        .devfest-cta {
+        .devfest__cta {
             text-align: center;
             height: 100%;
             display: flex;
@@ -259,13 +251,13 @@
                 font-size: 1.6em;
             }
 
-            &.bas-warning {
+            &.bas__warning {
                 background-color: var(--warning);
             }
-            &.gt-primary {
+            &.gt__primary {
                 background-color: var(--primary);
             }
-            &.bav-success {
+            &.bav__success {
                 background-color: var(--success);
             }
         }
