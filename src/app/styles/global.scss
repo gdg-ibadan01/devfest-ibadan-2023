@@ -42,6 +42,11 @@ img {
   margin: 0;
   cursor: pointer;
 
+  &.wh-48 {
+    width: 48px;
+    height: 48px;
+  }
+
   i {
     width: 100%;
     background-repeat: no-repeat;
@@ -53,8 +58,13 @@ img {
     &.diagonal__arrow {
       background-image: url("../../assets/svgs/diagonal-arrow.svg");
     }
+    &.plus--icon {
+      background-image: url("../../assets/svgs/plus.svg");
+    }
   }
 }
+
+
 
 .circle {
   position: fixed;
