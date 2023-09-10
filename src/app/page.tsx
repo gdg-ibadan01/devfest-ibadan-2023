@@ -16,8 +16,11 @@ const Home = () => {
   const {
     cursorText,
     cursorVariant,
+    volunteer,
+    ticket,
+    speaker,
     devfestHeroEnter,
-    devfestHeroLeave,
+    devfestLeave,
     ref,
     variants,
     spring,
@@ -50,12 +53,15 @@ const Home = () => {
       <TextCarousel />
       <DevfestHero
         devfestHeroEnter={devfestHeroEnter}
-        devfestHeroLeave={devfestHeroLeave}
+        volunteer={volunteer}
+        devfestLeave={devfestLeave}
+        ticket={ticket}
+        speaker={speaker}
       />
       <LogosCarousel />
-      <About />
-      <Countdown />
-      <Speakers />
+      <About devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave}/>
+      <Countdown devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave}/>
+      <Speakers devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave}/>
       <Footer />
     </div>
   );

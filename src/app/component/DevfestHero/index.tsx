@@ -7,11 +7,11 @@ import bottomRightPicture from '../../../assets/imgs/bottom-right.png';
 import topRightPicture from '../../../assets/imgs/top-right.png';
 import gdgIbadanLogo from '../../../assets/svgs/gdg-ibadan-logo.svg';
 
-const DevfestHero = ({devfestHeroEnter, devfestHeroLeave}: {devfestHeroEnter: any, devfestHeroLeave: any}) => {
-    
+const DevfestHero = ({ devfestHeroEnter, devfestLeave, volunteer, ticket, speaker }: { devfestHeroEnter: any, devfestLeave: any, volunteer: any, ticket: any, speaker: any }) => {
+
     return (
         <>
-            <div className={Styles["devfesthero__wrapper"]} onMouseEnter={devfestHeroEnter} onMouseLeave={devfestHeroLeave}>
+            <div className={Styles["devfesthero__wrapper"]}>
                 <div className={Styles["nigeria__map"]}></div>
                 <div className={`${Styles.bubble__picture__frame} ${Styles.bottom__left}`}>
                     <Image src={bottomLeftPicture} alt="devfest Ibadan past event" />
@@ -27,14 +27,14 @@ const DevfestHero = ({devfestHeroEnter, devfestHeroLeave}: {devfestHeroEnter: an
                 </div>
                 <div className={Styles["devfesthero__container"]}>
                     <div className={Styles["devfesthero"]}>
-                        <div className={Styles["logo__container"]}>
+                        <div className={Styles["logo__container"]} onMouseEnter={devfestHeroEnter} onMouseLeave={devfestLeave}>
                             <Image src={gdgIbadanLogo} alt="GDG Ibadan Logo" />
                         </div>
-                        <div className={Styles["content"]}>
-                            <h1 className={Styles["heading"]}>The BiggestTech</h1>
-                            <h1 className={Styles["heading"]}>Event is here again</h1>
+                        <div className={Styles["content"]} >
+                            <h1 className={Styles["heading"]} onMouseEnter={devfestHeroEnter} onMouseLeave={devfestLeave}>The Biggest Tech</h1>
+                            <h1 className={Styles["heading"]} onMouseEnter={devfestHeroEnter} onMouseLeave={devfestLeave}>Event is here again</h1>
                             <div className={Styles["colored-texts-container"]}>
-                                <h1 className={Styles['colored']}>
+                                <h1 className={Styles['colored']} onMouseEnter={devfestHeroEnter} onMouseLeave={devfestLeave}>
                                     <span className={Styles["primary"]}>D</span>
                                     <span className={Styles["danger"]}>E</span>
                                     <span className={Styles["warning"]}>V</span>
@@ -54,13 +54,13 @@ const DevfestHero = ({devfestHeroEnter, devfestHeroLeave}: {devfestHeroEnter: an
             </div>
             <div className={Styles["devfest__ctas__wrapper"]}>
                 <div className={Styles["devfest__ctas"]}>
-                    <a className={`${Styles.devfest__cta} ${Styles.bas__warning}`}>
+                    <a className={`${Styles.devfest__cta} ${Styles.bas__warning}`} onMouseEnter={speaker} onMouseLeave={devfestLeave}>
                         <h3>become a speaker</h3>
                     </a>
-                    <a className={`${Styles.devfest__cta} ${Styles.gt__primary}`}>
+                    <a className={`${Styles.devfest__cta} ${Styles.gt__primary}`} onMouseEnter={ticket} onMouseLeave={devfestLeave}>
                         <h3>get ticket</h3>
                     </a>
-                    <a className={`${Styles.devfest__cta} ${Styles.bav__success}`}>
+                    <a className={`${Styles.devfest__cta} ${Styles.bav__success}`} onMouseEnter={volunteer} onMouseLeave={devfestLeave}>
                         <h3>become a volunteer</h3>
                     </a>
                 </div>

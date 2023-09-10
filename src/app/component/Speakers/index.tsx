@@ -6,7 +6,7 @@ import Speaker2 from "../../../assets/imgs/speakers/speaker2.png";
 import Speaker3 from "../../../assets/imgs/speakers/speaker3.png";
 import Speaker4 from "../../../assets/imgs/speakers/speaker4.png";
 
-const Speakers = () => {
+const Speakers = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, devfestLeave: any}) => {
   const speakers = [
     {
       name: "KHAN DANIELS",
@@ -88,7 +88,7 @@ const Speakers = () => {
   ];
   const organizers = [
     {
-      name: "TIAMIYU ABIDEMI",
+      name: "ABIDEMI TIAMiYU",
       color: "var(--primary)",
       role: "GDG Ibadan Lead",
       company: "Aiti",
@@ -125,7 +125,7 @@ const Speakers = () => {
   ];
   return (
     <>
-      <div className={Styles["container"]}>
+      <div className={Styles["container"]} onMouseEnter={devfestHeroEnter} onMouseLeave={devfestLeave}>
         <div className={Styles["speakers__wrapper"]}>
           <div className={`${Styles.curve} ${Styles.left}`}></div>
           <div className={`${Styles.curve} ${Styles.right}`}></div>

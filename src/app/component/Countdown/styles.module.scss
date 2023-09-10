@@ -2,7 +2,9 @@
   width: 100vw;
   overflow: auto;
   padding: 2rem 20px;
+  background-color: var(--dark);
   background: url("../../../assets/imgs/cbg.png") center center;
+  cursor: none;
 
   &__title {
     text-align: center;
