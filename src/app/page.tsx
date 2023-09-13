@@ -59,9 +59,15 @@ const Home = () => {
         speaker={speaker}
       />
       <LogosCarousel />
-      <About devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave}/>
-      <Countdown devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave}/>
-      <Speakers devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave}/>
+      <About devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave} />
+      <Countdown
+        devfestHeroEnter={devfestHeroEnter}
+        devfestLeave={devfestLeave}
+      />
+      <Speakers
+        devfestHeroEnter={devfestHeroEnter}
+        devfestLeave={devfestLeave}
+      />
       <Footer />
     </div>
   );
