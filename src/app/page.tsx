@@ -16,11 +16,10 @@ const Home = () => {
   const {
     cursorText,
     cursorVariant,
-    volunteer,
-    ticket,
-    speaker,
-    devfestHeroEnter,
-    devfestLeave,
+    continueEnter,
+    continueLeave,
+    viewEnter,
+    viewLeave,
     ref,
     variants,
     spring,
@@ -51,23 +50,11 @@ const Home = () => {
         <span className="cursorText">{cursorText}</span>
       </motion.div>
       <TextCarousel />
-      <DevfestHero
-        devfestHeroEnter={devfestHeroEnter}
-        volunteer={volunteer}
-        devfestLeave={devfestLeave}
-        ticket={ticket}
-        speaker={speaker}
-      />
+      <DevfestHero devfestEnter={continueEnter} devfestLeave={continueLeave} />
       <LogosCarousel />
-      <About devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave} />
-      <Countdown
-        devfestHeroEnter={devfestHeroEnter}
-        devfestLeave={devfestLeave}
-      />
-      <Speakers
-        devfestHeroEnter={devfestHeroEnter}
-        devfestLeave={devfestLeave}
-      />
+      <About />
+      <Countdown />
+      <Speakers />
       <Footer />
     </div>
   );

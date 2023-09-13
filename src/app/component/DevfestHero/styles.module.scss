@@ -239,6 +239,7 @@
       justify-content: center;
       align-items: center;
       color: var(--white);
+      cursor: none;
 
       @media only screen and (min-width: 250px) and (max-width: 480px) {
         height: 85px;

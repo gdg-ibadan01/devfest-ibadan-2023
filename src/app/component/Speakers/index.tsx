@@ -1,12 +1,17 @@
 import Styles from "./styles.module.scss";
-
 import Card from "../Card";
 import Speaker1 from "../../../assets/imgs/speakers/speaker1.png";
 import Speaker2 from "../../../assets/imgs/speakers/speaker2.png";
 import Speaker3 from "../../../assets/imgs/speakers/speaker3.png";
 import Speaker4 from "../../../assets/imgs/speakers/speaker4.png";
+import { FC } from "react";
 
-const Speakers = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, devfestLeave: any}) => {
+interface iSpeaker {
+  entered?: () => void;
+  leave?: () => void;
+}
+
+const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
   const speakers = [
     {
       name: "KHAN DANIELS",
@@ -123,6 +128,7 @@ const Speakers = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, de
       image: Speaker1,
     },
   ];
+
   return (
     <>
       <div className={Styles["container"]}>

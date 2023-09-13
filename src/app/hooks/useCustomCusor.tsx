@@ -1,6 +1,11 @@
 import useMouse from "@react-hook/mouse-position";
 import { useState, useRef } from "react";
 
+interface MousePositions {
+  mouseXPosition: number;
+  mouseYPosition: number;
+}
+
 const useCustomCursor = () => {
   const [cursorText, setCursorText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("default");
@@ -11,63 +16,50 @@ const useCustomCursor = () => {
     leaveDelay: 100,
   });
 
-  interface MousePositions {
-    mouseXPosition?: number;
-    mouseYPosition?: number;
-  }
-
-  // interface mouseFunctions {
-  //   devfestHeroEnter: (e: object) => any;
-  //   devfestHeroLeave: (e: object) => any;
-  // }
-
-  let mousePositions: MousePositions = {
-    mouseXPosition: 0,
-    mouseYPosition: 0,
-  };
+  let mouseXPosition: number = 0;
+  let mouseYPosition: number = 0;
 
   if (mouse.x !== null) {
-    mousePositions.mouseXPosition = mouse.clientX!; // non-null assertion operator
+    mouseXPosition = mouse.clientX!; // non-null assertion operator
   }
 
   if (mouse.y !== null) {
-    mousePositions.mouseYPosition = mouse.clientY!; // non-null assertion operator
+    mouseYPosition = mouse.clientY!; // non-null assertion operator
   }
 
   const variants = {
     default: {
       opacity: 1,
-      height: 30,
-      width: 30,
-      fontSize: "20px",
-      backgroundColor: "#fff",
-      mixBlendMode: "difference",
-      x: mousePositions.mouseXPosition,
-      y: mousePositions.mouseYPosition,
-
+      height: 10,
+      width: 10,
+      fontSize: "16px",
+      backgroundColor: "var(--light-gray)",
+      x: mouseXPosition,
+      y: mouseYPosition,
       transition: {
         type: "spring",
         mass: 0.6,
       },
     },
-    devfestHero: {
+    view: {
       opacity: 1,
-      backgroundColor: "#fff",
-      mixBlendMode: "difference",
-      color: "#0e1921",
+      backgroundColor: "var(--white)",
+      color: "var(--dark)",
       height: 80,
       width: 80,
-      x: mousePositions.mouseXPosition ?? 0 - 32,
-      y: mousePositions.mouseYPosition ?? 0 - 32,
+      fontSize: "18px",
+      x: mouseXPosition - 32,
+      y: mouseYPosition - 32,
     },
-    volunteer: {
+    continue: {
       opacity: 1,
-      backgroundColor: "transparent",
-      height: 20,
-      width: 20,
-      fontSize: "32px",
-      x: mousePositions.mouseXPosition ?? 0 - 50,
-      y: mousePositions.mouseYPosition ?? 0 - 50,
+      backgroundColor: "var(--white)",
+      color: "var(--dark)",
+      height: 100,
+      width: 100,
+      fontSize: "18px",
+      x: mouseXPosition - 32,
+      y: mouseYPosition - 32,
     },
   };
 
@@ -77,34 +69,33 @@ const useCustomCursor = () => {
     damping: 28,
   };
 
-  function devfestHeroEnter(e: object) {
-    setCursorText("");
-    setCursorVariant("devfestHero");
-  }
-  function volunteer(e: object) {
-    setCursorText("🦸‍♂️🦸‍♀️");
-    setCursorVariant("volunteer");
-  }
-  function ticket(e: object) {
-    setCursorText("🎟️");
-    setCursorVariant("volunteer");
-  }
-  function speaker(e: object) {
-    setCursorText("🗣️");
-    setCursorVariant("volunteer");
-  }
+  const viewEnter = () => {
+    setCursorText("View");
+    setCursorVariant("view");
+  };
 
-  function devfestLeave(e: object) {
+  const viewLeave = () => {
     setCursorText("");
     setCursorVariant("default");
-  }
+  };
+
+  const continueEnter = () => {
+    setCursorText("Continue");
+    setCursorVariant("continue");
+
+    console.log("Entered");
+  };
+
+  const continueLeave = () => {
+    setCursorText("");
+    setCursorVariant("default");
+  };
 
   return {
-    devfestHeroEnter,
-    volunteer,
-    ticket,
-    speaker,
-    devfestLeave,
+    viewEnter,
+    viewLeave,
+    continueEnter,
+    continueLeave,
     cursorText,
     cursorVariant,
     ref,
