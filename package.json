@@ -17,6 +17,7 @@
     "eslint-config-next": "13.4.19",
     "framer-motion": "^10.16.4",
     "framer-motion-ticker": "^1.0.19",
+    "gsap": "^3.12.2",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",

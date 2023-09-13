@@ -1,6 +1,7 @@
 import Styles from "./styles.module.scss";
-
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { slideUp, appear, slideLeft } from "./animate";
 import bottomLeftPicture from "../../../assets/imgs/bottom-left.png";
 import topCenterPicture from "../../../assets/imgs/top-center.png";
 import bottomRightPicture from "../../../assets/imgs/bottom-right.png";
@@ -15,39 +16,75 @@ const DevfestHero = ({
   devfestLeave?: any;
 }) => {
   return (
-    <>
+    <motion.main
+      variants={slideUp}
+      initial="initial"
+      animate="enter"
+      className={Styles.landing}
+    >
       <div className={Styles["devfesthero__wrapper"]}>
         <div className={Styles["nigeria__map"]}></div>
         <div
           className={`${Styles.bubble__picture__frame} ${Styles.bottom__left}`}
         >
-          <Image src={bottomLeftPicture} alt="devfest Ibadan past event" />
+          <motion.div variants={appear} initial="initial" animate="enter">
+            <Image src={bottomLeftPicture} alt="devfest Ibadan past event" />
+          </motion.div>
         </div>
         <div
           className={`${Styles.bubble__picture__frame} ${Styles.top__center}`}
         >
-          <Image src={topCenterPicture} alt="devfest Ibadan past event" />
+          <motion.div variants={appear} initial="initial" animate="enter">
+            <Image src={topCenterPicture} alt="devfest Ibadan past event" />
+          </motion.div>
         </div>
         <div
           className={`${Styles.bubble__picture__frame} ${Styles.bottom__right}`}
         >
-          <Image src={bottomRightPicture} alt="devfest Ibadan past event" />
+          <motion.div variants={appear} initial="initial" animate="enter">
+            <Image src={bottomRightPicture} alt="devfest Ibadan past event" />
+          </motion.div>
         </div>
         <div
           className={`${Styles.bubble__picture__frame} ${Styles.top__right}`}
         >
-          <Image src={topRightPicture} alt="devfest Ibadan past event" />
+          <motion.div variants={appear} initial="initial" animate="enter">
+            <Image src={topRightPicture} alt="devfest Ibadan past event" />
+          </motion.div>
         </div>
         <div className={Styles["devfesthero__container"]}>
           <div className={Styles["devfesthero"]}>
             <div className={Styles["logo__container"]}>
-              <Image src={gdgIbadanLogo} alt="GDG Ibadan Logo" />
+              <motion.div variants={slideUp} initial="initial" animate="enter">
+                <Image src={gdgIbadanLogo} alt="GDG Ibadan Logo" />
+              </motion.div>
             </div>
             <div className={Styles["content"]}>
-              <h1 className={Styles["heading"]}>The Biggest Tech</h1>
-              <h1 className={Styles["heading"]}>Event is here again</h1>
+              <div className={Styles["mask"]}>
+                <motion.h1
+                  variants={slideUp}
+                  initial="initial"
+                  animate="enter"
+                  className={Styles["heading"]}
+                >
+                  The Biggest Tech
+                </motion.h1>
+                <motion.h1
+                  variants={slideUp}
+                  initial="initial"
+                  animate="enter"
+                  className={Styles["heading"]}
+                >
+                  Event is here again
+                </motion.h1>
+              </div>
               <div className={Styles["colored-texts-container"]}>
-                <h1 className={Styles["colored"]}>
+                <motion.h1
+                  initial="initial"
+                  animate={"enter"}
+                  variants={slideLeft}
+                  className={Styles["colored"]}
+                >
                   <span className={Styles["primary"]}>D</span>
                   <span className={Styles["danger"]}>E</span>
                   <span className={Styles["warning"]}>V</span>
@@ -59,7 +96,7 @@ const DevfestHero = ({
                   <span className={Styles["danger"]}>0</span>
                   <span className={Styles["warning"]}>2</span>
                   <span className={Styles["success"]}>3</span>
-                </h1>
+                </motion.h1>
               </div>
             </div>
           </div>
@@ -90,7 +127,7 @@ const DevfestHero = ({
           </a>
         </div>
       </div>
-    </>
+    </motion.main>
   );
 };
 
