@@ -38,35 +38,35 @@ const Speakers = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, de
     },
     {
       name: "KHAN DANIELS",
-      color: "var(--primary)",
+      color: "var(--warning)",
       role: "Product Designer",
       company: "Heyfood",
       image: Speaker1,
     },
     {
       name: "KHAN DANIELS",
-      color: "var(--warning)",
+      color: "var(--primary)",
       role: "Product Designer",
       company: "Heyfood",
       image: Speaker2,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--danger)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker3,
     },
     {
       name: "KHAN DANIELS",
       color: "var(--success)",
       role: "Product Designer",
       company: "Heyfood",
+      image: Speaker3,
+    },
+    {
+      name: "KHAN DANIELS",
+      color: "var(--danger)",
+      role: "Product Designer",
+      company: "Heyfood",
       image: Speaker4,
     },
     {
       name: "KHAN DANIELS",
-      color: "var(--primary)",
+      color: "var(--danger)",
       role: "Product Designer",
       company: "Heyfood",
       image: Speaker1,
@@ -80,7 +80,7 @@ const Speakers = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, de
     },
     {
       name: "KHAN DANIELS",
-      color: "var(--danger)",
+      color: "var(--primary)",
       role: "Product Designer",
       company: "Heyfood",
       image: Speaker3,
@@ -125,7 +125,7 @@ const Speakers = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, de
   ];
   return (
     <>
-      <div className={Styles["container"]} onMouseEnter={devfestHeroEnter} onMouseLeave={devfestLeave}>
+      <div className={Styles["container"]}>
         <div className={Styles["speakers__wrapper"]}>
           <div className={`${Styles.curve} ${Styles.left}`}></div>
           <div className={`${Styles.curve} ${Styles.right}`}></div>
