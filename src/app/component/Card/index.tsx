@@ -1,6 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import Styles from "./styles.module.scss";
 
+import InstagramIcon from "../../../assets/svgs/instagram.svg";
+import LinkedinIcon from "../../../assets/svgs/linkedin.svg";
+
 import { FC } from "react";
 
 interface cardInterface {
@@ -31,6 +34,16 @@ const Card: FC<cardInterface> = ({ data, title }) => {
             <h3>{name}</h3>
             <p>{`${role}, ${company}`}</p>
           </div>
+          <div className={Styles["speaker--card-socials"]}>
+          <div className={Styles["socials"]}>
+              <a href="!#" className={Styles["social"]}>
+                <Image src={InstagramIcon} alt="Instagram Icon"/>
+              </a>
+              <a href="!#" className={Styles["social"]}>
+                <Image src={LinkedinIcon} alt="Linkedin Icon"/>
+              </a>
+            </div>
+          </div>
         </div>
       )}
 
@@ -45,6 +58,16 @@ const Card: FC<cardInterface> = ({ data, title }) => {
           <div className={Styles["organizer--card-profile"]}>
             <h3>{name}</h3>
             <p>{`${role}, ${company}`}</p>
+          </div>
+          <div className={Styles["organizer--card-socials"]}>
+            <div className={Styles["socials"]}>
+              <a href="!#" className={Styles["social"]}>
+                <Image src={InstagramIcon} alt="Instagram Icon"/>
+              </a>
+              <a href="!#" className={Styles["social"]}>
+                <Image src={LinkedinIcon} alt="Linkedin Icon"/>
+              </a>
+            </div>
           </div>
         </div>
       )}
