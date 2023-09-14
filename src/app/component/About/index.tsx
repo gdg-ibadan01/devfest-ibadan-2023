@@ -22,7 +22,7 @@ const skills = [
   "CYBER SECURITY",
 ];
 
-const About = ({ devfestHeroEnter, devfestLeave }: { devfestHeroEnter: any, devfestLeave: any }) => {
+const About = () => {
   const [randomColors, setRandomColors] = useState<string[]>([]);
   const constraintsRef = useRef(null);
 
