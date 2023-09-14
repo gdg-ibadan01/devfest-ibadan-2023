@@ -2,7 +2,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import TextCarousel from "./component/Carousel/TextCarousel";
 import LogosCarousel from "./component/Carousel/LogosCarousel";
 import DevfestHero from "./component/DevfestHero";
 import About from "./component/About";
@@ -18,8 +17,6 @@ const Home = () => {
     cursorVariant,
     continueEnter,
     continueLeave,
-    viewEnter,
-    viewLeave,
     ref,
     variants,
     spring,
@@ -49,7 +46,6 @@ const Home = () => {
       >
         <span className="cursorText">{cursorText}</span>
       </motion.div>
-      <TextCarousel />
       <DevfestHero devfestEnter={continueEnter} devfestLeave={continueLeave} />
       <LogosCarousel />
       <About />

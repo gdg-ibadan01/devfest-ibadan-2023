@@ -1,11 +1,6 @@
 import useMouse from "@react-hook/mouse-position";
 import { useState, useRef } from "react";
 
-interface MousePositions {
-  mouseXPosition: number;
-  mouseYPosition: number;
-}
-
 const useCustomCursor = () => {
   const [cursorText, setCursorText] = useState("");
   const [cursorVariant, setCursorVariant] = useState("default");
@@ -69,16 +64,6 @@ const useCustomCursor = () => {
     damping: 28,
   };
 
-  const viewEnter = () => {
-    setCursorText("View");
-    setCursorVariant("view");
-  };
-
-  const viewLeave = () => {
-    setCursorText("");
-    setCursorVariant("default");
-  };
-
   const continueEnter = () => {
     setCursorText("Continue");
     setCursorVariant("continue");
@@ -92,8 +77,6 @@ const useCustomCursor = () => {
   };
 
   return {
-    viewEnter,
-    viewLeave,
     continueEnter,
     continueLeave,
     cursorText,
