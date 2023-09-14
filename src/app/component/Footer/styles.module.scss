@@ -49,6 +49,7 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    overflow: auto;
 
     @media screen and (max-width: 640px) {
       flex-wrap: wrap;
@@ -59,7 +60,7 @@
       width: 70%;
       height: 200px;
       padding: 0 6rem;
-      overflow: hidden;
+      overflow: auto;
 
       @media screen and (max-width: 820px) {
         padding: 0 2rem;

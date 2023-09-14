@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Styles from "./styles.module.scss";
 
-import InstagramIcon from "../../../assets/svgs/instagram.svg";
+import TwitterIcon from "../../../assets/svgs/twitter.svg";
 import LinkedinIcon from "../../../assets/svgs/linkedin.svg";
 
 import { FC } from "react";
@@ -37,7 +37,7 @@ const Card: FC<cardInterface> = ({ data, title }) => {
           <div className={Styles["speaker--card-socials"]}>
           <div className={Styles["socials"]}>
               <a href="!#" className={Styles["social"]}>
-                <Image src={InstagramIcon} alt="Instagram Icon"/>
+                <Image src={TwitterIcon} alt="Twitter Icon"/>
               </a>
               <a href="!#" className={Styles["social"]}>
                 <Image src={LinkedinIcon} alt="Linkedin Icon"/>
@@ -62,7 +62,7 @@ const Card: FC<cardInterface> = ({ data, title }) => {
           <div className={Styles["organizer--card-socials"]}>
             <div className={Styles["socials"]}>
               <a href="!#" className={Styles["social"]}>
-                <Image src={InstagramIcon} alt="Instagram Icon"/>
+                <Image src={TwitterIcon} alt="Twitter Icon"/>
               </a>
               <a href="!#" className={Styles["social"]}>
                 <Image src={LinkedinIcon} alt="Linkedin Icon"/>
