@@ -1,3 +1,4 @@
+import Magnetic from "../Magnetic";
 import { useRef } from "react";
 import Pills from "../Pills";
 import Styles from "./styles.module.scss";
@@ -12,27 +13,35 @@ const Footer = () => {
       <header className={Styles["container__header"]}>
         <h1>Follow Us</h1>
         <ul className={Styles["container__header--links"]}>
-          <li>
-            <a href="#">Speakers</a>
-          </li>
-          <li>
-            <a href="#">Register</a>
-          </li>
-          <li>
-            <a href="#">Sponsors</a>
-          </li>
-          <li>
-            <a href="#">Volunteers</a>
-          </li>
+          <Magnetic>
+            <li>
+              <a href="#">Speakers</a>
+            </li>
+          </Magnetic>
+          <Magnetic>
+            <li>
+              <a href="#">Register</a>
+            </li>
+          </Magnetic>
+          <Magnetic>
+            <li>
+              <a href="#">Sponsors</a>
+            </li>
+          </Magnetic>
+          <Magnetic>
+            <li>
+              <a href="#">Volunteers</a>
+            </li>
+          </Magnetic>
         </ul>
       </header>
       <footer className={Styles["container__footer"]} >
         <aside className={Styles["container__footer--socials"]} ref={constraintsRef}>
           <motion.section drag dragConstraints={constraintsRef}>
-            <Pills text="TWITTER" bgColor="var(--success)"/>
+            <Pills text="TWITTER" bgColor="var(--success)" />
           </motion.section>
           <motion.section drag dragConstraints={constraintsRef}>
-            <Pills text="FACEBOOK" bgColor="var(--warning)"/>
+            <Pills text="FACEBOOK" bgColor="var(--warning)" />
           </motion.section>
           <motion.section drag dragConstraints={constraintsRef}>
             <Pills text="INSTAGRAM" bgColor="var(--danger)" />

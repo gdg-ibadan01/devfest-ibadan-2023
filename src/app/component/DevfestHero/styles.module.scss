@@ -1,265 +1,274 @@
+.landing {
+  position: relative;
+  overflow: hidden;
+}
 .devfesthero__wrapper {
-    background-color: var(--dark);
-    width: 100vw;
-    height: 90vh;
+  background-color: var(--dark);
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  // cursor: none;
+
+  @media only screen and (min-width: 0px) and (max-width: 768px) {
+    height: 100vh;
+  }
+
+  @media only screen and (min-width: 250px) and (max-width: 480px) {
+    height: 100vh;
+  }
+
+  .nigeria__map {
+    width: 750px;
+    height: 610px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-image: url("../../../assets/imgs/nigeria-map.png");
+    background-size: contain;
+    background-position: top center;
+
+    @media only screen and (min-width: 250px) and (max-width: 480px) {
+      width: 374px;
+      height: 304px;
+      background-image: url("../../../assets/imgs/mobile-nigeria-map.png");
+    }
+  }
+
+  .bubble__picture__frame {
+    position: absolute;
+    border: 1.9px solid var(--white);
+    border-radius: 50%;
+    // background-color: green;
+    overflow: hidden;
+
+    &.bottom__left {
+      width: 368px;
+      height: 368px;
+      left: 15px;
+      bottom: 54px;
+      padding: 21px;
+
+      @media only screen and (min-width: 0px) and (max-width: 1024px) {
+        width: 140px;
+        height: 140px;
+        padding: 10px;
+      }
+
+      @media only screen and (min-width: 250px) and (max-width: 480px) {
+        width: 191px;
+        height: 191px;
+        bottom: 45px;
+        padding: 11px;
+      }
+    }
+
+    &.top__center {
+      width: 162px;
+      height: 162px;
+      top: 62px;
+      left: 700px;
+      padding: 12px;
+
+      @media only screen and (min-width: 0px) and (max-width: 1024px) {
+        left: 40px;
+      }
+
+      @media only screen and (min-width: 250px) and (max-width: 480px) {
+        left: 16px;
+        width: 126px;
+        height: 126px;
+        padding: 9px;
+      }
+    }
+
+    &.bottom__right,
+    &.top__right {
+      width: 210px;
+      height: 210px;
+      padding: 11px;
+
+      @media only screen and (min-width: 250px) and (max-width: 480px) {
+        padding: 7.7px;
+      }
+    }
+
+    &.bottom__right {
+      right: 166px;
+      bottom: 25px;
+
+      @media only screen and (min-width: 250px) and (max-width: 480px) {
+        width: 146px;
+        height: 146px;
+        right: 25px;
+        bottom: 185px;
+      }
+    }
+    &.top__right {
+      right: 181px;
+      top: 109px;
+
+      @media only screen and (min-width: 250px) and (max-width: 480px) {
+        width: 146px;
+        height: 146px;
+        top: 150px;
+        right: 16px;
+      }
+    }
+  }
+
+  .devfesthero__container {
+    margin: 0 auto;
     position: relative;
-    cursor: none;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-     @media only screen and (min-width: 0px) and (max-width: 768px) {
-        height: 100vh;
-    }
+    .devfesthero {
+      .logo__container {
+        width: 250px;
+        height: 38px;
+        margin-bottom: 28px;
+        overflow: hidden;
 
-    @media only screen and (min-width: 250px) and (max-width: 480px) { 
-        height: 100vh;
-     }
+        @media only screen and (min-width: 250px) and (max-width: 480px) {
+          display: none;
+        }
+      }
 
-    .nigeria__map {
-        width: 750px;
-        height: 610px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      .content {
+        .mask {
+          overflow: hidden;
+        }
+        h1.heading {
+          max-width: 790px;
+          font-size: 3.6em;
+          color: var(--white);
+          // font-family: 'Radio Grotesk';
 
-        background-image: url("../../../assets/imgs/nigeria-map.png");
-        background-size: contain;
-        background-position: top center;
+          &:nth-child(2) {
+            margin-left: 18%;
+          }
 
-       @media only screen and (min-width: 250px) and (max-width: 480px) { 
+          @media only screen and (min-width: 0px) and (max-width: 1024px) {
+            max-width: 100%;
+            font-size: 3em;
+          }
 
-            width: 374px;
-            height: 304px;
-            background-image: url("../../../assets/imgs/mobile-nigeria-map.png");
-         }
-    }
+          @media only screen and (min-width: 250px) and (max-width: 480px) {
+            max-width: 100%;
+            font-size: 1.7em;
 
-    .bubble__picture__frame {
-        position: absolute;
-        border: 1.9px solid var(--white);
-        border-radius: 50%;
+            &:nth-child(2) {
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .colored-texts-container {
+          display: flex;
+          width: 843px;
 
-        &.bottom__left {
-            width: 368px;
-            height: 368px;
-            left: 15px;
-            bottom: 54px;
-            padding: 21px;
+          @media only screen and (min-width: 0px) and (max-width: 1024px) {
+            width: 100%;
+          }
+
+          @media only screen and (min-width: 250px) and (max-width: 480px) {
+            width: 100%;
+          }
+
+          h1.colored {
+            font-size: 4.7em;
+            letter-spacing: 20px;
+            font-weight: 800;
+            margin-left: 26%;
 
             @media only screen and (min-width: 0px) and (max-width: 1024px) {
-                width: 140px;
-                height: 140px;
-                padding: 10px;
+              font-size: 4em;
+              margin-left: 0;
+              letter-spacing: 10px;
             }
 
-           @media only screen and (min-width: 250px) and (max-width: 480px) { 
-                width: 191px;
-                height: 191px;
-                bottom: 45px;
-                padding: 11px;
-             }   
-        }
-
-        &.top__center {
-            width: 162px;
-            height: 162px;
-            top: 62px;
-            left: 700px;
-            padding: 12px;
-
-            @media only screen and (min-width: 0px) and (max-width: 1024px) {
-                left: 40px;
+            @media only screen and (min-width: 250px) and (max-width: 480px) {
+              font-size: 1.9em;
+              margin-left: 0;
+              letter-spacing: 10px;
             }
 
-           @media only screen and (min-width: 250px) and (max-width: 480px) {
-                left: 16px;
-                width: 126px;
-                height: 126px;
-                padding: 9px;
-             }    
+            span.primary {
+              color: var(--primary);
+            }
+            span.success {
+              color: var(--success);
+            }
+            span.warning {
+              color: var(--warning);
+            }
+            span.danger {
+              color: var(--danger);
+            }
+
+            span {
+              &:nth-child(8) {
+                margin-left: 40px;
+
+                @media only screen and (min-width: 250px) and (max-width: 480px) {
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
         }
-
-        &.bottom__right,
-        &.top__right {
-            width: 210px;
-            height: 210px;
-            padding: 11px;
-
-           @media only screen and (min-width: 250px) and (max-width: 480px) { 
-               padding: 7.7px;
-             }
-        }
-
-        &.bottom__right {
-            right: 166px;
-            bottom: 25px;
-
-           @media only screen and (min-width: 250px) and (max-width: 480px) { 
-                width: 146px;
-                height: 146px;
-                right: 25px;
-                bottom: 185px;
-             }
-        }
-        &.top__right {
-            right: 181px;
-            top: 109px;
-
-           @media only screen and (min-width: 250px) and (max-width: 480px) { 
-                width: 146px;
-                height: 146px;
-                top: 150px;
-                right: 16px;
-             }
-        }
+      }
     }
-
-    .devfesthero__container {
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .devfesthero {
-            
-            .logo__container {
-                width: 250px;
-                height: 38px;
-                margin-bottom: 28px;
-
-               @media only screen and (min-width: 250px) and (max-width: 480px) { 
-                    display: none;
-                }
-            }
-
-            .content {
-                h1.heading {
-                    max-width: 790px;
-                    font-size: 3.6em;
-                    color: var(--white);
-                    // font-family: 'Radio Grotesk';
-
-                    &:nth-child(2) {
-                        margin-left: 18%;
-                    }
-
-                     @media only screen and (min-width: 0px) and (max-width: 1024px) {
-                        max-width: 100%;
-                        font-size: 3em;
-                    }
-
-                    @media only screen and (min-width: 250px) and (max-width: 480px) { 
-                        max-width: 100%;
-                        font-size: 1.7em;
-
-                        &:nth-child(2) {
-                            margin-bottom: 20px;
-                        }
-                     }
-                }
-                .colored-texts-container {
-                    display: flex;
-                    width: 843px;
-
-                    @media only screen and (min-width: 0px) and (max-width: 1024px) {
-                        width: 100%;
-                    }
-
-                    @media only screen and (min-width: 250px) and (max-width: 480px) { 
-                        width: 100%;
-                     }
-
-                    h1.colored {
-                        font-size: 4.7em;
-                        letter-spacing: 20px;
-                        font-weight: 800;
-                        margin-left: 26%;
-
-                         @media only screen and (min-width: 0px) and (max-width: 1024px) {
-                            font-size: 4em;
-                            margin-left: 0;
-                            letter-spacing: 10px;
-                        }
-
-                       @media only screen and (min-width: 250px) and (max-width: 480px) { 
-                        font-size: 1.9em;
-                        margin-left: 0;
-                        letter-spacing: 10px;
-                     }
-
-                        span.primary {
-                            color: var(--primary);
-                        }
-                        span.success {
-                            color: var(--success);
-                        }
-                        span.warning {
-                            color: var(--warning);
-                        }
-                        span.danger {
-                            color: var(--danger);
-                        }
-
-                        span {
-                            &:nth-child(8) {
-                                margin-left: 40px;
-
-                               @media only screen and (min-width: 250px) and (max-width: 480px) { 
-                                    margin-left: 10px;
-                                 }  
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 
 .devfest__ctas__wrapper {
-    cursor: none;
-    .devfest__ctas {
-        width: 100vw;
-        height: 109px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-        align-items: center;
+  .devfest__ctas {
+    width: 100vw;
+    min-height: 109px;
+    background-color: green;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
 
-       @media only screen and (min-width: 250px) and (max-width: 480px) { 
-            grid-template-columns: repeat(1, 1fr);
-            height: auto;
-         }
-
-        .devfest__cta {
-            text-align: center;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--white);
-
-           @media only screen and (min-width: 250px) and (max-width: 480px) { 
-                height: 85px;
-             }
-
-            h3 {
-                text-transform: uppercase;
-                font-size: 1.6em;
-            }
-
-            &.bas__warning {
-                background-color: var(--warning);
-            }
-            &.gt__primary {
-                background-color: var(--primary);
-            }
-            &.bav__success {
-                background-color: var(--success);
-            }
-        }
+    @media only screen and (min-width: 250px) and (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+      height: auto;
     }
+
+    .devfest__cta {
+      text-align: center;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--white);
+      cursor: none;
+
+      @media only screen and (min-width: 250px) and (max-width: 480px) {
+        height: 85px;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        font-size: 1.6em;
+      }
+
+      &.bas__warning {
+        background-color: var(--warning);
+      }
+      &.gt__primary {
+        background-color: var(--primary);
+      }
+      &.bav__success {
+        background-color: var(--success);
+      }
+    }
+  }
 }

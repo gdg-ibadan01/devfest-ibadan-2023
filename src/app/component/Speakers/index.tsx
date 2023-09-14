@@ -1,12 +1,17 @@
 import Styles from "./styles.module.scss";
-
 import Card from "../Card";
 import Speaker1 from "../../../assets/imgs/speakers/speaker1.png";
 import Speaker2 from "../../../assets/imgs/speakers/speaker2.png";
 import Speaker3 from "../../../assets/imgs/speakers/speaker3.png";
 import Speaker4 from "../../../assets/imgs/speakers/speaker4.png";
+import { FC } from "react";
 
-const Speakers = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, devfestLeave: any}) => {
+interface iSpeaker {
+  entered?: () => void;
+  leave?: () => void;
+}
+
+const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
   const speakers = [
     {
       name: "KHAN DANIELS",
@@ -123,6 +128,7 @@ const Speakers = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, de
       image: Speaker1,
     },
   ];
+
   return (
     <>
       <div className={Styles["container"]}>
@@ -138,21 +144,26 @@ const Speakers = ({ devfestHeroEnter, devfestLeave }: {devfestHeroEnter: any, de
             {speakers.map((speaker, index) => (
               <Card key={index} data={speaker} title={"speaker"} />
             ))}
-            <div
-              className={`${Styles["speaker--card"]} ${Styles.big} ${Styles.bas}`}
+            <a
+              href="https://sessionize.com/devfest-ibadan-2023/"
+              target="_blank"
             >
-              <span className="__icon wh-48">
-                <i className="plus--icon"></i>
-              </span>
-              <h3>BECOME A SPEAKER</h3>
-            </div>
+              <div
+                className={`${Styles["speaker--card"]} ${Styles.big} ${Styles.bas}`}
+              >
+                <span className="__icon wh-48">
+                  <i className="plus--icon"></i>
+                </span>
+                <h3>BECOME A SPEAKER</h3>
+              </div>
+            </a>
           </div>
         </div>
         <div className={Styles["organizers__wrapper"]}>
           <div className={Styles["organizers__content"]}>
             <div className={Styles["organizers__content--title"]}>
               <h1>The organisers</h1>
-              <p>The Special Event Company Team</p>
+              <p>Meet the Minds Behind the Magic</p>
             </div>
           </div>
           <div className={Styles["organizers__cards"]}>

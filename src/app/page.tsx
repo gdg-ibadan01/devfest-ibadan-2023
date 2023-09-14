@@ -2,7 +2,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import TextCarousel from "./component/Carousel/TextCarousel";
 import LogosCarousel from "./component/Carousel/LogosCarousel";
 import DevfestHero from "./component/DevfestHero";
 import About from "./component/About";
@@ -16,11 +15,8 @@ const Home = () => {
   const {
     cursorText,
     cursorVariant,
-    volunteer,
-    ticket,
-    speaker,
-    devfestHeroEnter,
-    devfestLeave,
+    continueEnter,
+    continueLeave,
     ref,
     variants,
     spring,
@@ -38,7 +34,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} id="hero" data-scroll-container>
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
@@ -50,18 +46,11 @@ const Home = () => {
       >
         <span className="cursorText">{cursorText}</span>
       </motion.div>
-      <TextCarousel />
-      <DevfestHero
-        devfestHeroEnter={devfestHeroEnter}
-        volunteer={volunteer}
-        devfestLeave={devfestLeave}
-        ticket={ticket}
-        speaker={speaker}
-      />
+      <DevfestHero devfestEnter={continueEnter} devfestLeave={continueLeave} />
       <LogosCarousel />
-      <About devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave}/>
-      <Countdown devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave}/>
-      <Speakers devfestHeroEnter={devfestHeroEnter} devfestLeave={devfestLeave}/>
+      <About />
+      <Countdown />
+      <Speakers />
       <Footer />
     </div>
   );

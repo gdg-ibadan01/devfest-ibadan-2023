@@ -35,12 +35,12 @@ const Card: FC<cardInterface> = ({ data, title }) => {
             <p>{`${role}, ${company}`}</p>
           </div>
           <div className={Styles["speaker--card-socials"]}>
-          <div className={Styles["socials"]}>
+            <div className={Styles["socials"]}>
               <a href="!#" className={Styles["social"]}>
                 <Image src={TwitterIcon} alt="Twitter Icon"/>
               </a>
               <a href="!#" className={Styles["social"]}>
-                <Image src={LinkedinIcon} alt="Linkedin Icon"/>
+                <Image src={LinkedinIcon} alt="Linkedin Icon" />
               </a>
             </div>
           </div>
@@ -65,7 +65,7 @@ const Card: FC<cardInterface> = ({ data, title }) => {
                 <Image src={TwitterIcon} alt="Twitter Icon"/>
               </a>
               <a href="!#" className={Styles["social"]}>
-                <Image src={LinkedinIcon} alt="Linkedin Icon"/>
+                <Image src={LinkedinIcon} alt="Linkedin Icon" />
               </a>
             </div>
           </div>

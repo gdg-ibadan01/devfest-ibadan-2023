@@ -1,10 +1,28 @@
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
 .container {
   width: 100vw;
   overflow: auto;
   padding: 2rem 20px;
   background-color: var(--dark);
   background: url("../../../assets/imgs/cbg.png") center center;
-  cursor: none;
+  // cursor: none;
 
   &__title {
     text-align: center;
