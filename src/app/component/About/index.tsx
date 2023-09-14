@@ -1,8 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Pills from "../Pills";
 import Styles from "./styles.module.scss";
 import Button from "../Button";
+
+import { motion } from "framer-motion";
 
 const colorVariables = ["--primary", "--warning", "--success", "--danger"];
 
@@ -22,6 +24,7 @@ const skills = [
 
 const About = () => {
   const [randomColors, setRandomColors] = useState<string[]>([]);
+  const constraintsRef = useRef(null);
 
   useEffect(() => {
     const randomColorArray = Array.from({ length: skills.length }, () => {
@@ -33,7 +36,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className={Styles["container"]}>
+    <div className={Styles["container"]} ref={constraintsRef}>
       <section className={Styles["container__text"]}>
         <h1>What is devfest?</h1>
         <p>
@@ -51,13 +54,13 @@ const About = () => {
         </p>
         <Button>Become a Sponsor</Button>
       </section>
-      <section className={Styles["container__pills"]}>
-        {skills.map((data, idx) => (
-          <div key={idx} className={Styles["container__pills--el"]}>
-            <Pills text={data} bgColor={`var(${randomColors[idx]})`} />
-          </div>
-        ))}
-      </section>
+        <section className={Styles["container__pills"]}>
+          {skills.map((data, idx) => (
+            <motion.div key={idx} className={Styles["container__pills--el"]} drag dragConstraints={constraintsRef}>
+              <Pills text={data} bgColor={`var(${randomColors[idx]})`} />
+            </motion.div>
+          ))}
+        </section>
     </div>
   );
 };
