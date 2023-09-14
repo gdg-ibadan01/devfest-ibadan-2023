@@ -34,7 +34,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} id="hero" data-scroll-container>
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>

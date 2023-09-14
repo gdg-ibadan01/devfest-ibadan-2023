@@ -27,7 +27,7 @@ body {
   scroll-behavior: smooth;
   font-family: var(--font-cabinet-grotesk), "sans-serif";
   font-weight: 500;
-  overflow-x: hidden;
+  overflow: hidden;
   cursor: wait;
 }
 
@@ -66,8 +66,6 @@ img {
   }
 }
 
-
-
 .circle {
   position: fixed;
   z-index: 100;
@@ -86,9 +84,9 @@ img {
   text-align: center;
   font-size: 16px;
 
-  @media only screen and (min-width: 250px) and (max-width: 480px) { 
+  @media only screen and (min-width: 250px) and (max-width: 480px) {
     display: none;
- }
+  }
 }
 
 .cursorText {
