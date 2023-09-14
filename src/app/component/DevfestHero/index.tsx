@@ -108,6 +108,8 @@ const DevfestHero = ({
             className={`${Styles.devfest__cta} ${Styles.bas__warning}`}
             onMouseEnter={devfestEnter}
             onMouseLeave={devfestLeave}
+            href="https://sessionize.com/devfest-ibadan-2023/"
+            target="_blank"
           >
             <h3>become a speaker</h3>
           </a>
@@ -115,6 +117,8 @@ const DevfestHero = ({
             className={`${Styles.devfest__cta} ${Styles.gt__primary}`}
             onMouseEnter={devfestEnter}
             onMouseLeave={devfestLeave}
+            href="https://gdg.community.dev/events/details/google-gdg-ibadan-presents-devfest-ibadan-2023/"
+            target="_blank"
           >
             <h3>get ticket</h3>
           </a>

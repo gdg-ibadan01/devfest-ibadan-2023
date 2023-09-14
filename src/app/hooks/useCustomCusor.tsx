@@ -50,9 +50,10 @@ const useCustomCursor = () => {
       opacity: 1,
       backgroundColor: "var(--white)",
       color: "var(--dark)",
-      height: 100,
-      width: 100,
-      fontSize: "18px",
+      height: 110,
+      width: 110,
+      fontSize: "16px",
+      fontWeight: "bold",
       x: mouseXPosition - 32,
       y: mouseYPosition - 32,
     },
@@ -65,7 +66,7 @@ const useCustomCursor = () => {
   };
 
   const continueEnter = () => {
-    setCursorText("Continue");
+    setCursorText("CONTINUE");
     setCursorVariant("continue");
 
     console.log("Entered");

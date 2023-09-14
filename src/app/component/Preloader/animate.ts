@@ -14,7 +14,7 @@ export const textSlideUp = {
   },
   open: (i: any) => ({
     y: "0%",
-    transition: { duration: 0.6, ease: [0.45, 0, 0.55, 1], delay: 0.02 * i },
+    transition: { duration: 0.6, ease: [0.45, 0, 0.55, 1], delay: 0.01 * i },
   }),
   closed: {
     // y: "100%",
