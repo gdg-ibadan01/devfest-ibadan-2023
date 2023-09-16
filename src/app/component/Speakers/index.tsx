@@ -98,6 +98,8 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       role: "GDG Ibadan Lead",
       company: "Aiti",
       image: Speaker1,
+      twitterUrl: "https://twitter.com/Eeskay01",
+      linkedinUrl: "https://www.linkedin.com/in/tiamiyu-sikiru-abidemi/",
     },
     {
       name: "JOSHUA OLAJIDE",
@@ -105,13 +107,17 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       role: "GDG Ibadan Co-Lead",
       company: "ARM GROUP",
       image: Speaker2,
+      twitterUrl: "https://twitter.com/olatojosh",
+      linkedinUrl: "https://www.linkedin.com/in/joshtom/",
     },
     {
       name: "BASHEEROH AKINPELU",
       color: "var(--danger)",
-      role: "",
-      company: "WTM Ibadan Lead",
+      role: "WTM Ibadan Lead",
+      company: "",
       image: Speaker3,
+      twitterUrl: "https://x.com/basheeroha?s=11&t=Jc4DmAKHJZJreybAmBsz5A",
+      linkedinUrl: "https://www.linkedin.com/in/basheeroh-akinpelu-74923a198",
     },
     {
       name: "Wuraola Akinlade",
@@ -119,6 +125,8 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       role: "WTM Ibadan Co-Lead",
       company: "",
       image: Speaker4,
+      twitterUrl: "https://twitter.com/wuraolakinlade",
+      linkedinUrl: "https://www.linkedin.com/in/odunayo-akinlade/",
     },
     {
       name: "TOBI OLADUNJOYE",
@@ -126,6 +134,8 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       role: "GDG Ibadan Design Lead",
       company: "",
       image: Speaker1,
+      twitterUrl: "https://twitter.com/teathobi",
+      linkedinUrl: "https://www.linkedin.com/in/teathobi",
     },
   ];
 

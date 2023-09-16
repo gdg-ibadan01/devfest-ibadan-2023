@@ -13,12 +13,14 @@ interface cardInterface {
     company: string;
     color: string;
     image: StaticImageData;
+    twitterUrl?: string;
+    linkedinUrl?: string;
   };
   title: string;
 }
 
 const Card: FC<cardInterface> = ({ data, title }) => {
-  const { name, role, company, color, image } = data;
+  const { name, role, company, color, image, twitterUrl, linkedinUrl } = data;
 
   return (
     <>
@@ -37,7 +39,7 @@ const Card: FC<cardInterface> = ({ data, title }) => {
           <div className={Styles["speaker--card-socials"]}>
             <div className={Styles["socials"]}>
               <a href="!#" className={Styles["social"]}>
-                <Image src={TwitterIcon} alt="Twitter Icon"/>
+                <Image src={TwitterIcon} alt="Twitter Icon" />
               </a>
               <a href="!#" className={Styles["social"]}>
                 <Image src={LinkedinIcon} alt="Linkedin Icon" />
@@ -61,10 +63,14 @@ const Card: FC<cardInterface> = ({ data, title }) => {
           </div>
           <div className={Styles["organizer--card-socials"]}>
             <div className={Styles["socials"]}>
-              <a href="!#" className={Styles["social"]}>
-                <Image src={TwitterIcon} alt="Twitter Icon"/>
+              <a href={twitterUrl} className={Styles["social"]} target="_blank">
+                <Image src={TwitterIcon} alt="Twitter Icon" />
               </a>
-              <a href="!#" className={Styles["social"]}>
+              <a
+                href={linkedinUrl}
+                className={Styles["social"]}
+                target="_blank"
+              >
                 <Image src={LinkedinIcon} alt="Linkedin Icon" />
               </a>
             </div>
