@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
 import Styles from "./styles.module.scss";
-
 import TwitterIcon from "../../../assets/svgs/twitter.svg";
 import LinkedinIcon from "../../../assets/svgs/linkedin.svg";
 
@@ -15,12 +14,14 @@ interface cardInterface {
     image: StaticImageData;
     twitterUrl?: string;
     linkedinUrl?: string;
+    height?: string;
   };
   title: string;
 }
 
 const Card: FC<cardInterface> = ({ data, title }) => {
-  const { name, role, company, color, image, twitterUrl, linkedinUrl } = data;
+  const { name, role, company, color, image, twitterUrl, linkedinUrl, height } =
+    data;
 
   return (
     <>
@@ -52,10 +53,24 @@ const Card: FC<cardInterface> = ({ data, title }) => {
       {title === "organizer" && (
         <div
           className={`${Styles["speaker--card"]} ${Styles.medium}`}
-          style={{ backgroundColor: "#E9ECED" }}
+          style={{
+            backgroundColor: "#E9ECED",
+            display: "flex",
+          }}
         >
-          <div className={Styles["organizer--card-image"]}>
-            <Image src={image} alt={`${name} headshot`} />
+          <div
+            className={Styles["organizer--card-image"]}
+            style={{ marginTop: "auto" }}
+          >
+            <Image
+              src={image}
+              alt={`${name} headshot`}
+              style={{
+                objectFit: "cover",
+                height: `${height}px`,
+                width: "100%",
+              }}
+            />
           </div>
           <div className={Styles["organizer--card-profile"]}>
             <h3>{name}</h3>
