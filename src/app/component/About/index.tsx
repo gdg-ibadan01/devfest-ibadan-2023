@@ -36,7 +36,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className={Styles["container"]} ref={constraintsRef}>
+    <div className={Styles["container"]}>
       <section className={Styles["container__text"]}>
         <h1>What is devfest?</h1>
         <p>
@@ -54,13 +54,18 @@ const About = () => {
         </p>
         <Button>Become a Sponsor</Button>
       </section>
-        <section className={Styles["container__pills"]}>
-          {skills.map((data, idx) => (
-            <motion.div key={idx} className={Styles["container__pills--el"]} drag dragConstraints={constraintsRef}>
-              <Pills text={data} bgColor={`var(${randomColors[idx]})`} />
-            </motion.div>
-          ))}
-        </section>
+      <section className={Styles["container__pills"]} ref={constraintsRef}>
+        {skills.map((data, idx) => (
+          <motion.div
+            key={idx}
+            className={Styles["container__pills--el"]}
+            drag
+            dragConstraints={constraintsRef}
+          >
+            <Pills text={data} bgColor={`var(${randomColors[idx]})`} />
+          </motion.div>
+        ))}
+      </section>
     </div>
   );
 };
