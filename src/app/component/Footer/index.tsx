@@ -2,11 +2,12 @@ import Magnetic from "../Magnetic";
 import { useRef } from "react";
 import Pills from "../Pills";
 import Styles from "./styles.module.scss";
-
 import { motion } from "framer-motion";
 
 const Footer = () => {
   const constraintsRef = useRef(null);
+
+  const handleRoute = (url: string) => window.open(`${url}`, "_blank");
 
   return (
     <div className={Styles.container}>
@@ -15,17 +16,32 @@ const Footer = () => {
         <ul className={Styles["container__header--links"]}>
           <Magnetic>
             <li>
-              <a href="#">Speakers</a>
+              <a
+                href="https://sessionize.com/devfest-ibadan-2023/"
+                target="_blank"
+              >
+                Speakers
+              </a>
             </li>
           </Magnetic>
           <Magnetic>
             <li>
-              <a href="#">Register</a>
+              <a
+                href="https://gdg.community.dev/events/details/google-gdg-ibadan-presents-devfest-ibadan-2023/"
+                target="_blank"
+              >
+                Register
+              </a>
             </li>
           </Magnetic>
           <Magnetic>
             <li>
-              <a href="#">Sponsors</a>
+              <a
+                href="https://drive.google.com/drive/folders/15Hhrb7A_fypcxiIOuvneVgehYxwSh2rh?usp=drive_link"
+                target="_blank"
+              >
+                Sponsors
+              </a>
             </li>
           </Magnetic>
           <Magnetic>
@@ -35,16 +51,35 @@ const Footer = () => {
           </Magnetic>
         </ul>
       </header>
-      <footer className={Styles["container__footer"]} >
-        <aside className={Styles["container__footer--socials"]} ref={constraintsRef}>
+      <footer className={Styles["container__footer"]}>
+        <aside
+          className={Styles["container__footer--socials"]}
+          ref={constraintsRef}
+        >
           <motion.section drag dragConstraints={constraintsRef}>
-            <Pills text="TWITTER" bgColor="var(--success)" />
+            <Pills
+              text="TWITTER"
+              bgColor="var(--success)"
+              handleRoute={() => handleRoute("https://twitter.com/gdgibadan")}
+            />
           </motion.section>
           <motion.section drag dragConstraints={constraintsRef}>
-            <Pills text="FACEBOOK" bgColor="var(--warning)" />
+            <Pills
+              text="FACEBOOK"
+              bgColor="var(--warning)"
+              handleRoute={() =>
+                handleRoute("https://web.facebook.com/gdgibadan1/")
+              }
+            />
           </motion.section>
           <motion.section drag dragConstraints={constraintsRef}>
-            <Pills text="INSTAGRAM" bgColor="var(--danger)" />
+            <Pills
+              text="INSTAGRAM"
+              bgColor="var(--danger)"
+              handleRoute={() =>
+                handleRoute("https://www.instagram.com/gdgibadan/")
+              }
+            />
           </motion.section>
         </aside>
         <aside className={Styles["container__footer--copyright"]}>
