@@ -6,12 +6,12 @@ const EventDate = () => {
     <div className={Styles.container}>
       <div className={Styles.wrapper}>
         <Ticker duration={60}>
-          <p> December 3rd 2024 - December 3rd 2023 &nbsp; </p>
-          <p> December 3rd 2024 - December 3rd 2023 </p>
+          <p> December 2nd 2023 - December 2rd 2023 &nbsp; </p>
+          <p> December 2nd 2023 - December 2nd 2023 &nbsp; </p>
         </Ticker>
         <Ticker duration={30}>
-          <p>ICC UI Second Gate - ICC UI Second Gate &nbsp;</p>
-          <p>ICC UI Second Gate - ICC UI Second Gate</p>
+          <p>Kakanfo Inn & Conference Center - Kakanfo Inn & Conference Center &nbsp;</p>
+          <p>Kakanfo Inn & Conference Center - Kakanfo Inn & Conference Center &nbsp;</p>
         </Ticker>
       </div>
     </div>
