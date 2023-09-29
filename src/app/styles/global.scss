@@ -5,16 +5,93 @@ html {
   --warning: #fbbc04;
   --success: #34a853;
   --danger: #ea4335;
+  --light-gray: #e9eced;
+  --gray: #213c4e;
+  --gray-light: #336383;
   --white: #fff;
-  --font-grotesk: "grotesk";
+  --dark: #0e1921;
+  --font-radio-grotesk: "Radio Grotesk";
+  --font-cabinet-grotesk: "Cabinet Grotesk";
+  --pad: "10px";
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-size: 16px;
+  font-size: 20px;
   width: 100%;
   scroll-behavior: smooth;
+  font-family: var(--font-cabinet-grotesk), "sans-serif";
+  font-weight: 500;
+  overflow-x: hidden;
+  cursor: wait;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.__icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+
+  &.wh-48 {
+    width: 48px;
+    height: 48px;
+  }
+
+  i {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100%;
+    display: block;
+
+    &.diagonal__arrow {
+      background-image: url("../../assets/svgs/diagonal-arrow.svg");
+    }
+    &.plus--icon {
+      background-image: url("../../assets/svgs/plus.svg");
+    }
+  }
+}
+
+.circle {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  background-color: #1e91d6;
+  border-radius: 200px;
+  pointer-events: none;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+
+  @media only screen and (min-width: 250px) and (max-width: 480px) {
+    display: none;
+  }
+}
+
+.cursorText {
+  flex: auto;
+  font-size: inherit;
+  pointer-events: none;
+  margin: auto;
 }

@@ -1,40 +1,57 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
-
-import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
-import "./page.css";
-import { useToggle } from "./hooks/useToggle";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import LogosCarousel from "./component/Carousel/LogosCarousel";
+import DevfestHero from "./component/DevfestHero";
+import About from "./component/About";
+import Countdown from "./component/Countdown";
+import Speakers from "./component/Speakers";
+import Footer from "./component/Footer";
+import useCustomCursor from "./hooks/useCustomCusor";
+import Preloader from "./component/Preloader";
 
 const Home = () => {
-  const router = useRouter();
-  const handleClick = () => router.push("/about");
-  const [isVisible, setIsVisible] = useToggle(false);
+  const {
+    cursorText,
+    cursorVariant,
+    continueEnter,
+    continueLeave,
+    ref,
+    variants,
+    spring,
+  } = useCustomCursor();
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    (async () => {
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
+
   return (
-    <div className="container">
-      {isVisible ? (
-        <motion.div
-          className="box"
-          animate={{
-            scale: [1, 2, 2, 1, 1],
-            rotate: [0, 0, 180, 180, 0],
-            borderRadius: ["0%", "0%", "50%", "50%", "0%"],
-          }}
-          transition={{
-            duration: 2,
-            ease: "easeInOut",
-            times: [0, 0.2, 0.5, 0.8, 1],
-            repeat: Infinity,
-            repeatDelay: 1,
-          }}
-        />
-      ) : (
-        <div className="box"></div>
-      )}
-      <h1>DEVFEST 2023</h1>
-      <button onClick={handleClick}>About Page</button>
-      <button onClick={setIsVisible}>
-        {isVisible ? "STOP ANIMATION" : "ANIMATE"}{" "}
-      </button>
+    <div ref={ref} id="hero">
+      <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
+      <motion.div
+        variants={variants}
+        className="circle"
+        animate={cursorVariant}
+        transition={spring}
+      >
+        <span className="cursorText">{cursorText}</span>
+      </motion.div>
+      <DevfestHero devfestEnter={continueEnter} devfestLeave={continueLeave} />
+      <LogosCarousel />
+      <About />
+      <Countdown />
+      <Speakers />
+      <Footer />
     </div>
   );
 };
