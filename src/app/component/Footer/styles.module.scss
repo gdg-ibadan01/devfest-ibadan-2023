@@ -59,7 +59,7 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    overflow: auto;
+    // overflow: auto;
 
     @media screen and (max-width: 640px) {
       flex-wrap: wrap;
@@ -80,20 +80,21 @@
         width: 100%;
       }
 
-      section {
+      &-sect {
         position: absolute;
         transform-origin: center top;
+        // background-color: red !important;
 
         &:nth-child(1) {
           top: 4rem;
           transform: rotate(17deg);
 
-          & > div {
+          & > div > div {
             padding: 15px 80px;
           }
 
           @media screen and (max-width: 820px) {
-            & > div {
+            & > div > div {
               padding: 15px 40px;
             }
           }
@@ -108,14 +109,14 @@
           left: 20rem;
           transform: rotate(-27deg);
 
-          & > div {
+          & > div > div {
             padding: 15px 80px;
           }
 
           @media screen and (max-width: 820px) {
             left: 12rem;
 
-            & > div {
+            & > div > div {
               padding: 15px 40px;
             }
           }
@@ -132,7 +133,7 @@
           left: 38rem;
           transform: rotate(13deg);
 
-          & > div {
+          & > div > div {
             padding: 15px 80px;
           }
 
@@ -140,7 +141,7 @@
             left: 23rem;
             top: 8rem;
 
-            & > div {
+            & > div > div {
               padding: 15px 40px;
             }
           }
