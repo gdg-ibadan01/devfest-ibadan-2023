@@ -35,6 +35,13 @@ const About = () => {
     setRandomColors(randomColorArray);
   }, []);
 
+  const sponsorsPage = () => {
+    var anchor = document.createElement('a');
+    anchor.target = "_blank";
+    anchor.href = "https://drive.google.com/drive/folders/15Hhrb7A_fypcxiIOuvneVgehYxwSh2rh?usp=drive_link";
+    anchor.click();
+  }
+
   return (
     <div className={Styles["container"]}>
       <section className={Styles["container__text"]}>
@@ -52,7 +59,7 @@ const About = () => {
           and economic impact, DevFest offers an amazing platform for developers
           to connect locally, learn, and build on Google's tools.
         </p>
-        <Button>Become a Sponsor</Button>
+        <Button onClick={() => sponsorsPage()}>Become a Sponsor</Button>
       </section>
       <section className={Styles["container__pills"]} ref={constraintsRef}>
         {skills.map((data, idx) => (
