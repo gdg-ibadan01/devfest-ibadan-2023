@@ -56,31 +56,37 @@ const Footer = () => {
           className={Styles["container__footer--socials"]}
           ref={constraintsRef}
         >
-          <motion.section drag dragConstraints={constraintsRef}>
-            <Pills
-              text="TWITTER"
-              bgColor="var(--success)"
-              handleRoute={() => handleRoute("https://twitter.com/gdgibadan")}
-            />
-          </motion.section>
-          <motion.section drag dragConstraints={constraintsRef}>
-            <Pills
-              text="FACEBOOK"
-              bgColor="var(--warning)"
-              handleRoute={() =>
-                handleRoute("https://web.facebook.com/gdgibadan1/")
-              }
-            />
-          </motion.section>
-          <motion.section drag dragConstraints={constraintsRef}>
-            <Pills
-              text="INSTAGRAM"
-              bgColor="var(--danger)"
-              handleRoute={() =>
-                handleRoute("https://www.instagram.com/gdgibadan/")
-              }
-            />
-          </motion.section>
+          <section className={Styles["container__footer--socials-sect"]}>
+            <motion.div drag dragConstraints={constraintsRef}>
+              <Pills
+                text="TWITTER"
+                bgColor="var(--success)"
+                handleRoute={() => handleRoute("https://twitter.com/gdgibadan")}
+              />
+            </motion.div>
+          </section>
+          <section className={Styles["container__footer--socials-sect"]}>
+            <motion.div drag dragConstraints={constraintsRef}>
+              <Pills
+                text="FACEBOOK"
+                bgColor="var(--warning)"
+                handleRoute={() =>
+                  handleRoute("https://web.facebook.com/gdgibadan1/")
+                }
+              />
+            </motion.div>
+          </section>
+          <section className={Styles["container__footer--socials-sect"]}>
+            <motion.div drag dragConstraints={constraintsRef}>
+              <Pills
+                text="INSTAGRAM"
+                bgColor="var(--danger)"
+                handleRoute={() =>
+                  handleRoute("https://www.instagram.com/gdgibadan/")
+                }
+              />
+            </motion.div>
+          </section>
         </aside>
         <aside className={Styles["container__footer--copyright"]}>
           <p>&copy; gdgibadan2023</p>
