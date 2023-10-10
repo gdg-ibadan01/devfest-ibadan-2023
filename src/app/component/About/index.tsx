@@ -59,8 +59,8 @@ const About = () => {
           <motion.div
             key={idx}
             className={Styles["container__pills--el"]}
-            drag
-            dragConstraints={constraintsRef}
+            // drag
+            // dragConstraints={constraintsRef}
           >
             <Pills text={data} bgColor={`var(${randomColors[idx]})`} />
           </motion.div>
