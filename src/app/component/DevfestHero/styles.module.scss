@@ -3,10 +3,24 @@
   overflow: hidden;
 }
 .devfesthero__wrapper {
+  position: relative;
   background-color: var(--dark);
   width: 100vw;
   height: 90vh;
   position: relative;
+  background-image: url("../../../assets/imgs/ibadan.png");
+  background-size: cover;
+  background-position: top center;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0e1921c8;
+  }
   // cursor: none;
 
   @media only screen and (min-width: 0px) and (max-width: 768px) {
@@ -17,24 +31,20 @@
     height: 100vh;
   }
 
-  .nigeria__map {
-    width: 750px;
-    height: 610px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  // .nigeria__map {
+  //   width: 750px;
+  //   height: 610px;
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
 
-    background-image: url("../../../assets/imgs/nigeria-map.png");
-    background-size: contain;
-    background-position: top center;
-
-    @media only screen and (min-width: 250px) and (max-width: 480px) {
-      width: 374px;
-      height: 304px;
-      background-image: url("../../../assets/imgs/mobile-nigeria-map.png");
-    }
-  }
+  //   @media only screen and (min-width: 250px) and (max-width: 480px) {
+  //     width: 374px;
+  //     height: 304px;
+  //     background-image: url("../../../assets/imgs/ibadan.png");
+  //   }
+  // }
 
   .bubble__picture__frame {
     position: absolute;
