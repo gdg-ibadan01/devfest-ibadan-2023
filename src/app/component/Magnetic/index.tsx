@@ -11,7 +11,6 @@ const Magnetic: FC<iMagnetic> = ({ children }) => {
   useEffect(() => {
     // const currentElement = magnetic.current as HTMLElement | null;
     const currentElement = magnetic.current as any;
-    console.log(children);
     const xTo = gsap.quickTo(magnetic.current, "x", {
       duration: 1,
       ease: "elastic.out(1, 0.3)",
