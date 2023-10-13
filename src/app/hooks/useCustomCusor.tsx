@@ -68,8 +68,6 @@ const useCustomCursor = () => {
   const continueEnter = () => {
     setCursorText("CONTINUE");
     setCursorVariant("continue");
-
-    console.log("Entered");
   };
 
   const continueLeave = () => {
