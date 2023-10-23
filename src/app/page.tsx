@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { useEffect, useState } from "react";
+import Script from "next/script";
 import { AnimatePresence, motion } from "framer-motion";
 import LogosCarousel from "./component/Carousel/LogosCarousel";
 import DevfestHero from "./component/DevfestHero";
@@ -52,6 +53,19 @@ const Home = () => {
       <Countdown />
       <Speakers />
       <Footer />
+
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-3ZTJL4VVVR"
+      ></Script>
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-3ZTJL4VVVR');`}
+      </Script>
     </div>
   );
 };
