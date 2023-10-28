@@ -4,7 +4,7 @@ import Pills from "../Pills";
 import Styles from "./styles.module.scss";
 import Button from "../Button";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 
 const colorVariables = ["--primary", "--warning", "--success", "--danger"];
 
@@ -25,6 +25,7 @@ const skills = [
 const About = () => {
   const [randomColors, setRandomColors] = useState<string[]>([]);
   const constraintsRef = useRef(null);
+  const rotation = useMotionValue(-10);
 
   useEffect(() => {
     const randomColorArray = Array.from({ length: skills.length }, () => {
@@ -34,13 +35,6 @@ const About = () => {
 
     setRandomColors(randomColorArray);
   }, []);
-
-  const sponsorsPage = () => {
-    var anchor = document.createElement('a');
-    anchor.target = "_blank";
-    anchor.href = "https://drive.google.com/drive/folders/15Hhrb7A_fypcxiIOuvneVgehYxwSh2rh?usp=drive_link";
-    anchor.click();
-  }
 
   return (
     <div className={Styles["container"]}>
@@ -59,18 +53,15 @@ const About = () => {
           and economic impact, DevFest offers an amazing platform for developers
           to connect locally, learn, and build on Google's tools.
         </p>
-        <Button onClick={() => sponsorsPage()}>Become a Sponsor</Button>
+        <Button>Become a Sponsor</Button>
       </section>
       <section className={Styles["container__pills"]} ref={constraintsRef}>
         {skills.map((data, idx) => (
-          <motion.div
-            key={idx}
-            className={Styles["container__pills--el"]}
-            drag
-            dragConstraints={constraintsRef}
-          >
-            <Pills text={data} bgColor={`var(${randomColors[idx]})`} />
-          </motion.div>
+          <div key={idx} className={Styles["container__pills--el"]}>
+            <motion.div drag dragConstraints={constraintsRef}>
+              <Pills text={data} bgColor={`var(${randomColors[idx]})`} />
+            </motion.div>
+          </div>
         ))}
       </section>
     </div>
