@@ -11,6 +11,8 @@ import Speaker11 from "@/assets/imgs/speakers/speaker11.png";
 import Speaker21 from "@/assets/imgs/speakers/speaker21.png";
 import Speaker31 from "@/assets/imgs/speakers/speaker31.png";
 import Speaker41 from "@/assets/imgs/speakers/speaker41.png";
+import ComingSoonCard from "../ComingSoonCard";
+
 
 interface iSpeaker {
   entered?: () => void;
@@ -146,6 +148,42 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     },
   ];
 
+  const comingSoon = [
+    {
+      color: 'blue'
+    },
+    {
+      color: 'yellow'
+    },
+    {
+      color: 'green'
+    },
+    {
+      color: 'red'
+    },
+    {
+      color: 'green'
+    },
+    {
+      color: 'red'
+    },
+    {
+      color: 'blue'
+    },
+    {
+      color: 'yellow'
+    },
+    {
+      color: 'blue'
+    },
+    {
+      color: 'yellow'
+    },
+    {
+      color: 'green'
+    },
+  ]
+
   return (
     <>
       <div className={Styles["container"]}>
@@ -158,9 +196,12 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
             </div>
           </div>
           <div className={Styles["speakers__cards"]}>
-            {speakers.map((speaker, index) => (
-              <Card key={index} data={speaker} title={"speaker"} />
+            {comingSoon.map((item, index) => (
+              <ComingSoonCard key={index} color={item.color} />
             ))}
+            {/* {speakers.map((speaker, index) => (
+              <Card key={index} data={speaker} title={"speaker"} />
+            ))} */}
             <a
               href="https://sessionize.com/devfest-ibadan-2023/"
               target="_blank"
