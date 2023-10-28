@@ -1,0 +1,13 @@
+.cardContainer{
+    max-width: 360px;
+    height: 588px;
+
+    @media only screen and (min-width: 250px) and (max-width: 480px) {
+        max-width: 100%;
+    }
+    .cardImage{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
