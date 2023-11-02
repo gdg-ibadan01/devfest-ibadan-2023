@@ -1,0 +1,62 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  background-color: var(--dark);
+}
+.container svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 300px);
+}
+.container svg path {
+  fill: var(--dark);
+}
+.container .body {
+  width: 1000px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+}
+@media screen and (max-width: 820px) {
+  .container .body {
+    width: 80%;
+  }
+}
+.container .body .masktitle {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+}
+.container .body .masktitle h1 {
+  color: var(--gray-light);
+  margin-bottom: 1rem;
+}
+.container .body p {
+  margin: 0px;
+  font-size: 100px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: var(--light-gray);
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.container .body p .mask {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+}
+@media screen and (max-width: 640px) {
+  .container .body p {
+    font-size: 3.5rem;
+    gap: 15px;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

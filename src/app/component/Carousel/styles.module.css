@@ -1,0 +1,34 @@
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.devfest__carousel__wrapper {
+  background-color: var(--white);
+}
+.devfest__carousel__wrapper .devfest__carousel .text__carousel {
+  width: 380px;
+  height: 52px;
+  display: grid;
+  grid-template-columns: 305px 1fr;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  margin-left: 40px;
+}
+.devfest__carousel__wrapper .devfest__carousel .logo__carousel {
+  width: 200px;
+  height: 126px;
+  margin-left: 52px;
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfest__carousel__wrapper .devfest__carousel .logo__carousel {
+    width: 150px;
+    height: 80px;
+    margin-left: 20px;
+  }
+}/*# sourceMappingURL=styles.module.css.map */

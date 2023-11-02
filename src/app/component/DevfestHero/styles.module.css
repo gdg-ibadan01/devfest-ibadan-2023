@@ -1,0 +1,279 @@
+.landing {
+  position: relative;
+  overflow: hidden;
+}
+
+.devfesthero__wrapper {
+  position: relative;
+  background-color: var(--dark);
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  background-image: url("https://res.cloudinary.com/dh8trnu8w/image/upload/v1697219132/devfestheroframe_o4aptk.png");
+  background-size: cover;
+  background-position: top center;
+}
+.devfesthero__wrapper::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 25, 33, 0.7843137255);
+}
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .devfesthero__wrapper {
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper {
+    height: 100vh;
+  }
+}
+.devfesthero__wrapper .bubble__picture__frame {
+  position: absolute;
+  border: 1.9px solid var(--white);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.devfesthero__wrapper .bubble__picture__frame.bottom__left {
+  width: 368px;
+  height: 368px;
+  left: 15px;
+  bottom: 54px;
+  padding: 21px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  .devfesthero__wrapper .bubble__picture__frame.bottom__left {
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .bubble__picture__frame.bottom__left {
+    width: 191px;
+    height: 191px;
+    bottom: 45px;
+    padding: 11px;
+  }
+}
+.devfesthero__wrapper .bubble__picture__frame.top__center {
+  width: 162px;
+  height: 162px;
+  top: 62px;
+  left: 700px;
+  padding: 12px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  .devfesthero__wrapper .bubble__picture__frame.top__center {
+    left: 40px;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .bubble__picture__frame.top__center {
+    left: 16px;
+    width: 126px;
+    height: 126px;
+    padding: 9px;
+  }
+}
+.devfesthero__wrapper .bubble__picture__frame.bottom__right, .devfesthero__wrapper .bubble__picture__frame.top__right {
+  width: 210px;
+  height: 210px;
+  padding: 11px;
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .bubble__picture__frame.bottom__right, .devfesthero__wrapper .bubble__picture__frame.top__right {
+    padding: 7.7px;
+  }
+}
+.devfesthero__wrapper .bubble__picture__frame.bottom__right {
+  right: 166px;
+  bottom: 25px;
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .bubble__picture__frame.bottom__right {
+    width: 146px;
+    height: 146px;
+    right: 25px;
+    bottom: 185px;
+  }
+}
+.devfesthero__wrapper .bubble__picture__frame.top__right {
+  right: 181px;
+  top: 109px;
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .bubble__picture__frame.top__right {
+    width: 146px;
+    height: 146px;
+    top: 150px;
+    right: 16px;
+  }
+}
+.devfesthero__wrapper .devfesthero__container {
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .logo__container {
+  width: 250px;
+  height: 38px;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero .logo__container {
+    margin-left: 0%;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero .logo__container {
+    margin-left: 2%;
+  }
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .content .mask {
+  overflow: hidden;
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .content h1.heading {
+  max-width: 790px;
+  font-size: 3.6em;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .content h1.heading:nth-child(2) {
+  margin-left: 18%;
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero .content h1.heading:nth-child(1) {
+    margin-left: 2%;
+  }
+  .devfesthero__wrapper .devfesthero__container .devfesthero .content h1.heading:nth-child(2) {
+    margin-left: 23%;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero .content h1.heading {
+    max-width: 100%;
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero .content h1.heading {
+    max-width: 85%;
+    font-size: 1.5em;
+  }
+  .devfesthero__wrapper .devfesthero__container .devfesthero .content h1.heading:nth-child(2) {
+    margin-bottom: 20px;
+  }
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container {
+  display: flex;
+  width: 843px;
+}
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container {
+    width: 90%;
+  }
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container h1.colored {
+  font-size: 4.7em;
+  letter-spacing: 20px;
+  font-weight: 800;
+  margin-left: 26%;
+}
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container h1.colored {
+    font-size: 4em;
+    margin-left: 0;
+    letter-spacing: 10px;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container h1.colored {
+    font-size: 1.8em;
+    margin-left: 0;
+    letter-spacing: 7.8px;
+  }
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container h1.colored span.primary {
+  color: var(--primary);
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container h1.colored span.success {
+  color: var(--success);
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container h1.colored span.warning {
+  color: var(--warning);
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container h1.colored span.danger {
+  color: var(--danger);
+}
+.devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container h1.colored span:nth-child(8) {
+  margin-left: 40px;
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero .content .colored-texts-container h1.colored span:nth-child(8) {
+    margin-left: 10px;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfesthero__wrapper .devfesthero__container .devfesthero {
+    padding: 0 80px;
+  }
+}
+
+.devfest__ctas__wrapper .devfest__ctas {
+  width: 100vw;
+  min-height: 109px;
+  background-color: green;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfest__ctas__wrapper .devfest__ctas {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+  }
+}
+.devfest__ctas__wrapper .devfest__ctas .devfest__cta {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  cursor: none;
+}
+@media only screen and (min-width: 250px) and (max-width: 480px) {
+  .devfest__ctas__wrapper .devfest__ctas .devfest__cta {
+    height: 85px;
+  }
+}
+.devfest__ctas__wrapper .devfest__ctas .devfest__cta h3 {
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+.devfest__ctas__wrapper .devfest__ctas .devfest__cta.bas__warning {
+  background-color: var(--warning);
+}
+.devfest__ctas__wrapper .devfest__ctas .devfest__cta.gt__primary {
+  background-color: var(--primary);
+}
+.devfest__ctas__wrapper .devfest__ctas .devfest__cta.bav__success {
+  background-color: var(--success);
+}/*# sourceMappingURL=styles.module.css.map */

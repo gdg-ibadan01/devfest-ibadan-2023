@@ -7,6 +7,7 @@ import topCenterPicture from "../../../assets/imgs/top-center.png";
 import bottomRightPicture from "../../../assets/imgs/bottom-right.png";
 import topRightPicture from "../../../assets/imgs/top-right.png";
 import gdgIbadanLogo from "../../../assets/svgs/gdg-ibadan-logo.svg";
+import Link from "next/link";
 
 const DevfestHero = ({
   devfestEnter,
@@ -122,13 +123,14 @@ const DevfestHero = ({
           >
             <h3>get ticket</h3>
           </a>
-          <a
+          <Link 
+            href='/volunteer'
             className={`${Styles.devfest__cta} ${Styles.bav__success}`}
             onMouseEnter={devfestEnter}
             onMouseLeave={devfestLeave}
           >
             <h3>become a volunteer</h3>
-          </a>
+          </Link>
         </div>
       </div>
     </motion.main>

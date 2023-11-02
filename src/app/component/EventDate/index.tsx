@@ -1,6 +1,7 @@
 import Ticker from "framer-motion-ticker";
 import Styles from "./styles.module.scss";
 import Button from "../Button";
+import Link from "next/link";
 
 
 const EventDate = () => {
@@ -17,12 +18,12 @@ const EventDate = () => {
         </Ticker>
       </div>
       <div className={Styles.actionBtnsContainer}>
-        <a href="">
+        <a href="mailto:info@gdgibadan.com">
             <Button children='Become a Sponsor' bgColor="#4285F4" />
         </a>
-        <a href="/volunteer">
+        <Link href="/volunteer">
             <Button children='Become a volunteer' bgColor="#F9AB00" />
-        </a>
+        </Link>
       </div>
     </div>
   );
