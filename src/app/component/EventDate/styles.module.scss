@@ -29,3 +29,18 @@
     }
   }
 }
+
+ .actionBtnsContainer {
+   width: 100%;
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 28px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 30px;
+    }
+ }
