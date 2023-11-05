@@ -281,7 +281,9 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
                   {devfestImages.map((item, index) => <div key={index} className={Styles.devfest__image}><Image src={item.image} alt='devfest image' /></div>)}
               </div>
               <div className={Styles.button__container}>
-                <Button children='View photos from past event' bgColor='#4285F4' />
+                <Button bgColor='#4285F4'>
+                  View photos from past event
+                </Button>
               </div>
         </div>
 

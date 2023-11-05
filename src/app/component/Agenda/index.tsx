@@ -15,7 +15,9 @@ const Agenda = () => {
             <div className={Styles.break_out}>
                 <h2>BREAK OUT SESSION</h2>
             </div>
-            <div><Button children='Get a Ticket' bgColor='#4285F4' /></div>
+            <Button bgColor='#4285F4' >
+                Get a Ticket
+            </Button>
         </section>
     </div>
   )
