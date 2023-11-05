@@ -7,7 +7,7 @@ const Header = () => {
   const headerTexts = [1,2,3,4]
   return (
     <header className={Styles.container}>
-      {headerTexts.map((item, index) => <HeaderItem />)}
+      {headerTexts.map((item, index) => <HeaderItem key={index} />)}
     </header>
   );
 };

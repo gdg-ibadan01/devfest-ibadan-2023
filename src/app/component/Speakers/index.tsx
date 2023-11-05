@@ -12,7 +12,13 @@ import Speaker21 from "@/assets/imgs/speakers/speaker21.png";
 import Speaker31 from "@/assets/imgs/speakers/speaker31.png";
 import Speaker41 from "@/assets/imgs/speakers/speaker41.png";
 import ComingSoonCard from "../ComingSoonCard";
-
+import Agenda from "../Agenda";
+import Button from "../Button";
+import Image from "next/image";
+import GreenDevfest from "@/assets/imgs/devfest/green-devfest.png";
+import BlueDevfest from "@/assets/imgs/devfest/blue-devfest.png";
+import YellowDevfest from "@/assets/imgs/devfest/yellow-devfest.png";
+import RedDevfest from "@/assets/imgs/devfest/red-devfest.png";
 
 interface iSpeaker {
   entered?: () => void;
@@ -91,13 +97,13 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       company: "Heyfood",
       image: Speaker21,
     },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker31,
-    },
+    // {
+    //   name: "KHAN DANIELS",
+    //   color: "var(--primary)",
+    //   role: "Product Designer",
+    //   company: "Heyfood",
+    //   image: Speaker31,
+    // },
   ];
   const organizers = [
     {
@@ -184,6 +190,21 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     },
   ]
 
+  const devfestImages = [
+    {
+      image: BlueDevfest,
+    },
+    {
+      image: RedDevfest,
+    },
+    {
+      image: YellowDevfest,
+    },
+    {
+      image: GreenDevfest,
+    },
+  ]
+
   return (
     <>
       <div className={Styles["container"]}>
@@ -217,19 +238,53 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
             </a>
           </div>
         </div>
-        <div className={Styles["organizers__wrapper"]}>
+        <div>
+          <Agenda />
+        </div>
+
+        <div className={Styles["organizers__mainwrapper"]}>
+          <div className={Styles["organizers__wrapper"]}>
+            <div className={Styles["organizers__content"]}>
+              <div className={Styles["organizers__content--title"]}>
+                <h1>The organisers</h1>
+                <p>Meet the Minds Behind the Magic</p>
+              </div>
+            </div>
+            <div className={Styles["organizers__cards"]}>
+              {organizers.map((organizer, index) => (
+                <Card key={index} data={organizer} title={"organizer"} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className={Styles["volunteers__wrapper"]}>
           <div className={Styles["organizers__content"]}>
             <div className={Styles["organizers__content--title"]}>
-              <h1>The organisers</h1>
-              <p>Meet the Minds Behind the Magic</p>
+              <h1>The Volunteers</h1>
+              <p>Join like-minded developers from all levels in moving the tech community forward.</p>
             </div>
           </div>
           <div className={Styles["organizers__cards"]}>
-            {organizers.map((organizer, index) => (
+            {speakers.map((organizer, index) => (
               <Card key={index} data={organizer} title={"organizer"} />
             ))}
           </div>
         </div>
+
+        <div className={Styles.reminder__container}>
+              <div className={Styles.reminder__heading}>
+                <h2>Don’t forget why you are here</h2>
+                <p>DevFest values inclusivity and diversity in knowledge and learning, to move the Tech community forward.</p>
+              </div>
+              <div className={Styles.devfest__images__container}>
+                  {devfestImages.map((item, index) => <div key={index} className={Styles.devfest__image}><Image src={item.image} alt='devfest image' /></div>)}
+              </div>
+              <div className={Styles.button__container}>
+                <Button children='View photos from past event' bgColor='#4285F4' />
+              </div>
+        </div>
+
       </div>
     </>
   );
