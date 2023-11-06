@@ -1,0 +1,35 @@
+.container{
+    width: 118%;
+    height: 52px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    gap: 31px;
+
+    // @media screen and (max-width: 768px) {
+    //    width: 410%;
+    // }
+}
+
+ .headerItem {
+     width: 379px;
+     display: flex;
+     align-items: center;
+     flex-direction: row;
+     gap: 61px;
+
+     @media screen and (max-width: 768px) {
+         gap: 30px;
+     }
+
+     .headerIcon {
+         width: 13px;
+         height: 13px;
+     }
+
+     .headerText {
+         font-size: 20px;
+     }
+ }

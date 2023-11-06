@@ -9,7 +9,7 @@ interface iButton extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button: FC<iButton> = ({ children, bgColor, ...props }) => {
   return (
-    <Magnetic>
+    // <Magnetic>
       <div className={Styles.container}>
         <button
           {...props}
@@ -20,7 +20,7 @@ const Button: FC<iButton> = ({ children, bgColor, ...props }) => {
         </button>
         <span></span>
       </div>
-    </Magnetic>
+    // </Magnetic>
   );
 };
 

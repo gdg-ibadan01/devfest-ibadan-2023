@@ -53,7 +53,9 @@ const About = () => {
           and economic impact, DevFest offers an amazing platform for developers
           to connect locally, learn, and build on Google's tools.
         </p>
-        <Button>Become a Sponsor</Button>
+        <a href="mailto:info@gdgibadan.com">
+          <Button>Become a Sponsor</Button>
+        </a>
       </section>
       <section className={Styles["container__pills"]} ref={constraintsRef}>
         {skills.map((data, idx) => (
