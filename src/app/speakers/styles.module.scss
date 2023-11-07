@@ -5,8 +5,13 @@
   // height: 100%;
 
   .container {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    @media screen and (max-width: 768px) {
+      padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
     .link {
       color: var(--primary);
@@ -20,12 +25,37 @@
     .flexContainer {
       display: flex;
       gap: 2rem;
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+      margin-top: 3rem;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+    }
 
       .imageFlex {
         flex: 1;
         height: 100%;
+        position: relative;
+
+        .speakerImg {
+          position: relative;
+          z-index: 3;
+        }
+
+        .star {
+          position: absolute;
+          bottom: -7.4rem;
+          left: -5.6rem;
+          width: 234px;
+          height: 234px;
+          z-index: 1;
+
+          @media screen and (max-width: 768px) {
+            bottom: -4.2rem;
+          left: -3.6rem;
+          width: 134px;
+          height: 134px;
+        }
+        }
       }
 
       .aboutFlex {
@@ -36,62 +66,106 @@
           font-size: 48px;
           line-height: 54px;
           font-weight: 400;
-          padding-bottom: 0.7rem;
+          padding-bottom: 1rem;
+
+          @media screen and (max-width: 768px) {
+            font-size: 30px;
+          line-height: 28px;
+          padding-top: 3rem;
+          font-weight: 500;
+        }
         }
 
         .details {
-          font-size: 18px;
-          line-height: 23px;
+          font-size: 20px;
+          line-height: 24px;
           font-weight: 400;
           padding-bottom: 1rem;
+          display: flex;
+          text-align: justify;
+
+          @media screen and (max-width: 768px) {
+            font-size: 17px;
+          line-height: 20px;
+        }
         }
 
         .details2 {
-          font-size: 18px;
-          line-height: 23px;
+          font-size: 20px;
+          line-height: 24px;
           font-weight: 400;
           padding-bottom: 1rem;
-        }
-
-        .social {
           display: flex;
-          gap: 3rem;
+          text-align: justify;
+
+          @media screen and (max-width: 768px) {
+            font-size: 17px;
+          line-height: 20px;
         }
-
-        .agendaContainer {
-          padding-top: 3rem;
-
-          .title {
-            font-size: 40px;
-            line-height: 50px;
-            font-weight: 400;
-            padding-bottom: 0.5rem;
-          }
-
-          .time {
-            width: 300px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15px;
-            line-height: 24px;
-            font-weight: 500;
-            background-color: var(--primary);
-          }
-        }
-
-        .topicContainer {
-          padding-top: 2rem;
-
-          .detail {
-            font-size: 30px;
-            line-height: 40px;
-            font-weight: 400;
-            padding-bottom: 0.5rem;
-          }
         }
       }
     }
+
+
+    .float {
+      display: flex;
+      gap: 2rem;
+      color: var(--light-white);
+      .leftFloat{
+        flex: 1;
+
+        @media screen and (max-width: 768px) {
+          display: none;
+      }
+      }
+
+      .rightFloat {
+        flex: 1;
+      
+      .social {
+        display: flex;
+        gap: 3rem;
+      }
+
+      .agendaContainer {
+        padding-top: 3rem;
+        
+
+        .title {
+          font-size: 40px;
+          line-height: 50px;
+          font-weight: 400;
+          padding-bottom: 0.5rem;
+        }
+
+        .time {
+          width: 300px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 15px;
+          line-height: 24px;
+          font-weight: 500;
+          background-color: var(--primary);
+        }
+      }
+
+      .topicContainer {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+
+        .detail {
+          font-size: 30px;
+          line-height: 40px;
+          font-weight: 400;
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+
+    }
+    
+    
   }
 }
