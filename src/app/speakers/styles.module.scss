@@ -13,15 +13,6 @@
     padding-right: 2rem;
   }
 
-    .link {
-      color: var(--primary);
-      padding-bottom: 3rem;
-      text-decoration: underline;
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 24px;
-    }
-
     .flexContainer {
       display: flex;
       gap: 2rem;
@@ -39,6 +30,31 @@
         .speakerImg {
           position: relative;
           z-index: 3;
+        }
+
+        .speakerInfo {
+          color: var(--light-white);
+          position: absolute;
+          bottom: 4.5rem;
+          right: 4.6rem;
+          z-index: 4;
+
+          h2 {
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 54px;
+          }
+
+          p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+          }
+
+          @media screen and (max-width: 768px) {
+            bottom: 3rem;
+            right: 3rem;
+        }
         }
 
         .star {
@@ -107,11 +123,11 @@
     }
 
 
-    .float {
+    .flex {
       display: flex;
       gap: 2rem;
       color: var(--light-white);
-      .leftFloat{
+      .leftFlex{
         flex: 1;
 
         @media screen and (max-width: 768px) {
@@ -119,7 +135,7 @@
       }
       }
 
-      .rightFloat {
+      .rightFlex {
         flex: 1;
       
       .social {

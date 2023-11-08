@@ -4,13 +4,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Speaker from "@/assets/imgs/speaker.png"
 import Star from "@/assets/imgs/star.png"
-// import TwitterIcon from "@/assets/svgs/twitter.svg";
-import LinkedinIcon from "@/assets/svgs/linkedin.svg";
 import { TwitterIcon, XIcon } from '@/icons';
 import { LinkedInIcon } from '@/icons/linkedin-icon';
 import Button from '../component/Button';
 import Footer from '../component/Footer';
 import Header from '../component/Header';
+import BackButton from '../component/BackButton';
 
 const Speakers = () => {
   return (
@@ -18,10 +17,14 @@ const Speakers = () => {
     <Header />
     <div className={Styles.speakerContainer}>
         <div className={Styles.container}>
-        <Link className={Styles.link} href={''}>Back to Homepage</Link>
+          <BackButton />
         <div className={Styles.flexContainer}>
             <div className={Styles.imageFlex}>
                 <Image src={Speaker} className={Styles.speakerImg} alt={''} />
+                <div className={Styles.speakerInfo}>
+                  <h2>KHAN <br/> DANIELS</h2>
+                  <p>Product Designer, Heyfood</p>
+                </div>
                 <Image src={Star} className={Styles.star} alt={''} />
             </div>
             <div className={Styles.aboutFlex}>
@@ -33,9 +36,9 @@ const Speakers = () => {
                 </div>
 
 
-                <div className={Styles.float}>
-                <div className={Styles.leftFloat}></div>
-                <div className={Styles.rightFloat}>
+                <div className={Styles.flex}>
+                <div className={Styles.leftFlex}></div>
+                <div className={Styles.rightFlex}>
                 <div className={Styles.social}>
               <Link href="!#">
                 <LinkedInIcon />
