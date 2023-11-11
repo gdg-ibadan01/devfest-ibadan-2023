@@ -62,7 +62,7 @@ const Card: FC<cardInterface> = ({ data, title }) => {
             className={Styles["organizer--card-image"]}
             style={{ marginTop: "auto" }}
           >
-            {/* <Image
+            <Image
               src={image}
               alt={`${name} headshot`}
               style={{
@@ -71,10 +71,10 @@ const Card: FC<cardInterface> = ({ data, title }) => {
                 // height: "100%",
                 width: "100%",
               }}
-              className={Styles["organizer--image"]}
-            /> */}
+              // className={Styles["organizer--image"]}
+            />
 
-            <Image src={image} alt={`${name} headshot`} className={Styles["organizer--image"]} />
+            {/* <Image src={image} alt={`${name} headshot`} className={Styles["organizer--image"]} /> */}
           </div>
           <div className={Styles["organizer--card-profile"]}>
             <h3>{name}</h3>
