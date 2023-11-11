@@ -68,9 +68,13 @@ const Card: FC<cardInterface> = ({ data, title }) => {
               style={{
                 objectFit: "cover",
                 height: `${height}px`,
+                // height: "100%",
                 width: "100%",
               }}
+              // className={Styles["organizer--image"]}
             />
+
+            {/* <Image src={image} alt={`${name} headshot`} className={Styles["organizer--image"]} /> */}
           </div>
           <div className={Styles["organizer--card-profile"]}>
             <h3>{name}</h3>
