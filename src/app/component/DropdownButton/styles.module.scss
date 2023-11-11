@@ -1,0 +1,64 @@
+.dropContainer {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 153px;
+    height: 40px;
+    border: none;
+    background-color: var(--primary);
+    text-align: center;
+    font-size: 1rem;
+
+    span {
+      color: #fff;
+    }
+
+    .arrowDropdown {
+        color: #fff;
+      font-size: 2rem;
+      transition: transform 0.3s ease;
+
+      .rotated {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .openBox {
+    transform-origin: top right;
+    position: absolute;
+    right: 0;
+    margin-top: 8px;
+    width: 157px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: #fff;
+    opacity: 0.5;
+    text-align: left;
+    margin-left: 1rem;
+
+    .boxContainer {
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      .box {
+        display: block;
+        font-size: 1rem;
+        line-height: 2rem;
+        color: black;
+        font-weight: 500;
+
+        &:hover {
+          background-color:  var(--primary);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
