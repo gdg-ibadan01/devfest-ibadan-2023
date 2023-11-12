@@ -20,6 +20,7 @@ import qudus from "@/assets/imgs/speakers/qudus.png";
 import oyin from "@/assets/imgs/speakers/oyin.png";
 import peter from "@/assets/imgs/speakers/peter.png";
 import ava from "@/assets/imgs/speakers/ava.png";
+import tobi from "@/assets/imgs/speakers/tobi.png";
 import ComingSoonCard from "../ComingSoonCard";
 import Agenda from "../Agenda";
 import Button from "../Button";
@@ -158,7 +159,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       color: "var(--primary)",
       role: "GDG Ibadan Design Lead",
       company: "",
-      image: Speaker5,
+      image: tobi,
       twitterUrl: "https://twitter.com/teathobi",
       linkedinUrl: "https://www.linkedin.com/in/teathobi",
     },
