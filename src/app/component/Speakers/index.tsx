@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Styles from "./styles.module.scss";
-import Card from "../Card";
+import Card, { cardInterface } from "../Card";
 import Speaker1 from "@/assets/imgs/speakers/speaker1.png";
 import Speaker2 from "@/assets/imgs/speakers/speaker2.png";
 import Speaker3 from "@/assets/imgs/speakers/speaker3.png";
@@ -19,7 +19,7 @@ import taiwo from "@/assets/imgs/speakers/taiwo.png";
 import qudus from "@/assets/imgs/speakers/qudus.png";
 import oyin from "@/assets/imgs/speakers/oyin.png";
 import peter from "@/assets/imgs/speakers/peter.png";
-import ava from '@/assets/imgs/speakers/ava.png'
+import ava from "@/assets/imgs/speakers/ava.png";
 import ComingSoonCard from "../ComingSoonCard";
 import Agenda from "../Agenda";
 import Button from "../Button";
@@ -114,7 +114,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     //   image: Speaker31,
     // },
   ];
-  const organizers = [
+  const organizers: cardInterface["data"][] = [
     {
       name: "ABIDEMI TIAMiYU",
       color: "var(--primary)",
@@ -132,6 +132,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       image: Speaker2,
       twitterUrl: "https://twitter.com/olatojosh",
       linkedinUrl: "https://www.linkedin.com/in/joshtom/",
+      objectFit: "contain",
     },
     {
       name: "BASHEEROH AKINPELU",
@@ -150,7 +151,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       image: Speaker4,
       twitterUrl: "https://twitter.com/wuraolakinlade",
       linkedinUrl: "https://www.linkedin.com/in/odunayo-akinlade/",
-      height: "300",
+      // height: "300",
     },
     {
       name: "TOBI OLADUNJOYE",
@@ -164,7 +165,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     {
       name: "Akeem Qudus",
       color: "var(--primary)",
-      role: "GDG Ibadan Co-Lead",
+      role: "GDG Ibadan Co-Organizer",
       company: "Huawei",
       image: qudus,
       twitterUrl: "https://x.com/holytechQudus",
@@ -182,7 +183,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     {
       name: "Ipoola Peter",
       color: "var(--danger)",
-      role: "GDG Co-organizer",
+      role: "GDG Ibadan Co-organizer",
       company: "Fineswap",
       image: peter,
       twitterUrl: "https://x.com/Petersdy07",
@@ -191,17 +192,17 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     {
       name: "John o. Ajeigbe",
       color: "var(--success)",
-      role: "GDG Organizer",
+      role: "GDG Ibadan Co-Organizer",
       company: "AltSchool Africa",
       image: john,
       twitterUrl: "https://www.twitter.com/john_pels",
       linkedinUrl: "https://www.linkedin.com/in/ajeigbejohn",
-      height: "300",
+      objectFit: "contain",
     },
     {
       name: "yusirat Alimi",
       color: "var(--primary)",
-      role: "GDG Co-organizer",
+      role: "GDG Ibadan Co-organizer",
       company: "",
       image: dammy,
       twitterUrl: "https://www.twitter.com/dammy_alimi",
@@ -215,7 +216,6 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       image: mubarak,
       twitterUrl: "https://twitter.com/Mubarak_Osuolal",
       linkedinUrl: "https://www.linkedin.com/in/mubarak-adekunle-b8424b24a",
-      height: "300",
     },
     {
       name: "Opeyemi Omole",
@@ -224,16 +224,20 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       company: "",
       image: ope,
       twitterUrl: "https://x.com/opeomole/status/1673044119478841344?s=46",
-      linkedinUrl: "https://www.linkedin.com/in/opeyemi-omole-951107144?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      linkedinUrl:
+        "https://www.linkedin.com/in/opeyemi-omole-951107144?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      objectFit: "contain",
     },
     {
-      name: "Ajeigbe Taiwo Matthew",
+      name: "Ajeigbe Taiwo",
       color: "var(--primary)",
-      role: "GDG Designer",
+      role: "GDG Ibadan Designer",
       company: "",
       image: taiwo,
       twitterUrl: "https://twitter.com/_onnyx_?t=5iHic9wl2KLG3EXnYrDnxA&s=09",
-      linkedinUrl: "https://www.linkedin.com/in/ajeigbe-taiwo-matthew-a61632219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      linkedinUrl:
+        "https://www.linkedin.com/in/ajeigbe-taiwo-matthew-a61632219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      margin: "40px 0 0 0",
     },
     {
       name: "Victoria Ayodeji",
@@ -243,44 +247,45 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       image: ava,
       twitterUrl: "http://twitter.com/versatile_ava",
       linkedinUrl: "https://linkedin.com/in/victoria-7",
+      margin: "-32px 0 0 0",
     },
   ];
 
   const comingSoon = [
     {
-      color: 'blue'
+      color: "blue",
     },
     {
-      color: 'yellow'
+      color: "yellow",
     },
     {
-      color: 'green'
+      color: "green",
     },
     {
-      color: 'red'
+      color: "red",
     },
     {
-      color: 'green'
+      color: "green",
     },
     {
-      color: 'red'
+      color: "red",
     },
     {
-      color: 'blue'
+      color: "blue",
     },
     {
-      color: 'yellow'
+      color: "yellow",
     },
     {
-      color: 'blue'
+      color: "blue",
     },
     {
-      color: 'yellow'
+      color: "yellow",
     },
     {
-      color: 'green'
+      color: "green",
     },
-  ]
+  ];
 
   const devfestImages = [
     {
@@ -295,7 +300,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     {
       image: GreenDevfest,
     },
-  ]
+  ];
 
   const hosts = [
     {
@@ -312,7 +317,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       company: "Heyfood",
       image: Speaker21,
     },
-  ]
+  ];
 
   const moderators = [
     {
@@ -336,7 +341,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       company: "Heyfood",
       image: Speaker11,
     },
-  ]
+  ];
 
   return (
     <>
@@ -394,7 +399,11 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
                 <div className={Styles["organizers__content"]}>
                   <div className={Styles["organizers__content--title"]}>
                     <h1>The Hosts</h1>
-                    <p>From turning every event into a masterpiece of hospitality, meet the heartbeat behind the curtain, our exceptional host.</p>
+                    <p>
+                      From turning every event into a masterpiece of
+                      hospitality, meet the heartbeat behind the curtain, our
+                      exceptional host.
+                    </p>
                   </div>
                 </div>
                 <div className={Styles["organizers__cards"]}>
@@ -403,12 +412,16 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
                   ))}
                 </div>
               </div>
-              
+
               <div className={Styles["moderators__container"]}>
                 <div className={Styles["organizers__content"]}>
                   <div className={Styles["organizers__content--title"]}>
                     <h1>The Moderators</h1>
-                    <p>With a profound understanding of the tech landscape, meet the guiding voices steering our tech event, the brilliant moderators.</p>
+                    <p>
+                      With a profound understanding of the tech landscape, meet
+                      the guiding voices steering our tech event, the brilliant
+                      moderators.
+                    </p>
                   </div>
                 </div>
                 <div className={Styles["organizers__cards"]}>
@@ -426,7 +439,10 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
           <div className={Styles["organizers__content"]}>
             <div className={Styles["organizers__content--title"]}>
               <h1>The Volunteers</h1>
-              <p>Join like-minded developers from all levels in moving the tech community forward.</p>
+              <p>
+                Join like-minded developers from all levels in moving the tech
+                community forward.
+              </p>
             </div>
           </div>
           <div className={Styles["organizers__cards"]}>
@@ -437,20 +453,26 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
         </div>
 
         <div className={Styles.reminder__container}>
-              <div className={Styles.reminder__heading}>
-                <h2>Don’t forget why you are here</h2>
-                <p>DevFest values inclusivity and diversity in knowledge and learning, to move the Tech community forward.</p>
+          <div className={Styles.reminder__heading}>
+            <h2>Don’t forget why you are here</h2>
+            <p>
+              DevFest values inclusivity and diversity in knowledge and
+              learning, to move the Tech community forward.
+            </p>
+          </div>
+          <div className={Styles.devfest__images__container}>
+            {devfestImages.map((item, index) => (
+              <div key={index} className={Styles.devfest__image}>
+                <Image src={item.image} alt="devfest image" />
               </div>
-              <div className={Styles.devfest__images__container}>
-                  {devfestImages.map((item, index) => <div key={index} className={Styles.devfest__image}><Image src={item.image} alt='devfest image' /></div>)}
-              </div>
-              <div className={Styles.button__container}>
-                <Button bgColor='#4285F4'>
-                  <p>View photos from past event</p>
-                </Button>
-              </div>
+            ))}
+          </div>
+          <div className={Styles.button__container}>
+            <Button bgColor="#4285F4">
+              <p>View photos from past event</p>
+            </Button>
+          </div>
         </div>
-
       </div>
     </>
   );
