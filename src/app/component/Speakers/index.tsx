@@ -145,7 +145,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     {
       name: "Wuraola Akinlade",
       color: "var(--success)",
-      role: "WTM Ibadan Co-Lead, GDG Ibadan Media and Publicity Lead",
+      role: "Gdg Ibadan media and publicity Lead, WTM Ibadan Co-Lead",
       company: "",
       image: Speaker4,
       twitterUrl: "https://twitter.com/wuraolakinlade",
@@ -174,7 +174,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       name: "Oyinkansola Awosan",
       color: "var(--warning)",
       role: "GDG Co-organizer and gbogbonise. 🙏🏾",
-      company: "Remitta",
+      company: "",
       image: oyin,
       twitterUrl: "http://twitter.com/tire_nii",
       linkedinUrl: "http://linkedin.com/in/oyinawosan",

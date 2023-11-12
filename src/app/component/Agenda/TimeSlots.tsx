@@ -1,19 +1,14 @@
 import React, { useState } from 'react'
 import Styles from './styles.module.scss'
 
-const TimeSlots = () => {
-    const [activeSlot, setActiveSlot] = useState(1);
-    const slots = [
-        '9:00am- 10:00am', 
-        '11am- 12:00am',
-        '1pm- 1:30pm',
-        '2pm- 1:30pm',
-        '2:30am- 3:30pm',
-        '2:30am- 3:30pm',
-        '4:00pm- 4:30pm',
-        '4:00pm- 4:30pm',
-        '4:00pm- 4:30pm'
-    ]
+
+interface TimeSlotsProps {
+  slots: { time: string }[];
+  activeSlot: number;
+  setActiveSlot: (index: number) => void;
+}
+
+const TimeSlots: React.FC<TimeSlotsProps> = ({slots, activeSlot, setActiveSlot}) => {
 
     const handleClick = (index: number) => {
         setActiveSlot(index)
@@ -22,7 +17,13 @@ const TimeSlots = () => {
   return (
     <section className={Styles.parentContainer}>
         <div className={Styles.childContainer}>
-              {slots.map((item, index) => <p key={index} className={`${Styles.text} ${index === activeSlot ? Styles.active : ''}`} onClick={() => handleClick(index)}>{item}</p>)}
+        {slots.map((item, index) => {
+          return (
+            <div className={`${Styles.text__container} ${index === activeSlot ? Styles.active : ''}`} onClick={() => handleClick(index)} key={index}>
+              <p className={Styles.text}>{item?.time}</p>
+            </div>
+          )
+        })}
         </div>
     </section>
   )
