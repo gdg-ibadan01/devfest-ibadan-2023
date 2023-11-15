@@ -68,7 +68,7 @@ const DevfestHero = ({
                   animate="enter"
                   className={Styles["heading"]}
                 >
-                  The Biggest Tech
+                  The Most Anticipated
                 </motion.h1>
                 <motion.h1
                   variants={slideUp}
@@ -76,7 +76,7 @@ const DevfestHero = ({
                   animate="enter"
                   className={Styles["heading"]}
                 >
-                  Event is here again
+                  Tech Gathering
                 </motion.h1>
               </div>
               <div className={Styles["colored-texts-container"]}>
