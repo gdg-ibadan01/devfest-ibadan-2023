@@ -5,7 +5,7 @@ import LinkedinIcon from "../../../assets/svgs/linkedin.svg";
 
 import { FC } from "react";
 
-interface cardInterface {
+export interface cardInterface {
   data: {
     name: string;
     role: string;
@@ -15,13 +15,25 @@ interface cardInterface {
     twitterUrl?: string;
     linkedinUrl?: string;
     height?: string;
+    margin?: string;
+    objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";
   };
   title: string;
 }
 
 const Card: FC<cardInterface> = ({ data, title }) => {
-  const { name, role, company, color, image, twitterUrl, linkedinUrl, height } =
-    data;
+  const {
+    name,
+    role,
+    company,
+    color,
+    image,
+    twitterUrl,
+    linkedinUrl,
+    height,
+    objectFit,
+    margin,
+  } = data;
 
   return (
     <>
@@ -58,23 +70,22 @@ const Card: FC<cardInterface> = ({ data, title }) => {
             display: "flex",
           }}
         >
-          <div
-            className={Styles["organizer--card-image"]}
-            style={{ marginTop: "auto" }}
-          >
+          <div className={Styles["organizer--card-image"]}>
             <Image
               src={image}
               alt={`${name} headshot`}
               style={{
-                objectFit: "cover",
-                height: `${height}px`,
+                objectFit: `${objectFit || "cover"}`,
+                height: `${height ? height + "px" : "100%"}`,
                 width: "100%",
+                margin: `${margin ? margin : "0"}`,
               }}
+              // className={Styles["organizer--image"]}
             />
           </div>
           <div className={Styles["organizer--card-profile"]}>
             <h3>{name}</h3>
-            <p>{`${role}, ${company}`}</p>
+            <p>{`${role}${company !== "" ? "," : ""} ${company}`}</p>
           </div>
           <div className={Styles["organizer--card-socials"]}>
             <div className={Styles["socials"]}>
