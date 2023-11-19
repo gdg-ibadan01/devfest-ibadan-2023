@@ -356,7 +356,10 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
           <div className={Styles["speakers__content"]}>
             <div className={Styles["speakers__content--title"]}>
               <h1>Event Speakers</h1>
-              <p>Meet our 2023 visionary speakers with innovative ideas in the tech space.</p>
+              <p>
+                Meet our 2023 visionary speakers with innovative ideas in the
+                tech space.
+              </p>
             </div>
           </div>
           <div className={Styles["speakers__cards"]}>
@@ -472,11 +475,11 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
               </div>
             ))}
           </div>
-          <div className={Styles.button__container}>
+          {/* <div className={Styles.button__container}>
             <Button bgColor="#4285F4">
               <p>View photos from past event</p>
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
