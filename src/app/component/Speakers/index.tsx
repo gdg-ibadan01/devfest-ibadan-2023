@@ -356,6 +356,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
           <div className={Styles["speakers__content"]}>
             <div className={Styles["speakers__content--title"]}>
               <h1>Event Speakers</h1>
+              <p>Meet our 2023 visionary speakers with innovative ideas in the tech space.</p>
             </div>
           </div>
           <div className={Styles["speakers__cards"]}>
