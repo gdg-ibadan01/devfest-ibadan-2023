@@ -5,7 +5,7 @@ import Speaker1 from "@/assets/imgs/speakers/speaker1.png";
 import Speaker2 from "@/assets/imgs/speakers/speaker2.png";
 import Speaker3 from "@/assets/imgs/speakers/speaker3.png";
 import Speaker4 from "@/assets/imgs/speakers/speaker4.png";
-// import Speaker5 from "@/assets/imgs/speakers/speaker5.png";
+import Speaker5 from "@/assets/imgs/speakers/speaker5.png";
 
 import Speaker11 from "@/assets/imgs/speakers/speaker11.png";
 import Speaker21 from "@/assets/imgs/speakers/speaker21.png";
@@ -22,7 +22,7 @@ import peter from "@/assets/imgs/speakers/peter.png";
 import ava from "@/assets/imgs/speakers/ava.png";
 import tobi from "@/assets/imgs/speakers/tobi.png";
 import ComingSoonCard from "../ComingSoonCard";
-// import Agenda from "../Agenda";
+import Agenda from "../Agenda";
 import Button from "../Button";
 import Image from "next/image";
 import GreenDevfest from "@/assets/gifs/green-devfest.gif";
@@ -356,10 +356,6 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
           <div className={Styles["speakers__content"]}>
             <div className={Styles["speakers__content--title"]}>
               <h1>Event Speakers</h1>
-              <p>
-                Meet our 2023 visionary speakers with innovative ideas in the
-                tech space.
-              </p>
             </div>
           </div>
           <div className={Styles["speakers__cards"]}>
@@ -384,9 +380,9 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
             </a> */}
           </div>
         </div>
-        {/* <div>
+        <div>
           <Agenda />
-        </div> */}
+        </div>
 
         <div className={Styles["organizers__mainwrapper"]}>
           <div className={Styles["organizers__wrapper"]}>
@@ -402,7 +398,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
               ))}
             </div>
             {/* Hosts and moderators section */}
-            {/* <div className={Styles["moderatorsAndHosts__container"]}>
+            <div className={Styles["moderatorsAndHosts__container"]}>
               <div className={Styles["hosts__container"]}>
                 <div className={Styles["organizers__content"]}>
                   <div className={Styles["organizers__content--title"]}>
@@ -438,12 +434,12 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
                   ))}
                 </div>
               </div>
-            </div> */}
+            </div>
             {/* Hosts and moderators section */}
           </div>
         </div>
 
-        {/* <div className={Styles["volunteers__wrapper"]}>
+        <div className={Styles["volunteers__wrapper"]}>
           <div className={Styles["organizers__content"]}>
             <div className={Styles["organizers__content--title"]}>
               <h1>The Volunteers</h1>
@@ -458,7 +454,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
               <Card key={index} data={organizer} title={"organizer"} />
             ))}
           </div>
-        </div> */}
+        </div>
 
         <div className={Styles.reminder__container}>
           <div className={Styles.reminder__heading}>
@@ -475,11 +471,11 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
               </div>
             ))}
           </div>
-          {/* <div className={Styles.button__container}>
+          <div className={Styles.button__container}>
             <Button bgColor="#4285F4">
               <p>View photos from past event</p>
             </Button>
-          </div> */}
+          </div>
         </div>
       </div>
     </>

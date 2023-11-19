@@ -43,28 +43,24 @@
       background-position: center center;
 
       &--title {
+        padding-top: 50px;
+
         h1 {
           // font-family: var(--font-radio-grotesk);
           text-align: center;
           font-size: 3.6em;
-          margin-bottom: 5px;
-        }
-
-        p{
-          text-align: center;
         }
       }
 
       @media only screen and (min-width: 250px) and (max-width: 480px) {
-        height: 190px;
+        height: 150px;
         &--title {
-          padding-top: 40px;
+          padding-top: 25px;
 
           h1 {
             // font-family: var(--font-radio-grotesk);
             text-align: center;
             font-size: 2em;
-            margin-bottom: 5px;
           }
         }
       }
@@ -311,7 +307,6 @@
 
     .reminder__heading {
       margin-bottom: 50px;
-      margin-top: 40px;
       text-align: center;
 
       h2 {
