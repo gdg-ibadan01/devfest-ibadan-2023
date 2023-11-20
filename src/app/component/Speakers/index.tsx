@@ -175,7 +175,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     {
       name: "Oyinkansola Awosan",
       color: "var(--warning)",
-      role: "GDG Co-organizer and gbogbonise. 🙏🏾",
+      role: "GDG Co-organizer",
       company: "",
       image: oyin,
       twitterUrl: "http://twitter.com/tire_nii",
@@ -286,6 +286,9 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     {
       color: "green",
     },
+    {
+      color: "red",
+    },
   ];
 
   const devfestImages = [
@@ -362,7 +365,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
             {/* {speakers.map((speaker, index) => (
               <Card key={index} data={speaker} title={"speaker"} />
             ))} */}
-            <a
+            {/* <a
               href="https://sessionize.com/devfest-ibadan-2023/"
               target="_blank"
             >
@@ -374,7 +377,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
                 </span>
                 <h3>BECOME A SPEAKER</h3>
               </div>
-            </a>
+            </a> */}
           </div>
         </div>
         <div>
