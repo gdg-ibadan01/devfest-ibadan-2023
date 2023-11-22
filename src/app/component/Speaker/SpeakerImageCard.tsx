@@ -1,9 +1,19 @@
-import Image from 'next/image'
+import Image, {StaticImageData} from 'next/image'
 import React from 'react'
-import Styles from '../styles.module.scss'
-import Star from '../../../../assets/svgs/bottom-star.svg'
+import Styles from './styles.module.scss'
+import Star from '../../../assets/svgs/bottom-star.svg'
 
-const SpeakerImageCard = ({data}) => {
+interface SpeakerInfoProps {
+  data: {
+    name: string,
+    image: StaticImageData,
+    role: string,
+    company: string,
+    color: string,
+  }
+}
+
+const SpeakerImageCard: React.FC<SpeakerInfoProps> = ({data}) => {
   
   return (
     <div className={Styles.parent__container}>

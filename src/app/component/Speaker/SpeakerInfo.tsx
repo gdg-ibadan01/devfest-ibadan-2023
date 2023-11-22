@@ -1,12 +1,23 @@
 import React from 'react'
-import Styles from '../styles.module.scss'
-import LinkedinIcon from '../../../../assets/svgs/linkedin.svg'
-import TwitterIcon from '../../../../assets/svgs/twitter.svg'
-import InstagramIcon from '../../../../assets/svgs/instagram.svg'
-import Image from 'next/image'
-import Button from '@/app/component/Button'
+import Styles from './styles.module.scss'
+import LinkedinIcon from '../../../assets/svgs/linkedin.svg'
+import TwitterIcon from '../../../assets/svgs/twitter.svg'
+import InstagramIcon from '../../../assets/svgs/instagram.svg'
+import Image, {StaticImageData} from 'next/image'
+import Button from '../Button'
 
-const SpeakerInfo = () => {
+
+interface SpeakerInfoProps {
+  data: {
+    name: string,
+    image: StaticImageData,
+    role: string,
+    company: string,
+    color: string,
+  }
+}
+
+const SpeakerInfo: React.FC<SpeakerInfoProps> = ({data}) => {
   return (
     <section className={Styles.speaker__info}>
       <div className={Styles.speaker__header}>
@@ -23,7 +34,6 @@ const SpeakerInfo = () => {
       <div className={Styles.social__icons__container}>
         <a href=""><Image src={LinkedinIcon} alt='linkedin icon' /></a>
         <a href=""><Image src={TwitterIcon} alt='Twitter icon' /></a>
-        {/* <a href=""><Image src={InstagramIcon} alt='Instagram icon' /></a> */}
       </div>
       <section className={Styles.speaker__talk__details}>
         <div className={Styles.agenda}>
