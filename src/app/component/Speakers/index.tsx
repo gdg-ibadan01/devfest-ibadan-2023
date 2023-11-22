@@ -178,7 +178,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     {
       name: "Oyinkansola Awosan",
       color: "var(--warning)",
-      role: "GDG Co-organizer and gbogbonise. 🙏🏾",
+      role: "GDG Co-organizer",
       company: "",
       image: oyin,
       twitterUrl: "http://twitter.com/tire_nii",
@@ -289,6 +289,9 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
     {
       color: "green",
     },
+    {
+      color: "red",
+    },
   ];
 
   const devfestImages = [
@@ -356,7 +359,6 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
           <div className={Styles["speakers__content"]}>
             <div className={Styles["speakers__content--title"]}>
               <h1>Event Speakers</h1>
-              <p>Meet our 2023 visionary speakers with innovative ideas in the tech space.</p>
             </div>
           </div>
           <div className={Styles["speakers__cards"]}>

@@ -12,7 +12,6 @@ import Footer from "./component/Footer";
 import useCustomCursor from "./hooks/useCustomCusor";
 import Preloader from "./component/Preloader";
 
-
 const Home = () => {
   const {
     cursorText,
