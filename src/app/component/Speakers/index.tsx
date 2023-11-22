@@ -29,6 +29,9 @@ import GreenDevfest from "@/assets/gifs/green-devfest.gif";
 import BlueDevfest from "@/assets/gifs/blue-devfest.gif";
 import YellowDevfest from "@/assets/gifs/yellow-devfest.gif";
 import RedDevfest from "@/assets/gifs/red-devfest.gif";
+import { speakerDetails } from "../speakerDetails";
+
+
 
 interface iSpeaker {
   entered?: () => void;
@@ -357,12 +360,12 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
             </div>
           </div>
           <div className={Styles["speakers__cards"]}>
-            {comingSoon.map((item, index) => (
+            {/* {comingSoon.map((item, index) => (
               <ComingSoonCard key={index} color={item.color} />
-            ))}
-            {/* {speakers.map((speaker, index) => (
-              <Card key={index} data={speaker} title={"speaker"} />
             ))} */}
+            {speakerDetails.map((speaker, index) => (
+              <Card key={index} data={speaker} title={"speaker"} />
+            ))}
             <a
               href="https://sessionize.com/devfest-ibadan-2023/"
               target="_blank"

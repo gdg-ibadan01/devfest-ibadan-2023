@@ -1,0 +1,207 @@
+.container{
+    background-color: #0E1921;
+    width: 100%;
+
+    .content{
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+}
+
+.speaker__info__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    @media screen and (max-width: 728px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+}
+
+.parent__container{
+    width: 48%;
+    height: 530px;
+    position: relative;
+    .image__card__container {
+            width: 100%;
+            height: 530px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+            position: relative;
+            z-index: 1;
+    
+            @media screen and (max-width: 728px) {
+                width: 100%;
+            }
+    
+            .image__container {
+                width: 70%;
+                height: 100%;
+                position: absolute;
+                object-fit: contain;
+                left: 0;
+                bottom: 0;
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+    
+                @media screen and (max-width: 728px) {
+                    width: 90%;
+                }
+            }
+    
+            .speaker__role {
+                position: absolute;
+                bottom: 50px;
+                right: 40px;
+                color: white;
+                z-index: 1;
+    
+                h2 {
+                    font-size: 48px;
+                    width: 190px;
+                    margin-bottom: 12px;
+                }
+    
+                p {
+                    font-size: 18px;
+                }
+    
+                @media screen and (max-width: 728px) {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 20px;
+                }
+            }
+    
+    
+    }
+    .star {
+            position: absolute;
+            bottom: -119px;
+            left: -105px;
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            @media screen and (max-width: 728px) {
+                   position: absolute;
+                   bottom: -120px;
+                   left: -95px;
+            }
+    
+        }
+    
+    @media screen and (max-width: 728px) {
+        width: 100%;
+    }
+}
+
+
+
+.speaker__info{
+    width: 48%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: 728px) {
+        width: 100%;
+    }
+
+    .speaker__header{
+        h2{
+            font-size: 48px;
+        }
+
+        @media screen and (max-width: 728px) {
+            h2{
+                font-size: 38px;
+            
+            }
+        }
+    }
+    .speaker__content{
+        p{
+            margin-bottom: 15px;
+            text-align: justify;
+            line-height: 30px;
+        }
+    }
+    .social__icons__container{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 70px;
+
+        a{
+            img{
+                width: 35px;
+                height: 35px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .speaker__talk__details{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 40px;
+
+        .agenda{
+            h2{
+                font-weight: 550;
+                font-size: 48px;
+                margin-bottom: 15px;
+            }
+            div{
+                width: 330px;
+                background-color: #4285F4;
+                color: white;
+                padding: 12px 20px;
+
+                p{
+                    text-align: center;
+                }
+            }
+
+            @media screen and (max-width: 728px) {
+                h2{
+                    font-size: 38px;
+                }
+            }
+        }
+        .topic{
+            h2{
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 40px;
+            }
+
+            @media screen and (max-width: 728px) {
+                h2{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
