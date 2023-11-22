@@ -22,8 +22,11 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
+    "react-router-dom": "^6.19.0",
+    "react-select": "^5.8.0",
     "sass": "^1.66.1",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "use-local-storage": "^3.0.0"
   },
   "devDependencies": {
     "@types/locomotive-scroll": "^4.1.1"
