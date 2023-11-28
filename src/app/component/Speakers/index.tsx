@@ -29,6 +29,14 @@ import GreenDevfest from "@/assets/gifs/green-devfest.gif";
 import BlueDevfest from "@/assets/gifs/blue-devfest.gif";
 import YellowDevfest from "@/assets/gifs/yellow-devfest.gif";
 import RedDevfest from "@/assets/gifs/red-devfest.gif";
+import { speakerDetails } from "../speakerDetails";
+import dara from '@/assets/imgs/speakers/dara.png'
+import toun from '@/assets/imgs/speakers/toun.png'
+import david from '@/assets/imgs/speakers/david.png'
+import shalom from '@/assets/imgs/speakers/shalom.png'
+import ntongha from '@/assets/imgs/speakers/ntongha.png'
+
+
 
 interface iSpeaker {
   entered?: () => void;
@@ -308,42 +316,52 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
 
   const hosts = [
     {
-      name: "KHAN DANIELS",
+      name: "Ntongha Alagba(Ekot)",
       color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker11,
+      role: "Growth Specialist",
+      company: "Norebase",
+      image: ntongha,
+      twitterUrl: 'https://twitter.com/ehn_tee',
+      linkedinUrl: 'https://www.linkedin.com/in/ntongha-ekot-product-marketer/'
     },
     {
-      name: "KHAN DANIELS",
+      name: "Olumide Adaramoye",
       color: "var(--warning)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker21,
+      role: "Growth Manager for fintechs and web3 startups",
+      company: "",
+      image: dara,
+      twitterUrl: '',
+      linkedinUrl: 'https://www.linkedin.com/in/olumideadaramoye/'
     },
   ];
 
   const moderators = [
     {
-      name: "KHAN DANIELS",
+      name: "Raji Adetoun",
       color: "var(--primary)",
       role: "Product Designer",
       company: "Heyfood",
-      image: Speaker11,
+      image: toun,
+      twitterUrl: 'https://twitter.com/rajiadetoun',
+      linkedinUrl: 'https://www.linkedin.com/in/rajiadetoun/'
     },
     {
-      name: "KHAN DANIELS",
+      name: "Shalom Adebola",
       color: "var(--warning)",
       role: "Product Designer",
       company: "Heyfood",
-      image: Speaker21,
+      image: shalom,
+      twitterUrl: 'https://twitter.com/shalombrain',
+      linkedinUrl: 'https://www.linkedin.com/in/shalombrain/'
     },
     {
-      name: "KHAN DANIELS",
+      name: "David Olagookun",
       color: "var(--primary)",
       role: "Product Designer",
       company: "Heyfood",
-      image: Speaker11,
+      image: david,
+      twitterUrl: 'https://twitter.com/david_oh',
+      linkedinUrl: 'https://www.linkedin.com/in/david-olagookun-17a862218/'
     },
   ];
 
@@ -356,16 +374,17 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
           <div className={Styles["speakers__content"]}>
             <div className={Styles["speakers__content--title"]}>
               <h1>Event Speakers</h1>
+              <p>Meet our 2023 visionary speakers with innovative ideas in the tech space.</p>
             </div>
           </div>
           <div className={Styles["speakers__cards"]}>
-            {comingSoon.map((item, index) => (
+            {/* {comingSoon.map((item, index) => (
               <ComingSoonCard key={index} color={item.color} />
-            ))}
-            {/* {speakers.map((speaker, index) => (
-              <Card key={index} data={speaker} title={"speaker"} />
             ))} */}
-            {/* <a
+            {speakerDetails.map((speaker, index) => (
+              <Card key={index} data={speaker} title={"speaker"} />
+            ))}
+            <a
               href="https://sessionize.com/devfest-ibadan-2023/"
               target="_blank"
             >
@@ -377,7 +396,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
                 </span>
                 <h3>BECOME A SPEAKER</h3>
               </div>
-            </a> */}
+            </a>
           </div>
         </div>
         <div>
@@ -402,11 +421,11 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
               <div className={Styles["hosts__container"]}>
                 <div className={Styles["organizers__content"]}>
                   <div className={Styles["organizers__content--title"]}>
-                    <h1>The Hosts</h1>
+                    <h1>The Moderators</h1>
                     <p>
-                      From turning every event into a masterpiece of
-                      hospitality, meet the heartbeat behind the curtain, our
-                      exceptional host.
+                      With a profound understanding of the tech landscape, meet
+                      the guiding voices steering our tech event, the brilliant
+                      moderators.
                     </p>
                   </div>
                 </div>
@@ -420,11 +439,11 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
               <div className={Styles["moderators__container"]}>
                 <div className={Styles["organizers__content"]}>
                   <div className={Styles["organizers__content--title"]}>
-                    <h1>The Moderators</h1>
+                    <h1>The Hosts</h1>
                     <p>
-                      With a profound understanding of the tech landscape, meet
-                      the guiding voices steering our tech event, the brilliant
-                      moderators.
+                      From turning every event into a masterpiece of
+                      hospitality, meet the heartbeat behind the curtain, our
+                      exceptional host.
                     </p>
                   </div>
                 </div>

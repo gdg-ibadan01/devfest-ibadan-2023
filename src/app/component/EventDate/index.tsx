@@ -26,9 +26,9 @@ const EventDate = () => {
         <a href="mailto:info@gdgibadan.com">
           <Button bgColor="#4285F4"> Become a Sponsor </Button>
         </a>
-        <Link href="/volunteer">
+        {/* <Link href="/volunteer">
           <Button bgColor="#F9AB00"> Become a volunteer </Button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
