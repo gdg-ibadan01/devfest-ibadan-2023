@@ -137,7 +137,7 @@ const Gallery = () => {
             />
           </div>
           <p>
-            We don't just capture moments, we build stories transforming
+            We don&apos;t just capture moments, we build stories transforming
             memories into timeless tales.
           </p>
 
