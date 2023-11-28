@@ -39,14 +39,14 @@ const Home = () => {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <motion.div
+      {/* <motion.div
         variants={variants}
         className="circle"
         animate={cursorVariant}
         transition={spring}
       >
         <span className="cursorText">{cursorText}</span>
-      </motion.div>
+      </motion.div> */}
       <DevfestHero devfestEnter={continueEnter} devfestLeave={continueLeave} />
       <LogosCarousel />
       <About />
