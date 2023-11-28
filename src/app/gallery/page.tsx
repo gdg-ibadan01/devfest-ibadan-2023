@@ -33,10 +33,10 @@ const Gallery = () => {
     },
   ];
 
-  const [selectedYear, setSelectedYear] = useState<string | null>("");
+  const [selectedYear, setSelectedYear] = useState<string | null>("2022");
   useEffect(() => {
     let newYear = window.localStorage.getItem("year")
-    setSelectedYear(newYear);
+    setSelectedYear(newYear || "2022");
   }, []);
 
   const handleYearSelect = (year: string) => {
@@ -131,7 +131,7 @@ const Gallery = () => {
           <div className={Styles.flexContainer}>
             <h2>Photo Booth</h2>
             <DropdownButton
-              title={selectedYear || "2022"}
+              title={selectedYear || ""}
               menus={["2022", "2021", "2020", "2019", "2018", "2017", "2016"]}
               onYearSelect={handleYearSelect}
             />
