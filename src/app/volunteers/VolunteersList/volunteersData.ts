@@ -1,25 +1,25 @@
-import rodiyyah from '@/assets/imgs/volunteers/arowona.png';
-import aanu from '@/assets/imgs/volunteers/aanu.png';
-import alomaja from '@/assets/imgs/volunteers/alomaja.png';
-import dafe from '@/assets/imgs/volunteers/dafe.png';
-import david from '@/assets/imgs/volunteers/david.png';
-import emmanuel from '@/assets/imgs/volunteers/emmanuel.png';
-import eniola from '@/assets/imgs/volunteers/eniola.png';
-import favour from '@/assets/imgs/volunteers/favour.png';
-import hafsoh from '@/assets/imgs/volunteers/hafsoh.png';
-import haneefah from '@/assets/imgs/volunteers/haneefah.png';
-import hikmah from '@/assets/imgs/volunteers/hikmah.png';
-import hannat from '@/assets/imgs/volunteers/hannat.png';
-import hope from '@/assets/imgs/volunteers/hope.png'
-import ikeolu from '@/assets/imgs/volunteers/ikeolu.png'
-import lateefah from '@/assets/imgs/volunteers/lateefah.png'
-import olapade from '@/assets/imgs/volunteers/olapade.png'
-import qudus from '@/assets/imgs/volunteers/qudus.png'
-import rahmat from '@/assets/imgs/volunteers/rahmat.png'
-import samuel from '@/assets/imgs/volunteers/samuel.png'
-import seyi from '@/assets/imgs/volunteers/seyi.png'
-import taiwo from '@/assets/imgs/volunteers/taiwo.png'
-import wumi from '@/assets/imgs/volunteers/wumi.png'
+import rodiyyah from "@/assets/imgs/volunteers/arowona.png";
+import aanu from "@/assets/imgs/volunteers/aanu.png";
+import alomaja from "@/assets/imgs/volunteers/alomaja.png";
+import dafe from "@/assets/imgs/volunteers/dafe.png";
+import david from "@/assets/imgs/volunteers/david.png";
+import emmanuel from "@/assets/imgs/volunteers/emmanuel.png";
+import eniola from "@/assets/imgs/volunteers/eniola.png";
+import favour from "@/assets/imgs/volunteers/favour.png";
+import hafsoh from "@/assets/imgs/volunteers/hafsoh.png";
+import haneefah from "@/assets/imgs/volunteers/haneefah.png";
+import hikmah from "@/assets/imgs/volunteers/hikmah.png";
+import hannat from "@/assets/imgs/volunteers/hannat.png";
+import hope from "@/assets/imgs/volunteers/hope.png";
+import ikeolu from "@/assets/imgs/volunteers/ikeolu.png";
+import lateefah from "@/assets/imgs/volunteers/lateefah.png";
+import olapade from "@/assets/imgs/volunteers/olapade.png";
+import qudus from "@/assets/imgs/volunteers/qudus.png";
+import rahmat from "@/assets/imgs/volunteers/rahmat.png";
+import samuel from "@/assets/imgs/volunteers/samuel.png";
+import seyi from "@/assets/imgs/volunteers/seyi.png";
+import taiwo from "@/assets/imgs/volunteers/taiwo.png";
+import wumi from "@/assets/imgs/volunteers/wumi.png";
 import cody from "@/assets/imgs/volunteers/cody.png";
 
 export const volunteersData = [
@@ -224,6 +224,5 @@ export const volunteersData = [
     color: "var(--primary)",
     role: "",
     company: "",
-    instagramUrl: "https://instagram.com/adeem_xvi",
   },
 ];

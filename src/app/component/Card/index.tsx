@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Styles from "./styles.module.scss";
 import TwitterIcon from "../../../assets/svgs/twitter.svg";
 import LinkedinIcon from "../../../assets/svgs/linkedin.svg";
-import InstagramIcon from '../../../assets/svgs/instagram.svg'
+import InstagramIcon from "../../../assets/svgs/instagram.svg";
 import { FC } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -72,6 +72,8 @@ const Card: FC<cardInterface> = ({ data, title }) => {
               height={100}
               style={{
                 margin: `${margin ? margin : "0"}`,
+                width: "100%",
+                height: "100%",
               }}
             />
           </div>

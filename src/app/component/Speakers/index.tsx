@@ -5,8 +5,6 @@ import Speaker1 from "@/assets/imgs/speakers/speaker1.png";
 import Speaker2 from "@/assets/imgs/speakers/speaker2.png";
 import Speaker3 from "@/assets/imgs/speakers/speaker3.png";
 import Speaker4 from "@/assets/imgs/speakers/speaker4.png";
-import Speaker5 from "@/assets/imgs/speakers/speaker5.png";
-
 import Speaker11 from "@/assets/imgs/speakers/speaker11.png";
 import Speaker21 from "@/assets/imgs/speakers/speaker21.png";
 import Speaker31 from "@/assets/imgs/speakers/speaker31.png";
@@ -21,20 +19,13 @@ import oyin from "@/assets/imgs/speakers/oyin.png";
 import peter from "@/assets/imgs/speakers/peter.png";
 import ava from "@/assets/imgs/speakers/ava.png";
 import tobi from "@/assets/imgs/speakers/tobi.png";
-import ComingSoonCard from "../ComingSoonCard";
 import Agenda from "../Agenda";
-import Button from "../Button";
 import Image from "next/image";
-// import GreenDevfest from "@/assets/gifs/green-devfest.gif";
-// import BlueDevfest from "@/assets/gifs/blue-devfest.gif";
-// import YellowDevfest from "@/assets/gifs/yellow-devfest.gif";
-// import RedDevfest from "@/assets/gifs/red-devfest.gif";
 import { speakerDetails } from "../speakerDetails";
-import dara from "@/assets/imgs/speakers/dara.png";
 import toun from "@/assets/imgs/speakers/toun.png";
 import david from "@/assets/imgs/speakers/david.png";
 import shalom from "@/assets/imgs/speakers/shalom.png";
-import ntongha from "@/assets/imgs/speakers/ntongha.png";
+import ntongha from "@/assets/imgs/speakers/Ntongha.png";
 import tolu from "@/assets/imgs/tolu.png";
 
 interface iSpeaker {
@@ -43,85 +34,6 @@ interface iSpeaker {
 }
 
 const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
-  const speakers = [
-    {
-      name: "KHAN DANIELS",
-      color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker11,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--warning)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker21,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--danger)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker31,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--success)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker41,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--warning)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker11,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker21,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--success)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker31,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--danger)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker41,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--danger)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker11,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--warning)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker21,
-    },
-    // {
-    //   name: "KHAN DANIELS",
-    //   color: "var(--primary)",
-    //   role: "Product Designer",
-    //   company: "Heyfood",
-    //   image: Speaker31,
-    // },
-  ];
   const organizers: cardInterface["data"][] = [
     {
       name: "ABIDEMI TIAMiYU",
