@@ -12,9 +12,7 @@ import hikmah from '@/assets/imgs/volunteers/hikmah.png';
 import hannat from '@/assets/imgs/volunteers/hannat.png';
 import hope from '@/assets/imgs/volunteers/hope.png'
 import ikeolu from '@/assets/imgs/volunteers/ikeolu.png'
-import khayrah from '@/assets/imgs/volunteers/khayrah.png'
 import lateefah from '@/assets/imgs/volunteers/lateefah.png'
-import nifemi from '@/assets/imgs/volunteers/nifemi.png'
 import olapade from '@/assets/imgs/volunteers/olapade.png'
 import qudus from '@/assets/imgs/volunteers/qudus.png'
 import rahmat from '@/assets/imgs/volunteers/rahmat.png'
@@ -22,7 +20,6 @@ import samuel from '@/assets/imgs/volunteers/samuel.png'
 import seyi from '@/assets/imgs/volunteers/seyi.png'
 import taiwo from '@/assets/imgs/volunteers/taiwo.png'
 import wumi from '@/assets/imgs/volunteers/wumi.png'
-import latifat from '@/assets/imgs/volunteers/latifat.png'
 import cody from "@/assets/imgs/volunteers/cody.png";
 
 export const volunteersData = [
@@ -32,7 +29,7 @@ export const volunteersData = [
     twitterUrl: "https://twitter.com/abdulroheem_",
     image: cody,
     color: "var(--primary)",
-    role: "Frontend Developer",
+    role: "",
     company: "",
   },
   {
@@ -119,15 +116,6 @@ export const volunteersData = [
     company: "",
   },
   {
-    name: "Khayrah Dosunmu",
-    twitterUrl: "https://twitter.com/KhayrahD",
-    image: khayrah,
-    instagramUrl: "https://instagram.com/khayrahdee",
-    color: "var(--primary)",
-    role: "",
-    company: "",
-  },
-  {
     name: "Oluwaseyi Obadeyi",
     twitterUrl: "https://twitter.com/romulanxy",
     image: seyi,
@@ -137,28 +125,10 @@ export const volunteersData = [
     company: "",
   },
   {
-    name: "Latunde Oluwanifemi",
-    twitterUrl: "https://twitter.com/thithhy",
-    image: nifemi,
-    instagramUrl: "https://instagram.com/__bankey",
-    color: "var(--primary)",
-    role: "",
-    company: "",
-  },
-  {
     name: "Ikeoluwa Anonimo",
     twitterUrl: "https://twitter.com/Ikeolu_",
     image: ikeolu,
     instagramUrl: "https://instagram.com/ike.olu_",
-    color: "var(--primary)",
-    role: "",
-    company: "",
-  },
-  {
-    name: "Latifat Akinyemi",
-    twitterUrl: "https://twitter.com/tefah__",
-    image: latifat,
-    instagramUrl: "https://instagram.com/latteefah_",
     color: "var(--primary)",
     role: "",
     company: "",
@@ -238,11 +208,22 @@ export const volunteersData = [
   {
     name: "Oluwatoba Taiwo",
     twitterUrl: "https://twitter.com/therealtubbzy",
-    linkedinUrl: '',
+    linkedinUrl: "",
     image: taiwo,
     instagramUrl: "",
     color: "var(--primary)",
     role: "",
     company: "",
+  },
+  {
+    name: "Qudus Musiliu",
+    twitterUrl: "",
+    linkedinUrl: "",
+    image: qudus,
+    instagramUrl: "",
+    color: "var(--primary)",
+    role: "",
+    company: "",
+    instagramUrl: "https://instagram.com/adeem_xvi",
   },
 ];
