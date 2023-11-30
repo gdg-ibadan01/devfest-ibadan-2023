@@ -38,7 +38,7 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            cursor: none;
+            // cursor: none;
 
             &:first-child {
               margin-right: 10px;
@@ -94,7 +94,7 @@
             &:first-child {
               margin-right: 10px;
             }
-            cursor: none;
+            // cursor: none;
           }
         }
       }
@@ -171,7 +171,7 @@
 
       h3 {
         font-size: 1.4em;
-        max-width: 185px;
+        max-width: 197px;
         font-weight: 400;
         margin-bottom: 15px;
         text-transform: uppercase;

@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Styles from "./styles.module.scss";
 import TwitterIcon from "../../../assets/svgs/twitter.svg";
 import LinkedinIcon from "../../../assets/svgs/linkedin.svg";
+import InstagramIcon from '../../../assets/svgs/instagram.svg'
 import { FC } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
