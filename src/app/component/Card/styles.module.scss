@@ -38,7 +38,7 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            cursor: none;
+            // cursor: none;
 
             &:first-child {
               margin-right: 10px;
@@ -94,7 +94,7 @@
             &:first-child {
               margin-right: 10px;
             }
-            cursor: none;
+            // cursor: none;
           }
         }
       }
@@ -103,34 +103,40 @@
 
   &.big {
     // width: 360px;
-    height: 588px;
+    // height: 588px;
+    height: 420px;
+    position: relative;
 
     .speaker--card-image {
-      margin-top: 70px;
+      // margin-top: 70px;
+      bottom: 0;
       width: 100%;
       transform: translate3d(0px, 0px, 0px) scale3d(1.05, 1.05, 1) rotateX(0deg)
         rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
       transform-style: preserve-3d;
       transition: transform 0.5s;
+      position: absolute;
     }
 
     .speaker--card-profile {
       position: absolute;
       color: var(--white);
       bottom: 38px;
-      padding-left: 33px;
+      // padding-left: 33px;
+      padding: 0 33px;
       z-index: 2;
       transition: bottom 0.5s;
 
       h3 {
-        font-size: 2.4em;
+        // font-size: 2.4em;
+        font-size: 1.3em;
         max-width: 200px;
-        font-weight: 400;
+        font-weight: 700;
         margin-bottom: 15px;
         text-transform: uppercase;
       }
       p {
-        font-size: 0.9em;
+        font-size: 0.8em;
       }
     }
     .speaker--card-socials {
@@ -203,5 +209,6 @@
     bottom: 0;
     left: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+    cursor: pointer;
   }
 }

@@ -25,18 +25,17 @@ import ComingSoonCard from "../ComingSoonCard";
 import Agenda from "../Agenda";
 import Button from "../Button";
 import Image from "next/image";
-import GreenDevfest from "@/assets/gifs/green-devfest.gif";
-import BlueDevfest from "@/assets/gifs/blue-devfest.gif";
-import YellowDevfest from "@/assets/gifs/yellow-devfest.gif";
-import RedDevfest from "@/assets/gifs/red-devfest.gif";
+// import GreenDevfest from "@/assets/gifs/green-devfest.gif";
+// import BlueDevfest from "@/assets/gifs/blue-devfest.gif";
+// import YellowDevfest from "@/assets/gifs/yellow-devfest.gif";
+// import RedDevfest from "@/assets/gifs/red-devfest.gif";
 import { speakerDetails } from "../speakerDetails";
-import dara from '@/assets/imgs/speakers/dara.png'
-import toun from '@/assets/imgs/speakers/toun.png'
-import david from '@/assets/imgs/speakers/david.png'
-import shalom from '@/assets/imgs/speakers/shalom.png'
-import ntongha from '@/assets/imgs/speakers/ntongha.png'
-
-
+import dara from "@/assets/imgs/speakers/dara.png";
+import toun from "@/assets/imgs/speakers/toun.png";
+import david from "@/assets/imgs/speakers/david.png";
+import shalom from "@/assets/imgs/speakers/shalom.png";
+import ntongha from "@/assets/imgs/speakers/ntongha.png";
+import tolu from "@/assets/imgs/tolu.png";
 
 interface iSpeaker {
   entered?: () => void;
@@ -301,16 +300,24 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
 
   const devfestImages = [
     {
-      image: BlueDevfest,
+      // image: BlueDevfest,
+      image:
+        "https://res.cloudinary.com/dh8trnu8w/image/upload/v1701191448/blue-devfest_vwlq3x.gif",
     },
     {
-      image: RedDevfest,
+      // image: RedDevfest,
+      image:
+        "https://res.cloudinary.com/dh8trnu8w/image/upload/v1701191444/red-devfest_p9gxps.gif",
     },
     {
-      image: YellowDevfest,
+      // image: YellowDevfest,
+      image:
+        "https://res.cloudinary.com/dh8trnu8w/image/upload/v1701191443/yellow-devfest_iwjk2x.gif",
     },
     {
-      image: GreenDevfest,
+      // image: GreenDevfest,
+      image:
+        "https://res.cloudinary.com/dh8trnu8w/image/upload/v1701191449/green-devfest_pwqqaw.gif",
     },
   ];
 
@@ -321,47 +328,47 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
       role: "Growth Specialist",
       company: "Norebase",
       image: ntongha,
-      twitterUrl: 'https://twitter.com/ehn_tee',
-      linkedinUrl: 'https://www.linkedin.com/in/ntongha-ekot-product-marketer/'
+      twitterUrl: "https://twitter.com/ehn_tee",
+      linkedinUrl: "https://www.linkedin.com/in/ntongha-ekot-product-marketer/",
     },
     {
-      name: "Olumide Adaramoye",
+      name: "Toluwanimi Olubanke",
       color: "var(--warning)",
-      role: "Growth Manager for fintechs and web3 startups",
-      company: "",
-      image: dara,
-      twitterUrl: '',
-      linkedinUrl: 'https://www.linkedin.com/in/olumideadaramoye/'
+      role: "Content Marketing Manager",
+      company: "Bloc",
+      image: tolu,
+      twitterUrl: "https://twitter.com/toluolubanke",
+      linkedinUrl: "https://www.linkedin.com/in/toluolubanke/",
     },
   ];
 
   const moderators = [
     {
-      name: "Raji Adetoun",
-      color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: toun,
-      twitterUrl: 'https://twitter.com/rajiadetoun',
-      linkedinUrl: 'https://www.linkedin.com/in/rajiadetoun/'
-    },
-    {
       name: "Shalom Adebola",
       color: "var(--warning)",
       role: "Product Designer",
-      company: "Heyfood",
+      company: "Freelance",
       image: shalom,
-      twitterUrl: 'https://twitter.com/shalombrain',
-      linkedinUrl: 'https://www.linkedin.com/in/shalombrain/'
+      twitterUrl: "https://twitter.com/shalombrain",
+      linkedinUrl: "https://www.linkedin.com/in/shalombrain/",
+    },
+    {
+      name: "Raji Adetoun",
+      color: "var(--primary)",
+      role: "Social, Community and Project Manager",
+      company: "",
+      image: toun,
+      twitterUrl: "https://twitter.com/rajiadetoun",
+      linkedinUrl: "https://www.linkedin.com/in/rajiadetoun/",
     },
     {
       name: "David Olagookun",
       color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
+      role: "Mobile Engineer",
+      company: "TM30",
       image: david,
-      twitterUrl: 'https://twitter.com/david_oh',
-      linkedinUrl: 'https://www.linkedin.com/in/david-olagookun-17a862218/'
+      twitterUrl: "https://twitter.com/david_oh",
+      linkedinUrl: "https://www.linkedin.com/in/david-olagookun-17a862218/",
     },
   ];
 
@@ -374,7 +381,10 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
           <div className={Styles["speakers__content"]}>
             <div className={Styles["speakers__content--title"]}>
               <h1>Event Speakers</h1>
-              <p>Meet our 2023 visionary speakers with innovative ideas in the tech space.</p>
+              <p>
+                Meet our 2023 visionary speakers with innovative ideas in the
+                tech space.
+              </p>
             </div>
           </div>
           <div className={Styles["speakers__cards"]}>
@@ -384,7 +394,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
             {speakerDetails.map((speaker, index) => (
               <Card key={index} data={speaker} title={"speaker"} />
             ))}
-            <a
+            {/* <a
               href="https://sessionize.com/devfest-ibadan-2023/"
               target="_blank"
             >
@@ -396,7 +406,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
                 </span>
                 <h3>BECOME A SPEAKER</h3>
               </div>
-            </a>
+            </a> */}
           </div>
         </div>
         <div>
@@ -486,15 +496,20 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
           <div className={Styles.devfest__images__container}>
             {devfestImages.map((item, index) => (
               <div key={index} className={Styles.devfest__image}>
-                <Image src={item.image} alt="devfest image" />
+                <Image
+                  src={item.image}
+                  alt="devfest image"
+                  width={100}
+                  height={100}
+                />
               </div>
             ))}
           </div>
-          <div className={Styles.button__container}>
+          {/* <div className={Styles.button__container}>
             <Button bgColor="#4285F4">
               <p>View photos from past event</p>
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

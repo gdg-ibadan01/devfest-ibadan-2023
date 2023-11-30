@@ -15,15 +15,20 @@
     .text__carousel {
       width: 380px;
       height: 52px;
-      display: grid;
-      grid-template-columns: 305px 1fr;
+      // border: 1px solid red;
+      display: flex;
+      // grid-template-columns: 305px 1fr;
       justify-content: center;
       align-items: center;
       column-gap: 60px;
       margin-left: 40px;
+      background-color: red;
     }
 
     .logo__carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 200px;
       height: 126px;
       margin-left: 52px;

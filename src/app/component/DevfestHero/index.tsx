@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Styles from "./styles.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -109,27 +110,27 @@ const DevfestHero = ({
             className={`${Styles.devfest__cta} ${Styles.bas__warning}`}
             onMouseEnter={devfestEnter}
             onMouseLeave={devfestLeave}
-            href="https://sessionize.com/devfest-ibadan-2023/"
+            href="https://gdg.community.dev/gdg-ibadan/"
             target="_blank"
           >
-            <h3>become a speaker</h3>
+            <h3>become a member</h3>
           </a>
           <a
             className={`${Styles.devfest__cta} ${Styles.gt__primary}`}
             onMouseEnter={devfestEnter}
             onMouseLeave={devfestLeave}
-            href="https://gdg.community.dev/events/details/google-gdg-ibadan-presents-devfest-ibadan-2023/"
+            href="/panelist"
             target="_blank"
           >
-            <h3>get ticket</h3>
+            <h3>panelist'23</h3>
           </a>
-          <Link 
-            href='/volunteer'
+          <Link
+            href="/volunteer"
             className={`${Styles.devfest__cta} ${Styles.bav__success}`}
             onMouseEnter={devfestEnter}
             onMouseLeave={devfestLeave}
           >
-            <h3>become a volunteer</h3>
+            <h3>volunteer'23</h3>
           </Link>
         </div>
       </div>

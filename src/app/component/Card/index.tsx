@@ -5,7 +5,6 @@ import LinkedinIcon from "../../../assets/svgs/linkedin.svg";
 import { FC } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { log } from "console";
 
 export interface cardInterface {
   data: {
@@ -13,12 +12,17 @@ export interface cardInterface {
     role: string;
     company: string;
     color: string;
-    image: StaticImageData;
+    image: StaticImageData | string;
     twitterUrl?: string;
     linkedinUrl?: string;
     height?: string;
     margin?: string;
     objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";
+    about?: any;
+    linkedin?: string;
+    twitter?: string;
+    topic?: string;
+    slideLink?: string;
   };
   title: string;
 }
@@ -36,43 +40,55 @@ const Card: FC<cardInterface> = ({ data, title }) => {
     height,
     objectFit,
     margin,
+    about,
+    linkedin,
+    twitter,
+    topic,
+    slideLink,
   } = data;
 
-  const speakerName = name?.toLowerCase().split(' ').join('-');
+  const speakerName = name?.toLowerCase().split(" ").join("-");
 
-  console.log(image);
-  
+  // console.log(image);
 
   const handleNavigate = () => {
     router.push(`/speaker/${speakerName}`);
-  }
+  };
 
   return (
     <>
       {title === "speaker" && (
-            <div
-              className={`${Styles["speaker--card"]} ${Styles.big}`}
-              style={{ backgroundColor: color }}
-              onClick={handleNavigate}
-            >
-              <div className={Styles["speaker--card-image"]}>
-                <Image src={image} alt={`${name} headshot`} />
-              </div>
-              <div className={Styles["speaker--card-profile"]}>
-                <h3>{name}</h3>
-                <p>{`${role}, ${company}`}</p>
-              </div>
-              <div className={Styles["speaker--card-socials"]}>
-                <div className={Styles["socials"]}>
-                  <a href="!#" className={Styles["social"]}>
-                    <Image src={TwitterIcon} alt="Twitter Icon" />
-                  </a>
-                  <a href="!#" className={Styles["social"]}>
-                    <Image src={LinkedinIcon} alt="Linkedin Icon" />
-                  </a>
-                </div>
-              </div>
+        <div
+          className={`${Styles["speaker--card"]} ${Styles.big}`}
+          style={{ backgroundColor: color }}
+          onClick={handleNavigate}
+        >
+          <div className={Styles["speaker--card-image"]}>
+            <Image
+              src={image}
+              alt={`${name} headshot`}
+              width={100}
+              height={100}
+              style={{
+                margin: `${margin ? margin : "0"}`,
+              }}
+            />
+          </div>
+          <div className={Styles["speaker--card-profile"]}>
+            <h3>{name}</h3>
+            <p>{`${role}${company ? "," : ""} ${company}`}</p>
+          </div>
+          <div className={Styles["speaker--card-socials"]}>
+            <div className={Styles["socials"]}>
+              <a href={twitter} className={Styles["social"]}>
+                <Image src={TwitterIcon} alt="Twitter Icon" />
+              </a>
+              <a href={linkedin} className={Styles["social"]}>
+                <Image src={LinkedinIcon} alt="Linkedin Icon" />
+              </a>
             </div>
+          </div>
+        </div>
       )}
 
       {title === "organizer" && (
@@ -93,7 +109,9 @@ const Card: FC<cardInterface> = ({ data, title }) => {
                 width: "100%",
                 margin: `${margin ? margin : "0"}`,
               }}
-            // className={Styles["organizer--image"]}
+              width={100}
+              height={100}
+              // className={Styles["organizer--image"]}
             />
           </div>
           <div className={Styles["organizer--card-profile"]}>
