@@ -468,7 +468,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
           </div>
         </div>
 
-        <div className={Styles["volunteers__wrapper"]}>
+        {/* <div className={Styles["volunteers__wrapper"]}>
           <div className={Styles["organizers__content"]}>
             <div className={Styles["organizers__content--title"]}>
               <h1>The Volunteers</h1>
@@ -483,7 +483,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
               <Card key={index} data={organizer} title={"organizer"} />
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className={Styles.reminder__container}>
           <div className={Styles.reminder__heading}>
