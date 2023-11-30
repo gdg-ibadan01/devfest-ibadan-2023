@@ -7,8 +7,12 @@
     width: 93%;
     margin: auto;
 
-    div {
+    &__header {
       margin-bottom: 50px;
+    }
+
+    div {
+      // margin-bottom: 50px;
       h2 {
         font-size: 72px;
         font-weight: bold;
@@ -50,20 +54,24 @@
 .parentContainer {
   width: 100%;
   height: 62px;
-  background-color: #f9ab00;
+  background-color: var(--warning);
   margin-bottom: 60px;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 
   .childContainer {
     width: 100%;
-    height: 60px;
-    background-color: #4285f4;
+    // height: 60px;
+    height: 100%;
+    background-color: var(--primary);
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow: hidden;
+    // overflow: hidden;
+    overflow-x: scroll;
+    // gap: 20px;
 
     @media screen and (max-width: 768px) {
       overflow-x: auto;
@@ -71,18 +79,22 @@
 
     .text__container {
       width: 200px;
-      height: 60px;
+      // height: 60px;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
 
       .text {
         font-size: 17px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       @media screen and (max-width: 768px) {
         width: 600px;
-
         .text {
           width: 150px;
         }

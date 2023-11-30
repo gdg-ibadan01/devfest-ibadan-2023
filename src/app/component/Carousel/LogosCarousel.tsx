@@ -9,6 +9,7 @@ import altschoolLogo from "../../../assets/imgs/altschool.png";
 import codemagicLogo from "../../../assets/imgs/codemagic.svg";
 import aitiLogo from "../../../assets/imgs/aiti.png";
 import googleLogo from "../../../assets/imgs/google.png";
+// import ghLogo from "../../../assets/imgs/gh.svg";
 
 const LogosCarousel = () => {
   return (
