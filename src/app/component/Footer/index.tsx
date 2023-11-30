@@ -3,6 +3,7 @@ import { useRef } from "react";
 import Pills from "../Pills";
 import Styles from "./styles.module.scss";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Footer = () => {
   const constraintsRef = useRef(null);
@@ -17,7 +18,8 @@ const Footer = () => {
           <Magnetic>
             <li>
               <a
-                href="https://sessionize.com/devfest-ibadan-2023/"
+                // href="https://sessionize.com/devfest-ibadan-2023/"
+                href="#"
                 target="_blank"
               >
                 Speakers
@@ -36,17 +38,14 @@ const Footer = () => {
           </Magnetic>
           <Magnetic>
             <li>
-              <a
-                href="https://drive.google.com/drive/folders/15Hhrb7A_fypcxiIOuvneVgehYxwSh2rh?usp=drive_link"
-                target="_blank"
-              >
+              <a href="#" target="_blank">
                 Sponsors
               </a>
             </li>
           </Magnetic>
           <Magnetic>
             <li>
-              <a href="#">Volunteers</a>
+              <Link href="/volunteers">Volunteers</Link>
             </li>
           </Magnetic>
         </ul>

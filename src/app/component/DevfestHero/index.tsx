@@ -115,17 +115,16 @@ const DevfestHero = ({
           >
             <h3>become a member</h3>
           </a>
-          <a
+          <Link
             className={`${Styles.devfest__cta} ${Styles.gt__primary}`}
             onMouseEnter={devfestEnter}
             onMouseLeave={devfestLeave}
             href="/panelist"
-            target="_blank"
           >
             <h3>panelist'23</h3>
-          </a>
+          </Link>
           <Link
-            href="/volunteer"
+            href="/volunteers"
             className={`${Styles.devfest__cta} ${Styles.bav__success}`}
             onMouseEnter={devfestEnter}
             onMouseLeave={devfestLeave}
