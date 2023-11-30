@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/page.jsx"
-  ],
+, "src/app/volunteers/VolunteersList/volunteersData.js"  ],
   "exclude": ["node_modules"]
 }
