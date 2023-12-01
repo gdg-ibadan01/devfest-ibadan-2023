@@ -110,10 +110,10 @@ const DevfestHero = ({
             className={`${Styles.devfest__cta} ${Styles.bas__warning}`}
             onMouseEnter={devfestEnter}
             onMouseLeave={devfestLeave}
-            href="https://gdg.community.dev/gdg-ibadan/"
+            href="https://selar.co/m/gdg-ibadan1"
             target="_blank"
           >
-            <h3>become a member</h3>
+            <h3>store</h3>
           </a>
           <Link
             className={`${Styles.devfest__cta} ${Styles.gt__primary}`}
