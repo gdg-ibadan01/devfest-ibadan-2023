@@ -34,11 +34,10 @@
     }
 
     .speakers__content {
-      height: 190px;
+      height: 160px;
       display: flex;
       justify-content: center;
       align-items: center;
-
       background-image: url("../../../assets/imgs/cbg.png");
       background-position: center center;
 
@@ -47,18 +46,16 @@
           // font-family: var(--font-radio-grotesk);
           text-align: center;
           font-size: 3.6em;
-          margin-bottom: 5px;
         }
-
-        p{
+        p {
           text-align: center;
         }
       }
 
       @media only screen and (min-width: 250px) and (max-width: 480px) {
-        height: 190px;
+        height: 180px;
         &--title {
-          padding-top: 40px;
+          padding-top: 45px;
 
           h1 {
             // font-family: var(--font-radio-grotesk);
@@ -310,8 +307,8 @@
     padding-bottom: 70px;
 
     .reminder__heading {
+      margin-top: 50px;
       margin-bottom: 50px;
-      margin-top: 40px;
       text-align: center;
 
       h2 {

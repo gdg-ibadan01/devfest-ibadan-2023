@@ -1,0 +1,40 @@
+.container {
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-top: 20px;
+
+  &__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    p {
+      text-align: left;
+    }
+
+    span {
+      width: auto;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      background-color: var(--primary);
+      padding: 10px 24px;
+    }
+
+    span#hall1 {
+      background-color: var(--success);
+    }
+    span#hall2 {
+      background-color: var(--warning);
+    }
+    span#hall3 {
+      background-color: var(--danger);
+    }
+  }
+}

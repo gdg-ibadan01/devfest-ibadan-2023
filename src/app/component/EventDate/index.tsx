@@ -22,14 +22,14 @@ const EventDate = () => {
           </p>
         </Ticker>
       </div>
-      <div className={Styles.actionBtnsContainer}>
+      {/* <div className={Styles.actionBtnsContainer}>
         <a href="mailto:info@gdgibadan.com">
           <Button bgColor="#4285F4"> Become a Sponsor </Button>
         </a>
         <Link href="/volunteer">
           <Button bgColor="#F9AB00"> Become a volunteer </Button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

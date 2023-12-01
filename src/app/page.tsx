@@ -12,7 +12,6 @@ import Footer from "./component/Footer";
 import useCustomCursor from "./hooks/useCustomCusor";
 import Preloader from "./component/Preloader";
 
-
 const Home = () => {
   const {
     cursorText,
@@ -40,14 +39,14 @@ const Home = () => {
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <motion.div
+      {/* <motion.div
         variants={variants}
         className="circle"
         animate={cursorVariant}
         transition={spring}
       >
         <span className="cursorText">{cursorText}</span>
-      </motion.div>
+      </motion.div> */}
       <DevfestHero devfestEnter={continueEnter} devfestLeave={continueLeave} />
       <LogosCarousel />
       <About />

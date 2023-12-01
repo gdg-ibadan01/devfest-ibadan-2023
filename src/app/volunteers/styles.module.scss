@@ -1,0 +1,17 @@
+.container{
+    width: 100%;
+    height: auto;
+    background-color: hsl(205, 40%, 9%);
+
+    .content{
+        width: 90%;
+        margin: auto;
+        height: 100%;
+        margin: 50px auto;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            margin: 50px auto;
+        }
+    }
+}

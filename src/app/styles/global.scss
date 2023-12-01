@@ -6,6 +6,7 @@ html {
   --success: #34a853;
   --danger: #ea4335;
   --light-gray: #e9eced;
+  --black: #000000;
   --gray: #213c4e;
   --gray-light: #336383;
   --white: #fff;
@@ -66,32 +67,32 @@ img {
   }
 }
 
-.circle {
-  position: fixed;
-  z-index: 100;
-  display: flex;
-  flex-flow: row;
-  align-content: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  height: 10px;
-  width: 10px;
-  background-color: #1e91d6;
-  border-radius: 200px;
-  pointer-events: none;
-  color: #fff;
-  text-align: center;
-  font-size: 16px;
+// .circle {
+//   position: fixed;
+//   z-index: 100;
+//   display: flex;
+//   flex-flow: row;
+//   align-content: center;
+//   justify-content: center;
+//   top: 0;
+//   left: 0;
+//   height: 10px;
+//   width: 10px;
+//   background-color: #1e91d6;
+//   border-radius: 200px;
+//   pointer-events: none;
+//   color: #fff;
+//   text-align: center;
+//   font-size: 16px;
 
-  @media only screen and (min-width: 250px) and (max-width: 480px) {
-    display: none;
-  }
-}
+//   // @media only screen and (min-width: 250px) and (max-width: 480px) {
+//   //   display: none;
+//   // }
+// }
 
-.cursorText {
-  flex: auto;
-  font-size: inherit;
-  pointer-events: none;
-  margin: auto;
-}
+// .cursorText {
+//   flex: auto;
+//   font-size: inherit;
+//   pointer-events: none;
+//   margin: auto;
+// }

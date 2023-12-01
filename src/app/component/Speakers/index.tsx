@@ -5,8 +5,6 @@ import Speaker1 from "@/assets/imgs/speakers/speaker1.png";
 import Speaker2 from "@/assets/imgs/speakers/speaker2.png";
 import Speaker3 from "@/assets/imgs/speakers/speaker3.png";
 import Speaker4 from "@/assets/imgs/speakers/speaker4.png";
-// import Speaker5 from "@/assets/imgs/speakers/speaker5.png";
-
 import Speaker11 from "@/assets/imgs/speakers/speaker11.png";
 import Speaker21 from "@/assets/imgs/speakers/speaker21.png";
 import Speaker31 from "@/assets/imgs/speakers/speaker31.png";
@@ -21,14 +19,14 @@ import oyin from "@/assets/imgs/speakers/oyin.png";
 import peter from "@/assets/imgs/speakers/peter.png";
 import ava from "@/assets/imgs/speakers/ava.png";
 import tobi from "@/assets/imgs/speakers/tobi.png";
-import ComingSoonCard from "../ComingSoonCard";
-// import Agenda from "../Agenda";
-import Button from "../Button";
+import Agenda from "../Agenda";
 import Image from "next/image";
-import GreenDevfest from "@/assets/gifs/green-devfest.gif";
-import BlueDevfest from "@/assets/gifs/blue-devfest.gif";
-import YellowDevfest from "@/assets/gifs/yellow-devfest.gif";
-import RedDevfest from "@/assets/gifs/red-devfest.gif";
+import { speakerDetails } from "../speakerDetails";
+import toun from "@/assets/imgs/speakers/toun.png";
+import david from "@/assets/imgs/speakers/david.png";
+import shalom from "@/assets/imgs/speakers/shalom.png";
+import ntongha from "@/assets/imgs/speakers/Ntongha.png";
+import tolu from "@/assets/imgs/tolu.png";
 
 interface iSpeaker {
   entered?: () => void;
@@ -36,85 +34,6 @@ interface iSpeaker {
 }
 
 const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
-  const speakers = [
-    {
-      name: "KHAN DANIELS",
-      color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker11,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--warning)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker21,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--danger)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker31,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--success)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker41,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--warning)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker11,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker21,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--success)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker31,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--danger)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker41,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--danger)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker11,
-    },
-    {
-      name: "KHAN DANIELS",
-      color: "var(--warning)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker21,
-    },
-    // {
-    //   name: "KHAN DANIELS",
-    //   color: "var(--primary)",
-    //   role: "Product Designer",
-    //   company: "Heyfood",
-    //   image: Speaker31,
-    // },
-  ];
   const organizers: cardInterface["data"][] = [
     {
       name: "ABIDEMI TIAMiYU",
@@ -293,57 +212,75 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
 
   const devfestImages = [
     {
-      image: BlueDevfest,
+      // image: BlueDevfest,
+      image:
+        "https://res.cloudinary.com/dh8trnu8w/image/upload/v1701191448/blue-devfest_vwlq3x.gif",
     },
     {
-      image: RedDevfest,
+      // image: RedDevfest,
+      image:
+        "https://res.cloudinary.com/dh8trnu8w/image/upload/v1701191444/red-devfest_p9gxps.gif",
     },
     {
-      image: YellowDevfest,
+      // image: YellowDevfest,
+      image:
+        "https://res.cloudinary.com/dh8trnu8w/image/upload/v1701191443/yellow-devfest_iwjk2x.gif",
     },
     {
-      image: GreenDevfest,
+      // image: GreenDevfest,
+      image:
+        "https://res.cloudinary.com/dh8trnu8w/image/upload/v1701191449/green-devfest_pwqqaw.gif",
     },
   ];
 
   const hosts = [
     {
-      name: "KHAN DANIELS",
+      name: "Ntongha Alagba(Ekot)",
       color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker11,
+      role: "Growth Specialist",
+      company: "Norebase",
+      image: ntongha,
+      twitterUrl: "https://twitter.com/ehn_tee",
+      linkedinUrl: "https://www.linkedin.com/in/ntongha-ekot-product-marketer/",
     },
     {
-      name: "KHAN DANIELS",
+      name: "Toluwanimi Olubanke",
       color: "var(--warning)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker21,
+      role: "Content Marketing Manager",
+      company: "Bloc",
+      image: tolu,
+      twitterUrl: "https://twitter.com/toluolubanke",
+      linkedinUrl: "https://www.linkedin.com/in/toluolubanke/",
     },
   ];
 
   const moderators = [
     {
-      name: "KHAN DANIELS",
-      color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker11,
-    },
-    {
-      name: "KHAN DANIELS",
+      name: "Shalom Adebola",
       color: "var(--warning)",
       role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker21,
+      company: "Freelance",
+      image: shalom,
+      twitterUrl: "https://twitter.com/shalombrain",
+      linkedinUrl: "https://www.linkedin.com/in/shalombrain/",
     },
     {
-      name: "KHAN DANIELS",
+      name: "Raji Adetoun",
       color: "var(--primary)",
-      role: "Product Designer",
-      company: "Heyfood",
-      image: Speaker11,
+      role: "Social, Community and Project Manager",
+      company: "",
+      image: toun,
+      twitterUrl: "https://twitter.com/rajiadetoun",
+      linkedinUrl: "https://www.linkedin.com/in/rajiadetoun/",
+    },
+    {
+      name: "David Olagookun",
+      color: "var(--primary)",
+      role: "Mobile Engineer",
+      company: "TM30",
+      image: david,
+      twitterUrl: "https://twitter.com/david_oh",
+      linkedinUrl: "https://www.linkedin.com/in/david-olagookun-17a862218/",
     },
   ];
 
@@ -363,12 +300,12 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
             </div>
           </div>
           <div className={Styles["speakers__cards"]}>
-            {comingSoon.map((item, index) => (
+            {/* {comingSoon.map((item, index) => (
               <ComingSoonCard key={index} color={item.color} />
-            ))}
-            {/* {speakers.map((speaker, index) => (
-              <Card key={index} data={speaker} title={"speaker"} />
             ))} */}
+            {speakerDetails.map((speaker, index) => (
+              <Card key={index} data={speaker} title={"speaker"} />
+            ))}
             {/* <a
               href="https://sessionize.com/devfest-ibadan-2023/"
               target="_blank"
@@ -384,9 +321,9 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
             </a> */}
           </div>
         </div>
-        {/* <div>
+        <div>
           <Agenda />
-        </div> */}
+        </div>
 
         <div className={Styles["organizers__mainwrapper"]}>
           <div className={Styles["organizers__wrapper"]}>
@@ -402,15 +339,15 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
               ))}
             </div>
             {/* Hosts and moderators section */}
-            {/* <div className={Styles["moderatorsAndHosts__container"]}>
+            <div className={Styles["moderatorsAndHosts__container"]}>
               <div className={Styles["hosts__container"]}>
                 <div className={Styles["organizers__content"]}>
                   <div className={Styles["organizers__content--title"]}>
-                    <h1>The Hosts</h1>
+                    <h1>The Moderators</h1>
                     <p>
-                      From turning every event into a masterpiece of
-                      hospitality, meet the heartbeat behind the curtain, our
-                      exceptional host.
+                      With a profound understanding of the tech landscape, meet
+                      the guiding voices steering our tech event, the brilliant
+                      moderators.
                     </p>
                   </div>
                 </div>
@@ -424,11 +361,11 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
               <div className={Styles["moderators__container"]}>
                 <div className={Styles["organizers__content"]}>
                   <div className={Styles["organizers__content--title"]}>
-                    <h1>The Moderators</h1>
+                    <h1>The Hosts</h1>
                     <p>
-                      With a profound understanding of the tech landscape, meet
-                      the guiding voices steering our tech event, the brilliant
-                      moderators.
+                      From turning every event into a masterpiece of
+                      hospitality, meet the heartbeat behind the curtain, our
+                      exceptional host.
                     </p>
                   </div>
                 </div>
@@ -438,7 +375,7 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
                   ))}
                 </div>
               </div>
-            </div> */}
+            </div>
             {/* Hosts and moderators section */}
           </div>
         </div>
@@ -471,7 +408,12 @@ const Speakers: FC<iSpeaker> = ({ entered, leave }) => {
           <div className={Styles.devfest__images__container}>
             {devfestImages.map((item, index) => (
               <div key={index} className={Styles.devfest__image}>
-                <Image src={item.image} alt="devfest image" />
+                <Image
+                  src={item.image}
+                  alt="devfest image"
+                  width={100}
+                  height={100}
+                />
               </div>
             ))}
           </div>
