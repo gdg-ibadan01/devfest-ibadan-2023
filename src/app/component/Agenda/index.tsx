@@ -118,13 +118,13 @@ const Agenda = () => {
       details: <BreakoutSession data={breakoutSession4} />,
     },
     {
-      time: "1:25am - 1:45pm",
+      time: "1:25pm - 1:45pm",
       title: "5th Breakout session (Presentation)",
       details: <BreakoutSession data={breakoutSession5} />,
     },
     {
       time: "1:50pm - 2:00pm",
-      title: "Speed Networking - Shalom",
+      title: "Speed Networking",
     },
     {
       time: "2:05pm - 2:25pm",
@@ -133,7 +133,7 @@ const Agenda = () => {
     {
       time: "2:30pm - 2:40pm",
       title: "Game",
-      details: "Don’t answer yes or no / Put a finger down -  David x Toun",
+      details: "Don’t answer yes or no / Put a finger down",
     },
     {
       time: "2:40pm - 2:55pm",
@@ -146,7 +146,7 @@ const Agenda = () => {
     },
     {
       time: "3:20pm - 3:40pm",
-      title: "2nd keynote session",
+      title: "Lightning",
       details: "The role of product design in Web3 adoption - Omomame Imafidon",
     },
     {

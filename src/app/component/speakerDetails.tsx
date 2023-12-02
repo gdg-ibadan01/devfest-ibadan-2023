@@ -13,7 +13,7 @@ import john from "@/assets/imgs/john.png";
 import laju from "@/assets/imgs/laju.png";
 import omomame from "@/assets/imgs/omomame.png";
 import sa from "@/assets/imgs/sa.png";
-import seyi from "@/assets/imgs/seyi.png";
+import seyi from "@/assets/imgs/seyi__xo.png";
 import talabi from "@/assets/imgs/talabi.png";
 import sodiq from "@/assets/imgs/sodiq.png";
 import tolu from "@/assets/imgs/tolu.png";
@@ -29,12 +29,13 @@ export const speakerDetails: SpeakerInfoProps["data"][] = [
     company: "Forth Vending Limited",
     image: ya,
     about: `<p> Yusuf Adeyemo is a DevOps engineer with a passion for helping startups transform software delivery through automation. In his role as Senior DevOps Consultant at Forth Vending Limited, Yusuf focuses on providing engineering teams with more control over their environment and software development process using modern tools. <br /> <br />
-    With a knack for seeking out ingenious yet simple solutions, John loves to cut through complexities and enable teams to deliver higher-quality products. He believes in the power of automation to revolutionize startups, replacing over-engineering with efficiency. John is excited to share his experiences leveraging automation to provide simplicity, productivity, and innovation for software-driven companies. His practical approach will inspire you to make automation work for your startup. </p>`,
+    With a knack for seeking out ingenious yet simple solutions, Yusuf loves to cut through complexities and enable teams to deliver higher-quality products. He believes in the power of automation to revolutionize startups, replacing over-engineering with efficiency. John is excited to share his experiences leveraging automation to provide simplicity, productivity, and innovation for software-driven companies. His practical approach will inspire you to make automation work for your startup. </p>`,
     linkedin: "https://www.linkedin.com/in/yusadolat/",
     twitter: "https://twitter.com/yusadolat",
     topic: "Serverless Superpowers with Google Cloud Functions",
     slideLink:
-      "https://docs.google.com/presentation/d/1sckuogX6Eylg1NNLmCZtIxad-ylbJ4lx/edit?usp=drive_link",
+      "https://drive.google.com/file/d/1T74lArVn3ziQMw37nBexu9DWySHky2Ue/view?usp=drive_link",
+    margin: "0 0 -50px 0",
   },
   {
     name: "ARINZE ONYE",
@@ -48,7 +49,7 @@ export const speakerDetails: SpeakerInfoProps["data"][] = [
     twitter: "https://twitter.com/arinze_onye",
     slideLink: "#",
     topic: "From code to market: how to build something people want",
-    margin: "0 0 -130px 0",
+    margin: "0 0 -200px 0",
   },
   {
     name: "CALEB OLOJO",
@@ -64,7 +65,7 @@ export const speakerDetails: SpeakerInfoProps["data"][] = [
       "https://docs.google.com/presentation/d/1LbAcpeT0wn1OuIYj-Ei_AMLCkCj2UNtJ1-EEckw3itw/edit?usp=drive_link",
     topic: "Building a npm package in 2023 — and beyond",
     twitter: "https://twitter.com/kafLamed",
-    margin: "0 0 -90px 0",
+    margin: "0 0 -150px 0",
   },
   {
     name: "Collins Enebeli",
@@ -92,7 +93,7 @@ export const speakerDetails: SpeakerInfoProps["data"][] = [
     slideLink:
       "https://docs.google.com/presentation/d/1xGsBocKYaY3-8kVpfsv919mNS3QMrhc8/edit?usp=drive_link",
     topic: "Bridging the gap between code and docs for technical writers.",
-    margin: "0 0 -125px 0",
+    margin: "0 0 -200px 0",
   },
   {
     name: "David Ajayi",
@@ -284,7 +285,7 @@ export const speakerDetails: SpeakerInfoProps["data"][] = [
       "https://docs.google.com/presentation/d/1VTN8D0ARTf_DIvJ8EQQ2TZbRMP3Y68cG/edit?usp=drive_link",
     topic: "The role of product design in Web3 adoption",
     twitter: "https://twitter.com/creativemame",
-    margin: "0 0 -90px 0",
+    margin: "0 0 -120px 0",
   },
   {
     about: `<p> My name is Seunfunmi Adegoke, and I am a Software Engineer currently working at Turing.
@@ -298,10 +299,11 @@ export const speakerDetails: SpeakerInfoProps["data"][] = [
     name: "Seunfunmi Adegoke",
     role: "Software Engineer",
     slideLink:
-      "https://docs.google.com/presentation/d/1eYjV82id55IRQo-q-JHpjn1UIq8prrO8/edit?usp=drive_link",
+      "https://docs.google.com/presentation/d/1iftXQnKbkp4zfdvBcdYiq5UsSevwKeVd/edit?usp=drive_link&ouid=115949176211992985103&rtpof=true&sd=true",
     topic:
       "Elevating Your Development Workflow with Vertex AI: Exploring Prompt Engineering and LLMs",
     twitter: "https://twitter.com/_codepiercer",
+    margin: "0 0 -50px 0",
   },
   {
     about: `<p> Oluwadare Seyi is a front-end engineer based in Lagos, Nigeria, focused on creating interactive experiences on the web.
@@ -418,6 +420,6 @@ export const speakerDetails: SpeakerInfoProps["data"][] = [
     slideLink: "",
     topic: "Keynote Address",
     twitter: "https://twitter.com/Geektutor",
-    margin: "0 0 -100px 0",
+    margin: "0 0 -150px 0",
   },
 ];

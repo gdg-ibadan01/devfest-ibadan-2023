@@ -49,7 +49,7 @@ const Countdown = () => {
   return (
     <div className={Styles.container}>
       <h1 className={Styles["container__title"]}>
-        {"The Countdown"}
+        {"Ongoing Event"}
       </h1>
       <div className={Styles["container__countdown"]}>
         <span className={Styles["container__countdown--wrapper"]}>
