@@ -21,6 +21,8 @@ import seyi from "@/assets/imgs/volunteers/seyi.png";
 import taiwo from "@/assets/imgs/volunteers/taiwo.png";
 import wumi from "@/assets/imgs/volunteers/wumi.png";
 import cody from "@/assets/imgs/volunteers/cody.png";
+import mary from '@/assets/imgs/volunteers/mary.png';
+import davidFrontend from '@/assets/imgs/volunteers/david-frontend.png'
 
 export const volunteersData = [
   {
@@ -220,6 +222,26 @@ export const volunteersData = [
     twitterUrl: "",
     linkedinUrl: "",
     image: qudus,
+    instagramUrl: "",
+    color: "var(--primary)",
+    role: "",
+    company: "",
+  },
+  {
+    name: "Mary Esivue",
+    twitterUrl: "https://twitter.com/maryesivue",
+    linkedinUrl: "https://www.linkedin.com/in/mary-esivue-603070147/",
+    image: mary,
+    instagramUrl: "",
+    color: "var(--primary)",
+    role: "",
+    company: "",
+  },
+  {
+    name: "Irefin David",
+    twitterUrl: "https://twitter.com/irefindavid",
+    linkedinUrl: "https://www.linkedin.com/in/irefin-david-84b952241/",
+    image: davidFrontend,
     instagramUrl: "",
     color: "var(--primary)",
     role: "",
