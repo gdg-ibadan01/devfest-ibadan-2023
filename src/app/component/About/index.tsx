@@ -41,14 +41,22 @@ const About = () => {
       <section className={Styles["container__text"]}>
         <h1>What is devfest?</h1>
         <p>
-          DevFest, an annual decentralised tech conference, empowers digital creatives to unlock cutting-edge ideas, discover new interests, and network with like-minded techies. Hosted by the Google Developer Groups (GDG) community, DevFest celebrated its 12th year in 2023, marking the commencement of the second decade for GDG.
+          DevFest, an annual decentralised tech conference, empowers digital
+          creatives to unlock cutting-edge ideas, discover new interests, and
+          network with like-minded techies. Hosted by the Google Developer
+          Groups (GDG) community, DevFest celebrated its 12th year in 2023,
+          marking the commencement of the second decade for GDG.
         </p>
         <p>
-          DevFest, a catalyst for exploring Google's suite of developer tools, propels the impact of local tech professionals worldwide. Whether you seek new opportunities, aim to enhance your knowledge of the latest Google developer tools, or aspire to leverage Google technologies for social and economic impact, DevFest provides an unparalleled platform for developers to connect locally, learn, and innovate.
-
+          DevFest, a catalyst for exploring Google's suite of developer tools,
+          propels the impact of local tech professionals worldwide. Whether you
+          seek new opportunities, aim to enhance your knowledge of the latest
+          Google developer tools, or aspire to leverage Google technologies for
+          social and economic impact, DevFest provides an unparalleled platform
+          for developers to connect locally, learn, and innovate.
         </p>
-        <a href="mailto:info@gdgibadan.com">
-          <Button>Become a Sponsor</Button>
+        <a href="https://gdg.community.dev/gdg-ibadan/" target="_blank">
+          <Button>Become a member</Button>
         </a>
       </section>
       <section className={Styles["container__pills"]} ref={constraintsRef}>

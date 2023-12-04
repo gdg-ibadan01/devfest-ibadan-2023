@@ -27,6 +27,9 @@
       width: 200px;
       height: 126px;
       margin-left: 52px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       @media only screen and (min-width: 250px) and (max-width: 480px) {
         width: 150px;

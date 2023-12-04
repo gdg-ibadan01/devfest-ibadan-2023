@@ -146,12 +146,12 @@
         overflow: hidden;
 
         @media only screen and (min-width: 0px) and (max-width: 1024px) {
-            margin-left: 0%;
-          }
+          margin-left: 0%;
+        }
 
-         @media only screen and (min-width: 250px) and (max-width: 480px) {
-            margin-left: 2%;
-         }
+        @media only screen and (min-width: 250px) and (max-width: 480px) {
+          margin-left: 2%;
+        }
       }
 
       .content {
@@ -170,13 +170,13 @@
           //   }
 
           @media only screen and (min-width: 250px) and (max-width: 480px) {
-              &:nth-child(1) {
-                  margin-bottom: 10px;
-                  margin-left: 2%;
-                }
-                &:nth-child(2) {
-                  margin-left: 2%;
-                }
+            &:nth-child(1) {
+              margin-bottom: 10px;
+              margin-left: 2%;
+            }
+            &:nth-child(2) {
+              margin-left: 2%;
+            }
           }
 
           @media only screen and (min-width: 0px) and (max-width: 1024px) {
@@ -251,7 +251,7 @@
     }
 
     @media only screen and (min-width: 250px) and (max-width: 480px) {
-      .devfesthero{
+      .devfesthero {
         padding: 0 80px;
       }
     }
@@ -280,7 +280,7 @@
       justify-content: center;
       align-items: center;
       color: var(--white);
-      cursor: none;
+      // cursor: none;
 
       @media only screen and (min-width: 250px) and (max-width: 480px) {
         height: 85px;

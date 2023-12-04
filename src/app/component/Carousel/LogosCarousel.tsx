@@ -2,11 +2,12 @@ import Styles from "./styles.module.scss";
 import Image from "next/image";
 import Ticker from "framer-motion-ticker";
 
-import lacaseraLogo from "../../../assets/imgs/lacasera.png";
-import shiipLogo from "../../../assets/imgs/shiip.png";
 import cardifyLogo from "../../../assets/imgs/cardify.png";
-import altschoolLogo from "../../../assets/imgs/altschool.png";
-import heyfoodLogo from "../../../assets/imgs/heyfood.png";
+import codemagicLogo from "../../../assets/imgs/codemagic.svg";
+import aitiLogo from "../../../assets/imgs/aiti.png";
+import googleLogo from "../../../assets/imgs/google.png";
+import blockchainLogo from "../../../assets/imgs/blockchain.png";
+import integraflowLogo from "../../../assets/imgs/integraflow.png";
 
 const LogosCarousel = () => {
   return (
@@ -15,19 +16,47 @@ const LogosCarousel = () => {
         <div className={Styles["devfest__carousel"]}>
           <Ticker duration={30}>
             <div className={Styles["logo__carousel"]}>
-              <Image src={lacaseraLogo} alt="Lacasera logo" />
+              <Image
+                src={cardifyLogo}
+                alt="cardify logo"
+                style={{ width: "150px", height: "150px" }}
+              />
             </div>
             <div className={Styles["logo__carousel"]}>
-              <Image src={shiipLogo} alt="Shiip logo" />
+              <Image
+                src={codemagicLogo}
+                alt="Codemagic logo"
+                style={{ width: "150px", height: "150px" }}
+              />
             </div>
             <div className={Styles["logo__carousel"]}>
-              <Image src={cardifyLogo} alt="cardify logo" />
+              <Image
+                src={aitiLogo}
+                alt="Aiti logo"
+                style={{ width: "80px", height: "80px" }}
+              />
             </div>
             <div className={Styles["logo__carousel"]}>
-              <Image src={altschoolLogo} alt="AltSchool logo" />
+              <Image
+                src={googleLogo}
+                alt="Google logo"
+                style={{ width: "100px", height: "100px" }}
+              />
             </div>
             <div className={Styles["logo__carousel"]}>
-              <Image src={heyfoodLogo} alt="Heyfood logo" />
+              <Image
+                src={blockchainLogo}
+                alt="Blockchain logo"
+                style={{ width: "150px", height: "150px" }}
+              />
+            </div>
+
+            <div className={Styles["logo__carousel"]}>
+              <Image
+                src={integraflowLogo}
+                alt="Integral Flow logo"
+                style={{ width: "150px", height: "150px" }}
+              />
             </div>
           </Ticker>
         </div>
