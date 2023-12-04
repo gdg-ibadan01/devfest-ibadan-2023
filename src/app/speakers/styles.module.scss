@@ -1,0 +1,203 @@
+.speakerContainer {
+  padding-top: 5rem;
+  background-color: var(--dark);
+
+  .container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    @media screen and (max-width: 768px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .flexContainer {
+      display: flex;
+      gap: 2rem;
+      margin-top: 3rem;
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+      }
+
+      .imageFlex {
+          flex: 1;
+          position: relative;
+
+        .colorBg {
+          background-color: var(--primary);
+          background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+          position: relative;
+          z-index: 5;
+          height: 100%;
+
+          .speakerImg {
+            width: 349px;
+
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
+          }
+
+          .speakerInfo {
+            color: var(--light-white);
+            position: absolute;
+            bottom: 4.5rem;
+            right: 4.6rem;
+
+            h2 {
+              font-weight: 400;
+              font-size: 48px;
+              line-height: 54px;
+            }
+
+            p {
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 22px;
+            }
+
+          }
+          @media screen and (max-width: 768px) {
+
+            .speakerInfo {
+              bottom: 3rem;
+              right: 3rem;
+            }
+          }
+        }
+
+          .star {
+            position: absolute;
+            bottom: -7.4rem;
+            left: -5.6rem;
+            width: 234px;
+            height: 234px;
+            z-index: 1;
+
+            @media screen and (max-width: 768px) {
+              bottom: -4.2rem;
+              left: -3.6rem;
+              width: 134px;
+              height: 134px;
+            }
+          }
+      }
+
+      .aboutFlex {
+        flex: 1;
+        color: var(--light-white);
+
+        .heading {
+          font-size: 48px;
+          line-height: 54px;
+          font-weight: 400;
+          padding-bottom: 1rem;
+
+          @media screen and (max-width: 768px) {
+            font-size: 30px;
+            line-height: 28px;
+            padding-top: 3rem;
+            font-weight: 500;
+          }
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          .details1 {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 400;
+            display: flex;
+            text-align: justify;
+
+            @media screen and (max-width: 768px) {
+              font-size: 17px;
+              line-height: 20px;
+            }
+          }
+
+          .details2 {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 400;
+            padding-bottom: 1rem;
+            display: flex;
+            text-align: justify;
+
+            @media screen and (max-width: 768px) {
+              font-size: 17px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .flex {
+      display: flex;
+      gap: 2rem;
+      color: var(--light-white);
+      padding-top: 1rem;
+
+      @media screen and (max-width: 768px) {
+        padding-top: 4rem;
+      }
+
+      .leftFlex {
+        flex: 1;
+
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      .rightFlex {
+        flex: 1;
+
+        .social {
+          display: flex;
+          gap: 3rem;
+        }
+
+        .agendaContainer {
+          padding-top: 3rem;
+
+          .title {
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: 400;
+            padding-bottom: 0.5rem;
+          }
+
+          .time {
+            width: 300px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: 500;
+            background-color: var(--primary);
+          }
+        }
+
+        .topicContainer {
+          padding-top: 2rem;
+          padding-bottom: 4rem;
+
+          .detail {
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 400;
+            padding-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

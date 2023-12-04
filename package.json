@@ -22,6 +22,9 @@
     "next-cloudinary": "^5.7.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^6.19.0",
+    "react-select": "^5.8.0",
     "sass": "^1.66.1",
     "sharp": "^0.33.0",
     "typescript": "5.2.2"

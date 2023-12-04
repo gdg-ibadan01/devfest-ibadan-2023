@@ -1,3 +1,4 @@
+"use client"
 import Magnetic from "../Magnetic";
 import { useRef } from "react";
 import Pills from "../Pills";
